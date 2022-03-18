@@ -1,6 +1,6 @@
-import { Job } from "../models/job";
+import { Job } from "../class/job";
 
-export const jobs: Job[] [
+export const JOBS: Job[] [
     {
         id: 1;
         fechaInicio: 1998;  // Existe tipo Date?

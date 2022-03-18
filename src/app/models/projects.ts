@@ -1,4 +1,4 @@
-export interface Projects {
+/* export interface Projects {
     id?: number;
     tituloProyecto: string;
     descripcionProyecto: string;
@@ -7,3 +7,4 @@ export interface Projects {
     snapshot: string;  // 
 
 }
+*/

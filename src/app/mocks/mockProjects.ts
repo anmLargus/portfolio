@@ -1,6 +1,6 @@
-import { Projects } from "../models/projects"
+import { Project } from "../class/project";
 
-export const projects: Projects[] [
+export const PROJECTS: Project[] [
     {
         id: 1;
         tituloProyecto: "Portfolio personal";

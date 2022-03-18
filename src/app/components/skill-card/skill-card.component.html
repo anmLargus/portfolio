@@ -1,0 +1,8 @@
+<div class="card p-3"><!--style="width: 18rem;"-->
+    <h4 class="card-title">{{skill.habilidad | titlecase}}</h4>
+    <div class="progress" style="height: 20px;">
+        <div class="progress-bar" role="progressbar" [ngStyle]="{width: skill.progress + '%'}" [attr.aria-valuenow]="progreso" aria-valuemin="0" aria-valuemax="100"></div>
+    <!-- style="width: 5%;" aria-valuenow="75" [style.width.%]="progreso"   -->
+    </div>
+    <p>{{progreso}}</p>
+</div>

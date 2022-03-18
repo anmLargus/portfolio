@@ -1,4 +1,4 @@
-export interface Job {
+/* export interface Job {
     id?: number;
     fechaInicio: string;  // Existe tipo Date?
     fechaFin: string;  // Existe tipo Date?
@@ -9,3 +9,4 @@ export interface Job {
     trabajosRealizados?: string;
     
 }
+*/

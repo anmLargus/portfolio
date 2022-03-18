@@ -1,6 +1,6 @@
-import { Educacion } from "../models/educacion";
+import { Educacion } from "../class/educacion";
 
-export const educaciones: Educacion[] [
+export const EDUCACIONES: Educacion[] [
     {
         id: 1;   // (opc)
         titulo: "Ingeniero Agrónomo";

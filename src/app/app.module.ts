@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -12,6 +13,9 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 
 import { ErrorComponent } from './pages/error/error.component';
 import { BotonComponent } from './components/boton/boton.component';
+import { SkillCardComponent } from './components/skill-card/skill-card.component';
+import { SkillsListComponent } from './pages/skills-list/skills-list.component';
+
 
 @NgModule({
   declarations: [
@@ -22,12 +26,16 @@ import { BotonComponent } from './components/boton/boton.component';
     InicioComponent,
     
     ErrorComponent,
-         BotonComponent
+         BotonComponent,
+         SkillCardComponent,
+         SkillsListComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
