@@ -15,6 +15,8 @@ import { ErrorComponent } from './pages/error/error.component';
 import { BotonComponent } from './components/boton/boton.component';
 import { SkillCardComponent } from './components/skill-card/skill-card.component';
 import { SkillsListComponent } from './pages/skills-list/skills-list.component';
+import { TarjetaComponent } from './components/tarjeta/tarjeta.component';
+import { AboutComponent } from './pages/about/about.component';
 
 
 @NgModule({
@@ -29,6 +31,8 @@ import { SkillsListComponent } from './pages/skills-list/skills-list.component';
          BotonComponent,
          SkillCardComponent,
          SkillsListComponent,
+         TarjetaComponent,
+         AboutComponent,
 
   ],
   imports: [
