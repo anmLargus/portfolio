@@ -23,6 +23,14 @@ export class ProjServService {
       linkProyecto: "direccion web del proyecto",
       snapshot: "path al snapshot del proyecto",
     },
+    {
+      id: 3,
+      tituloProyecto: "Proyecto Fake2",
+      descripcionProyecto: "Solo como ejemplo de otro proyecto",
+      tecnologias: "tecnologias empleadas: un monton",
+      linkProyecto: "direccion web del proyecto",
+      snapshot: "path al snapshot del proyecto",
+    },
   ]
 
   constructor() { }

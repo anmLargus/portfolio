@@ -1,8 +1,14 @@
-<p>proyectos works!</p>
+<br>
 <div class="container border border-danger">
-    <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
         <div *ngFor="let project of projects" class="col">
             <app-proj-card [project]="project"></app-proj-card>
         </div>
     </div>
 </div>
+
+<!-- <div class="row">
+    <div class="col-12 col-sm-6" *ngFor="let project of projects">
+        <app-proj-card [project]="project"></app-proj-card>
+    </div>
+</div> -->
