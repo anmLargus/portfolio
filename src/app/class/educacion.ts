@@ -1,9 +1,10 @@
 export class Educacion {
     id?: number = 1;
-    titulo: string = "";
-    anio: number = 1979; // Podria ser date?
-    institucion: string = "";
-    descripcionCurso?: string = "";  // Aca irian los directores del curso o de mi posgrado
-    duracion?: number = 0; // duracion en horas
+    titulo: string = ""; 
+    // anioInicio?: number = 1901; 
+    anioFin: number = 1979; 
+    lugar: string = "";
+   // descripcionStrong?: string = "";  
+    descripcion: string = "" ;
     calificacion?: number = 10; 
 }

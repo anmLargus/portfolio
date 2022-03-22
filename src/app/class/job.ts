@@ -1,10 +1,10 @@
 export class Job {
     id?: number = 1;
-    fechaInicio: string = "1/1/1901";  // Existe tipo Date?
-    fechaFin: string = "1/1/1901";  // Existe tipo Date?
+    anioInicio: string = "1/1/1901";  // Existe tipo Date?
+    anioFin: string = "1/1/1901";  // Existe tipo Date?
     empresa: string = "";
     posicion: string = "";
     descripcion: string = "";
-    esTrabajoActual: false;
+    esActual: boolean = false;
     trabajosRealizados?: string = "";
 }
