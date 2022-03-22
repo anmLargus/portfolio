@@ -8,22 +8,26 @@ export class ProjServService {
 
   proyectos: Project[] = [
     {
-      id: 1;
+      id: 1,
       tituloProyecto: "Portfolio",
       descripcionProyecto: "Muestrario de habilidades y mi experiencia como programador",
       tecnologias: "angular 13 bootstrap 5",
       linkProyecto: "direccion web del proyecto",
-      snapshot: "path al snapshot del proyecto"
+      snapshot: "path al snapshot del proyecto",
     },
     {
-      id: 2;
+      id: 2,
       tituloProyecto: "Proyecto Fake",
       descripcionProyecto: "Solo como ejemplo de otro proyecto",
-      tecnologias: "un monton",
+      tecnologias: "tecnologias empleadas: un monton",
       linkProyecto: "direccion web del proyecto",
-      snapshot: "path al snapshot del proyecto"
+      snapshot: "path al snapshot del proyecto",
     },
   ]
 
   constructor() { }
+
+  getProjects() {
+    return this.proyectos ;
+  }
 }

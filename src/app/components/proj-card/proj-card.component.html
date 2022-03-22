@@ -1,9 +1,13 @@
+
+
 <div class="card" style="width: 18rem;">
     <div class="card-body">
-      <h5 class="card-title">Título del proyecto</h5>
-      <h6 class="card-subtitle mb-2 text-muted">tecnologias empleadas</h6>
-      <p class="card-text">Here is a paragraph briefly explaining the project characteristics. </p>
-      <a href="#" class="card-link">Card link</a>
+      <h5 class="card-title">{{project.tituloProyecto}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{project.tecnologias}}</h6>
+      <p class="card-text">{{project.descripcionProyecto}}</p>
+      <a [href]="project.linkProyecto" class="card-link">Ir al proyecto</a>
       
     </div>
-  </div>
+</div>
+
+
