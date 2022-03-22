@@ -15,7 +15,7 @@ import { ErrorComponent } from './pages/error/error.component';
 import { BotonComponent } from './components/boton/boton.component';
 import { SkillCardComponent } from './components/skill-card/skill-card.component';
 import { SkillsListComponent } from './pages/skills-list/skills-list.component';
-import { TarjetaComponent } from './components/tarjeta/tarjeta.component';
+
 import { AboutComponent } from './pages/about/about.component';
 import { ProyectosComponent } from './pages/proyectos/proyectos.component';
 import { ProjCardComponent } from './components/proj-card/proj-card.component';
@@ -33,7 +33,7 @@ import { ProjCardComponent } from './components/proj-card/proj-card.component';
          BotonComponent,
          SkillCardComponent,
          SkillsListComponent,
-         TarjetaComponent,
+
          AboutComponent,
          ProyectosComponent,
          ProjCardComponent,
