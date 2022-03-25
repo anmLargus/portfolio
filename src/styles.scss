@@ -2,3 +2,8 @@
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+
+/* Para capitalizar solo la primer letra de un título o párrafo */
+.capitalize-first::first-letter {
+    text-transform: uppercase;
+}

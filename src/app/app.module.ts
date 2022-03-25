@@ -19,6 +19,11 @@ import { SkillsListComponent } from './pages/skills-list/skills-list.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ProyectosComponent } from './pages/proyectos/proyectos.component';
 import { ProjCardComponent } from './components/proj-card/proj-card.component';
+import { EduCardComponent } from './components/edu-card/edu-card.component';
+import { ExpCardComponent } from './components/exp-card/exp-card.component';
+
+import { EduFlyerComponent } from './components/edu-flyer/edu-flyer.component';
+import { JobsFlyerComponent } from './components/jobs-flyer/jobs-flyer.component';
 
 
 @NgModule({
@@ -30,13 +35,18 @@ import { ProjCardComponent } from './components/proj-card/proj-card.component';
     InicioComponent,
     
     ErrorComponent,
-         BotonComponent,
-         SkillCardComponent,
-         SkillsListComponent,
+    BotonComponent,
+    SkillCardComponent,
+    SkillsListComponent,
 
-         AboutComponent,
-         ProyectosComponent,
-         ProjCardComponent,
+    AboutComponent,
+    ProyectosComponent,
+    ProjCardComponent,
+    EduCardComponent,
+    ExpCardComponent,
+       
+    EduFlyerComponent,
+    JobsFlyerComponent,
 
   ],
   imports: [

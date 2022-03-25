@@ -1,6 +1,6 @@
 export class Educacion {
     id?: number = 1;
-    titulo: string = ""; 
+    titulo: string = ""; // Puede ser título profesional, nombre del curso y/o capacitación 
     // anioInicio?: number = 1901; 
     anioFin: number = 1979; 
     lugar: string = "";
