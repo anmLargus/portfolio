@@ -24,6 +24,7 @@ import { ExpCardComponent } from './components/exp-card/exp-card.component';
 
 import { EduFlyerComponent } from './components/edu-flyer/edu-flyer.component';
 import { JobsFlyerComponent } from './components/jobs-flyer/jobs-flyer.component';
+import { ContactoFormComponent } from './components/contacto-form/contacto-form.component';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { JobsFlyerComponent } from './components/jobs-flyer/jobs-flyer.component
        
     EduFlyerComponent,
     JobsFlyerComponent,
+    ContactoFormComponent,
 
   ],
   imports: [
