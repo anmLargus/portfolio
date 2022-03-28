@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common'; // Esto x si uso el scroller
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopnavbarComponent implements OnInit {
 
-  constructor() { }
+  // constructor( private viewportScroller: ViewportScroller ) { } // x si uso scroller
+  constructor( private viewportScroller: ViewportScroller ) { }
 
   ngOnInit(): void {
   }
+
+  // descomentar si uso el scroller
+  /* scrollTo() {
+    this.viewportScroller.scrollToAnchor('seccionProyectos');
+  } */
 
 }
