@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +25,9 @@ import { ExpCardComponent } from './components/exp-card/exp-card.component';
 import { EduFlyerComponent } from './components/edu-flyer/edu-flyer.component';
 import { JobsFlyerComponent } from './components/jobs-flyer/jobs-flyer.component';
 import { ContactoFormComponent } from './components/contacto-form/contacto-form.component';
+import { LoginComponent } from './pages/login/login.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
+
 
 
 @NgModule({
@@ -49,13 +52,15 @@ import { ContactoFormComponent } from './components/contacto-form/contacto-form.
     EduFlyerComponent,
     JobsFlyerComponent,
     ContactoFormComponent,
+    LoginComponent,
+    LoginFormComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
