@@ -17,7 +17,7 @@ export class ProjServService {
     },
     {
       id: 2,
-      tituloProyecto: "Proyecto Fake",
+      tituloProyecto: "Fake project",
       descripcionProyecto: "Solo como ejemplo de otro proyecto",
       tecnologias: "tecnologias empleadas: un monton",
       linkProyecto: "direccion web del proyecto",
@@ -25,9 +25,9 @@ export class ProjServService {
     },
     {
       id: 3,
-      tituloProyecto: "Proyecto Fake2",
+      tituloProyecto: "Bogus Project",
       descripcionProyecto: "Solo como ejemplo de otro proyecto",
-      tecnologias: "tecnologias empleadas: un monton",
+      tecnologias: "tecnologias empleadas: menos que antes",
       linkProyecto: "direccion web del proyecto",
       snapshot: "path al snapshot del proyecto",
     },
