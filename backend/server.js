@@ -10,52 +10,52 @@ app.use(cors());
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
-let items = [];
+let edus = [];
 
 app.get('/', (req, res) => {
     res.send('Servidor de prueba');
 });
-app.get('/items', async (req, res) => {
+app.get('/edus', async (req, res) => {
     await open();
-    res.json(items);
+    res.json(edus);
 });
-app.get('/items/:id', (req, res) => {
+app.get('/edus/:id', (req, res) => {
     res.send(`${req.params.id}`);
 });
-app.put('/items/:id', async (req, res) => {
+app.put('/edus/:id', async (req, res) => {
     const id = req.params.id;
     await open();
-    const index = items.findIndex(item => item.id === id);
-    items[index].completed = !items[index].completed;
+    const index = edu.findIndex(item => edu.id === id);
+    edus[index].completed = !edus[index].completed;
     await save();
-    res.json(items[index]);
+    res.json(edus[index]);
 });
-app.delete('/items/:id', async (req, res) => {
+app.delete('/edus/:id', async (req, res) => {
     const id = req.params.id;
     await open();
-    items = items.filter(item => item.id !== id);
+    edus = edus.filter(edu => edu.id !== id);
     await save();
-    res.json(items);
+    res.json(edus);
 });
 
-app.post('/items', async (req, res) => {
+app.post('/edus', async (req, res) => {
     const id = uuidv4();
     req.body['id'] = id;
     await open();
-    items.unshift(req.body);
+    edus.unshift(req.body);
     
     await save();
     res.json(req.body);
 });
 
 async function save(){
-    const res = await writeFile('data.json', JSON.stringify(items), 'utf-8'); // CAMBIAR EL NOMBRE DEL ARCHIVO X EL ARCHIVO JSON QUE SEA
+    const res = await writeFile('data.json', JSON.stringify(edus), 'utf-8'); // CAMBIAR EL NOMBRE DEL ARCHIVO X EL ARCHIVO JSON QUE SEA
 }
 
 async function open(){
     const res = await readFile('data.json', 'utf-8'); // CAMBIAR EL NOMBRE DEL ARCHIVO X EL ARCHIVO JSON QUE SEA
-    items = JSON.parse(res);
-    console.log('open',items);
+    edus = JSON.parse(res);
+    console.log('open',edus);
 }
 
 

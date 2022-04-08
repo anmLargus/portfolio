@@ -16,7 +16,11 @@ export class EduFlyerComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.educaciones = this.educacionService.getEducacion();
+    //this.educaciones = this.educacionService.getEducacion();
+    this.educacionService.getEducacion().subscribe(data => {
+      this.educaciones = data;
+      console.log("educacion desde servidor")
+    });
 
   }
 

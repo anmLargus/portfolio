@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Educacion } from '../class/educacion';
 
 
@@ -7,8 +9,14 @@ import { Educacion } from '../class/educacion';
 })
 export class EducacionService {
 
-  educacion: Educacion[] = [
-    {
+  url:string = 'http://localhost:3000/edus';
+  httpOptions = {
+    headers: {
+      'content-type': 'application/json'
+    }
+  };
+  educacion: Educacion[] = [];
+    /* {
       id: 1,
       titulo: "Ingeniero Agrónomo",
       anioFin: 2009, // Podria ser date?
@@ -40,12 +48,12 @@ export class EducacionService {
       descripcion: "Directores: Dr. Albert Fischer (U.California-Davis) y Bernal Valverde (U.Copenhagen). Duración: 30hs.",
       calificacion: 8, 
     }
+  ] */
 
-  ]
+  constructor(private http:HttpClient) { }
 
-  constructor() { }
-
-  getEducacion() {
-    return this.educacion;
+  getEducacion():Observable<Educacion[]> {
+    //return this.educacion;
+    return this.http.get<Educacion[]>(this.url);
   }
 }
