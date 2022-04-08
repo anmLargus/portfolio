@@ -9,7 +9,7 @@ import { Educacion } from '../class/educacion';
 })
 export class EducacionService {
 
-  url:string = 'http://localhost:3000/edus';
+  url:string = 'http://localhost:3000/edus'; //en server.js
   httpOptions = {
     headers: {
       'content-type': 'application/json'

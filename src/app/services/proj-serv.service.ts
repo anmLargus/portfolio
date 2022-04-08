@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Project } from '../class/project';
 
 @Injectable({
@@ -6,8 +8,15 @@ import { Project } from '../class/project';
 })
 export class ProjServService {
 
-  proyectos: Project[] = [
-    {
+  url:string = 'http://localhost:3002/projs';
+  httpOptions = {
+    headers: {
+      'content-type': 'application-json'
+    }
+  };
+
+  proyectos: Project[] = [];
+    /* {
       id: 1,
       tituloProyecto: "Portfolio",
       descripcionProyecto: "Muestrario de habilidades y mi experiencia como programador",
@@ -31,11 +40,12 @@ export class ProjServService {
       linkProyecto: "direccion web del proyecto",
       snapshot: "path al snapshot del proyecto",
     },
-  ]
+  ] */
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
-  getProjects() {
-    return this.proyectos ;
+  getProjects():Observable<Project[]> {
+    //return this.proyectos ;
+    return this.http.get<Project[]>(this.url);
   }
 }

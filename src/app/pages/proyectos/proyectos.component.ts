@@ -14,7 +14,11 @@ export class ProyectosComponent implements OnInit {
   constructor( private projServService: ProjServService ) { }
 
   ngOnInit(): void {
-    this.projects = this.projServService.getProjects() ;
+    this.projServService.getProjects().subscribe(data => {
+      this.projects = data;
+      console.log("proyectos desde el servidor")
+    }) ;
+    
   }
 
 }

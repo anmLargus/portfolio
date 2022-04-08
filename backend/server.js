@@ -25,7 +25,7 @@ app.get('/edus/:id', (req, res) => {
 app.put('/edus/:id', async (req, res) => {
     const id = req.params.id;
     await open();
-    const index = edu.findIndex(item => edu.id === id);
+    const index = edus.findIndex(job => edus.id === id);
     edus[index].completed = !edus[index].completed;
     await save();
     res.json(edus[index]);

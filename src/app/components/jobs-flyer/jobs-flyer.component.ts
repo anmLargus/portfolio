@@ -17,7 +17,12 @@ export class JobsFlyerComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.jobs = this.jobService.getJobs();
+    //this.jobs = this.jobService.getJobs();
+
+    this.jobService.getJobs().subscribe(data => {
+      this.jobs = data;
+      console.log("jobs desde servidor")
+    })
   }
 
 }

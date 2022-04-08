@@ -1,4 +1,6 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Job } from '../class/job';
 
 @Injectable({
@@ -6,8 +8,15 @@ import { Job } from '../class/job';
 })
 export class JobServService {
 
-  jobs: Job[] = [
-    {
+  url:string = 'http://localhost:3001/jobs';
+  httpOptions = {
+    headers: {
+      'content-type': 'application-json'
+    }
+  };
+
+  jobs: Job[] = [];
+    /* {
       id: 1,
       fechaInicio: "enero de 2016", 
       fechaFin: "",  
@@ -43,11 +52,12 @@ export class JobServService {
       descripcion: "Director: Julio Scursoni, Co-Director: Roberto Benech-Arnold.",
       esActual: false,
     }
-  ]
+  ] */
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
-  getJobs() {
-    return this.jobs ;
+  getJobs():Observable<Job[]> {
+    //return this.jobs ;
+    return this.http.get<Job[]>(this.url);
   }
 }

@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Skill } from '../class/skill';
 
 @Injectable({
@@ -6,8 +8,15 @@ import { Skill } from '../class/skill';
 })
 export class SkillService {
 
-  skills: Skill[] = [
-    {
+  url:string = 'http://localhost:3003/skills';
+  httpOptions = {
+    headers: {
+      'content-type': 'application-json'
+    }
+  };
+
+  skills: Skill[] = [];
+    /* {
       id:  1,
       habilidad: "HTML CSS",
       progress: 100,
@@ -32,11 +41,12 @@ export class SkillService {
       habilidad: "R",
       progress: 90,
     },
-  ]
+  ] */
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
-  getSkills() {
-    return this.skills;
+  getSkills():Observable<Skill[]> {
+    //return this.skills;
+    return this.http.get<Skill[]>(this.url);
   }
 }

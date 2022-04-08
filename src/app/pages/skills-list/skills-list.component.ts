@@ -15,7 +15,10 @@ export class SkillsListComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.skills = this.skillService.getSkills();
+    this.skillService.getSkills().subscribe(data => {
+      this.skills = data
+      console.log("skills desde el servidor")
+    });
     
   }
 
