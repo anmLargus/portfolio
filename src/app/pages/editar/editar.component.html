@@ -8,49 +8,63 @@
     <div ngbDropdown class="d-inline-block">
       <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
       <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <button ngbDropdownItem (click)="action='one'">Action - 1</button>
-        <button ngbDropdownItem (click)="action='two'">Action - 2</button>
-        <button ngbDropdownItem (click)="action='three'">Action - 3</button>
+        <button ngbDropdownItem (click)="opcion='one'">Experiencia Laboral</button>
+        <button ngbDropdownItem (click)="opcion='two'">Educación</button>
+        <button ngbDropdownItem (click)="opcion='three'">Proyectos</button>
+        <button ngbDropdownItem (click)="opcion='four'">Skills</button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="row" *ngIf="action == 'one'">
-  <div class="col">
-
-    <h1 class="text-center">HOLA EDIT ONE</h1>
-
-  </div>
+<div class="row" *ngIf="opcion == 'one'">
   <div class="col">
 
     <h1 class="text-center">HOLA FORM EDIT ONE</h1>
 
   </div>
-</div>
-
-<div class="row" *ngIf="action == 'two'">
   <div class="col">
 
-    <h1 class="text-center">HOLA EDIT 2</h1>
-
-  </div>
-  <div class="col">
-
-    <h1 class="text-center">HOLA FORM EDIT 2</h1>
+    <app-jobs-flyer></app-jobs-flyer>
 
   </div>
 </div>
 
-<div class="row" *ngIf="action == 'three'">
+<div class="row" *ngIf="opcion == 'two'">
   <div class="col">
 
-    <h1 class="text-center">HOLA EDIT 3</h1>
+    <h1 class="text-center">HOLA EDIT edu</h1>
 
   </div>
   <div class="col">
 
-    <h1 class="text-center">HOLA FORM EDIT 3</h1>
+    <app-edu-flyer></app-edu-flyer>
+
+  </div>
+</div>
+
+<div class="row" *ngIf="opcion == 'three'">
+  <div class="col">
+
+    <h1 class="text-center">HOLA EDIT proyectos</h1>
+
+  </div>
+  <div class="col">
+
+    <app-proyectos></app-proyectos>
+
+  </div>
+</div>
+
+<div class="row" *ngIf="opcion == 'four'">
+  <div class="col">
+
+    <h1 class="text-center">HOLA EDIT skills</h1>
+
+  </div>
+  <div class="col">
+
+    <app-skills-list></app-skills-list>
 
   </div>
 </div>
