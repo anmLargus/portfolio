@@ -10,7 +10,7 @@ import { faCircleMinus } from '@fortawesome/free-solid-svg-icons';
 })
 export class ExpCardComponent implements OnInit {
 
-  isEditable = false;
+  esBorrable = true;
   faCircleMinus = faCircleMinus;
 
   @Input() job: Job = new Job();

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { faCircleMinus } from '@fortawesome/free-solid-svg-icons';
 import { Skill } from 'src/app/class/skill';
 
 
@@ -9,6 +10,9 @@ import { Skill } from 'src/app/class/skill';
 })
 export class SkillCardComponent implements OnInit {
 
+  esBorrable = true;
+  faCircleMinus = faCircleMinus;
+
   @Input() skill: Skill = new Skill() ;
 
   public progreso = this.skill.progress ; // no se muy bien que función cumple esto
@@ -16,6 +20,10 @@ export class SkillCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onDelete() {
+    console.log("onDelete skill!");
   }
 
 }

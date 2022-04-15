@@ -27,9 +27,8 @@ import { JobsFlyerComponent } from './pages/jobs-flyer/jobs-flyer.component';
 import { ContactoFormComponent } from './components/contacto-form/contacto-form.component';
 import { LoginComponent } from './pages/login/login.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
-import { EditJobsComponent } from './components/edit-jobs/edit-jobs.component';
-
-
+import { AddJobComponent } from './components/add-job/add-job.component';
+import { EditarComponent } from './pages/editar/editar.component';
 
 
 @NgModule({
@@ -49,14 +48,14 @@ import { EditJobsComponent } from './components/edit-jobs/edit-jobs.component';
     ProyectosComponent,
     ProjCardComponent,
     EduCardComponent,
-    ExpCardComponent,
-       
+    ExpCardComponent,       
     EduFlyerComponent,
     JobsFlyerComponent,
     ContactoFormComponent,
     LoginComponent,
     LoginFormComponent,
-    EditJobsComponent,
+    AddJobComponent,
+    EditarComponent,
 
   ],
   imports: [

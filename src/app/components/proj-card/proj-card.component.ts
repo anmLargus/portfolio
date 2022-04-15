@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { faCircleMinus } from '@fortawesome/free-solid-svg-icons';
 import { Project } from 'src/app/class/project';
 
 @Component({
@@ -8,11 +9,18 @@ import { Project } from 'src/app/class/project';
 })
 export class ProjCardComponent implements OnInit {
 
+  esBorrable = true;
+  faCircleMinus = faCircleMinus;
+
   @Input() project: Project = new Project();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onDelete() {
+    console.log("onDelete proyecto!");
   }
 
 }

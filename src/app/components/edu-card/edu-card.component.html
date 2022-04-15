@@ -1,6 +1,8 @@
 
 <div>
-    <h5><strong>{{edu.titulo | titlecase }}</strong></h5>
+    <h5><strong>{{edu.titulo | titlecase }}</strong>
+        <fa-icon *ngIf="esBorrable" [icon]="faCircleMinus" (click)="onDelete()"></fa-icon>
+    </h5>
     <p class="ls-sm">
         <span class="h6">{{edu.lugar | titlecase }} </span><span class="text-muted">( {{edu.anioFin}} )</span>
          {{edu.descripcion}}. 
