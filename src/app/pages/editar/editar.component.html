@@ -8,10 +8,49 @@
     <div ngbDropdown class="d-inline-block">
       <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
       <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <button ngbDropdownItem>Action - 1</button>
-        <button ngbDropdownItem>Another Action</button>
-        <button ngbDropdownItem>Something else is here</button>
+        <button ngbDropdownItem (click)="action='one'">Action - 1</button>
+        <button ngbDropdownItem (click)="action='two'">Action - 2</button>
+        <button ngbDropdownItem (click)="action='three'">Action - 3</button>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="row" *ngIf="action == 'one'">
+  <div class="col">
+
+    <h1 class="text-center">HOLA EDIT ONE</h1>
+
+  </div>
+  <div class="col">
+
+    <h1 class="text-center">HOLA FORM EDIT ONE</h1>
+
+  </div>
+</div>
+
+<div class="row" *ngIf="action == 'two'">
+  <div class="col">
+
+    <h1 class="text-center">HOLA EDIT 2</h1>
+
+  </div>
+  <div class="col">
+
+    <h1 class="text-center">HOLA FORM EDIT 2</h1>
+
+  </div>
+</div>
+
+<div class="row" *ngIf="action == 'three'">
+  <div class="col">
+
+    <h1 class="text-center">HOLA EDIT 3</h1>
+
+  </div>
+  <div class="col">
+
+    <h1 class="text-center">HOLA FORM EDIT 3</h1>
+
   </div>
 </div>
