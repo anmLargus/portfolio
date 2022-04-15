@@ -7,6 +7,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { ProyectosComponent } from './pages/proyectos/proyectos.component';
 import { ContactoFormComponent } from './components/contacto-form/contacto-form.component';
 import { LoginComponent } from './pages/login/login.component';
+import { EditJobsComponent } from './components/edit-jobs/edit-jobs.component';
 
 const routes: Routes = [
   {path: "", redirectTo: "inicio", pathMatch: "full"},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: "about", component: AboutComponent},
   {path: "contacto", component: ContactoFormComponent},
   {path: "login", component: LoginComponent},
+  {path: "editJobs", component: EditJobsComponent},
   {path: "**", component: ErrorComponent},
 ];
 
