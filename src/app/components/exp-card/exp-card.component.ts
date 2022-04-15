@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Job } from 'src/app/class/job';
 
 import { faCircleMinus } from '@fortawesome/free-solid-svg-icons';
@@ -10,18 +10,21 @@ import { faCircleMinus } from '@fortawesome/free-solid-svg-icons';
 })
 export class ExpCardComponent implements OnInit {
 
-  esBorrable = true;
+  esBorrable: boolean = true;
   faCircleMinus = faCircleMinus;
 
   @Input() job: Job = new Job();
+  @Output() deleteJob : EventEmitter<Job> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onDelete() {
-    console.log("onDelete job!");
+  onDelete(job: Job) {
+    console.log("onDelete" + job);
+    this.deleteJob.emit(job);
+    
   }
 
 }

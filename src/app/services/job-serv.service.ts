@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Job } from '../class/job';
@@ -59,5 +59,9 @@ export class JobServService {
   getJobs():Observable<Job[]> {
     //return this.jobs ;
     return this.http.get<Job[]>(this.url);
+  }
+
+  deleteJob(job: Job): Observable<Job> {
+    return this.http.delete<Job>(this.url + job.id);
   }
 }

@@ -25,4 +25,9 @@ export class JobsFlyerComponent implements OnInit {
     })
   }
 
+  deleteJob(job:Job){
+    this.jobs = this.jobs.filter( x => x.id !== job.id);
+    this.jobService.deleteJob(job).subscribe();
+  }
+
 }

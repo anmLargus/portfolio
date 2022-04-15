@@ -9,6 +9,8 @@ export class EditarComponent implements OnInit {
 
   public opcion: string = "";
 
+  
+
   constructor() { }
 
   ngOnInit(): void {
