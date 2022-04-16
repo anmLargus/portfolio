@@ -8,29 +8,25 @@
     <div ngbDropdown class="d-inline-block">
       <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
       <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <button ngbDropdownItem (click)="opcion='one'">Experiencia Laboral</button>
-        <button ngbDropdownItem (click)="opcion='two'">Educación</button>
-        <button ngbDropdownItem (click)="opcion='three'">Proyectos</button>
-        <button ngbDropdownItem (click)="opcion='four'">Skills</button>
+        <button ngbDropdownItem (click)="opcion='a'">Experiencia Laboral</button>
+        <button ngbDropdownItem (click)="opcion='b'">Educación</button>
+        <button ngbDropdownItem (click)="opcion='c'">Proyectos</button>
+        <button ngbDropdownItem (click)="opcion='d'">Skills</button>
       </div>
     </div>
   </div>
 </div>
-
-<div class="row" *ngIf="opcion == 'one'">
+<!--Editar experiencia laboral-->
+<div class="row" *ngIf="opcion == 'a'">
   <div class="col">
-
-    <h1 class="text-center">HOLA FORM EDIT ONE</h1>
-
+    <app-add-job></app-add-job>
   </div>
   <div class="col">
-
     <app-jobs-flyer></app-jobs-flyer>
-
   </div>
 </div>
 
-<div class="row" *ngIf="opcion == 'two'">
+<div class="row" *ngIf="opcion == 'b'">
   <div class="col">
 
     <h1 class="text-center">HOLA EDIT edu</h1>
@@ -43,7 +39,7 @@
   </div>
 </div>
 
-<div class="row" *ngIf="opcion == 'three'">
+<div class="row" *ngIf="opcion == 'c'">
   <div class="col">
 
     <h1 class="text-center">HOLA EDIT proyectos</h1>
@@ -56,7 +52,7 @@
   </div>
 </div>
 
-<div class="row" *ngIf="opcion == 'four'">
+<div class="row" *ngIf="opcion == 'd'">
   <div class="col">
 
     <h1 class="text-center">HOLA EDIT skills</h1>

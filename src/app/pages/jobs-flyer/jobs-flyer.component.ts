@@ -11,8 +11,6 @@ export class JobsFlyerComponent implements OnInit {
 
   jobs: Job[] = [];
 
-
-
   constructor( private jobService: JobServService ) { }
 
   ngOnInit(): void {
@@ -28,6 +26,11 @@ export class JobsFlyerComponent implements OnInit {
   deleteJob(job:Job){
     this.jobs = this.jobs.filter( x => x.id !== job.id);
     this.jobService.deleteJob(job).subscribe();
+      /* this.jobService.deleteJob(job).subscribe(
+         () => ( this.jobs = this.jobs.filter( t => t.id !== job.id))
+      ) */
   }
+
+  
 
 }
