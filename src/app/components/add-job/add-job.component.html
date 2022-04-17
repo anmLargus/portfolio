@@ -1,29 +1,29 @@
 
-<form class="row g-3" >
+<form class="row g-3" (ngSubmit)="onSubmit()">
   <div class="col-md-6">
-    <label for="inputEmpresa" class="form-label">Empresa</label>
-    <input type="text" class="form-control" id="inputEmpresa">
+    <label for="empresa" class="form-label">Empresa</label>
+    <input type="text" class="form-control" id="empresa" [(ngModel)]="empresa">
   </div>
   <div class="col-md-6">
-    <label for="inputPosicion" class="form-label">Posición</label>
-    <input type="text" class="form-control" id="inputPosicion">
+    <label for="posicion" class="form-label">Posición</label>
+    <input type="text" class="form-control" id="posicion" [(ngModel)]="posicion">
   </div>
   <div class="col-12">
-    <label for="inputDescripcion" class="form-label">Tareas realizadas y descripción</label>
-    <input type="text" class="form-control" id="inputDescripcion" placeholder="Planché resortes y etc...">
+    <label for="descripcion" class="form-label">Tareas realizadas y descripción</label>
+    <input type="text" class="form-control" id="descripcion" placeholder="Planché resortes y etc..." [(ngModel)]="descripcion">
   </div>
   <div class="col-md-6">
-    <label for="inputCity" class="form-label">Fecha de inicio</label>
-    <input type="text" class="form-control" id="inputCity" placeholder="Solo mes y año">
+    <label for="fechaInicio" class="form-label">Fecha de inicio</label>
+    <input type="text" class="form-control" id="fechaInicio" placeholder="Solo mes y año" [(ngModel)]="fechaInicio">
   </div>
   <div class="col-md-6">
-    <label for="inputFechaFin" class="form-label">Fecha de Fin</label>
-    <input type="text" class="form-control" id="inputFechaFin" placeholder="Solo mes y año">
+    <label for="fechaFin" class="form-label">Fecha de Fin</label>
+    <input type="text" class="form-control" id="fechaFin" placeholder="Solo mes y año" [(ngModel)]="fechaFin">
   </div>
   <div class="col-12">
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
+      <input class="form-check-input" type="checkbox" id="esActual" [(ngModel)]="esActual">
+      <label class="form-check-label" for="esActual">
         Es trabajo actual?
       </label>
     </div>
