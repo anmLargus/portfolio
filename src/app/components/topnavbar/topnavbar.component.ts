@@ -1,5 +1,6 @@
 import { ViewportScroller } from '@angular/common'; // Esto x si uso el scroller
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { NavLink } from 'src/app/class/nav-link';
 
 @Component({
   selector: 'app-topnavbar',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./topnavbar.component.scss']
 })
 export class TopnavbarComponent implements OnInit {
+
+  @Input() links: NavLink[] = []; // Crea un array vacío para llenarlo con los links para el navbar
 
   // constructor( private viewportScroller: ViewportScroller ) { } // x si uso scroller
   constructor( private viewportScroller: ViewportScroller ) { }
