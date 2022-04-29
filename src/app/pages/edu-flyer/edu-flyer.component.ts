@@ -10,15 +10,14 @@ import { EducacionService } from 'src/app/services/educacion.service';
 })
 export class EduFlyerComponent implements OnInit {
 
-  educaciones: Educacion[] = [];
+  edus: Educacion[] = [];
 
   constructor( private educacionService: EducacionService) { }
 
   ngOnInit(): void {
-
     //this.educaciones = this.educacionService.getEducacion();
-    this.educacionService.getEducacion().subscribe(data => {
-      this.educaciones = data;
+    this.educacionService.getEducacion().subscribe(edus => {
+      this.edus = edus;
       console.log("educacion desde servidor")
     });
 
