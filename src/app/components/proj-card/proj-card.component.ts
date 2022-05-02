@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { faCircleMinus } from '@fortawesome/free-solid-svg-icons';
 import { Project } from 'src/app/class/project';
 
@@ -13,14 +13,17 @@ export class ProjCardComponent implements OnInit {
   faCircleMinus = faCircleMinus;
 
   @Input() project: Project = new Project();
+  @Output() onDeleteProject: EventEmitter<Project> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onDelete() {
+  onDelete(project: Project) {
     console.log("onDelete proyecto!");
+    console.log(project);
+    this.onDeleteProject.emit(project);
   }
 
 }

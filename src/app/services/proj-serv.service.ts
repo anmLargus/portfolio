@@ -22,4 +22,9 @@ export class ProjServService {
     //return this.proyectos ;
     return this.http.get<Project[]>(this.urlProj);
   }
+
+  deleteProject(project: Project): Observable<Project> {
+    const url = `${this.urlProj}/${project.id}`;
+    return this.http.delete<Project>(url);
+  }
 }

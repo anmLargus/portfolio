@@ -17,8 +17,12 @@ export class ProyectosComponent implements OnInit {
     this.projServService.getProjects().subscribe(data => {
       this.projects = data;
       console.log("proyectos desde el servidor")
-    }) ;
-    
+    }) ;    
+  }
+
+  deleteProject(project: Project) {
+    this.projServService.deleteProject(project)
+      .subscribe( ( ) => ( this.projects = this.projects.filter( (p) => p.id !== project.id ) ) );
   }
 
 }

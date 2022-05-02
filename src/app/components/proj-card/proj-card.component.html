@@ -3,7 +3,7 @@
 <div class="card" style="width: 18rem;">
     <div class="card-body">
       <h5 class="card-title">{{project.tituloProyecto}}
-        <fa-icon *ngIf="esBorrable" [icon]="faCircleMinus" (click)="onDelete()"></fa-icon>
+        <fa-icon *ngIf="esBorrable" [icon]="faCircleMinus" (click)="onDelete(project)"></fa-icon>
       </h5>
       <h6 class="card-subtitle mb-2 text-muted">{{project.tecnologias}}</h6>
       <p class="card-text">{{project.descripcionProyecto}}</p>
