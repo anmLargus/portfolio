@@ -14,22 +14,11 @@ export class JobsFlyerComponent implements OnInit {
   constructor( private jobService: JobServService ) { }
 
   ngOnInit(): void {
-
-    //this.jobs = this.jobService.getJobs();
-
-    this.jobService.getJobs().subscribe(data => {
-      this.jobs = data;
-      console.log("jobs desde servidor")
-    })
+    this.jobService.getJobs().subscribe(data => ( this.jobs = data) )
+    console.log("jobs desde servidor")
   }
 
-  deleteJob(job:Job){
-    this.jobs = this.jobs.filter( x => x.id !== job.id);
-    this.jobService.deleteJob(job).subscribe();
-      /* this.jobService.deleteJob(job).subscribe(
-         () => ( this.jobs = this.jobs.filter( t => t.id !== job.id))
-      ) */
-  }
+  
 
   
 

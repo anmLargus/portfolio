@@ -22,4 +22,9 @@ export class EducacionService {
     //return this.educacion;
     return this.http.get<Educacion[]>(this.urlEdu);
   }
+
+  deleteEdu(edu: Educacion): Observable<Educacion> {
+    const url = `${this.urlEdu}/${edu.id}`;
+    return this.http.delete<Educacion>(url);
+  }
 }

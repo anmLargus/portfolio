@@ -19,8 +19,12 @@ export class EduFlyerComponent implements OnInit {
     this.educacionService.getEducacion().subscribe(edus => {
       this.edus = edus;
       console.log("educacion desde servidor")
-    });
+    });  
+  }
 
+  deleteEducacion(edu: Educacion) {
+    this.educacionService.deleteEdu(edu)
+    .subscribe( ( ) => ( this.edus = this.edus.filter( (t) => t.id !== edu.id) ) );
   }
 
 }

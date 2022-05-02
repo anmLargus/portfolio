@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { faCircleMinus } from '@fortawesome/free-solid-svg-icons';
 import { Educacion } from '../../class/educacion';
 
@@ -14,14 +14,17 @@ export class EduCardComponent implements OnInit {
   faCircleMinus = faCircleMinus;
 
   @Input() edu: Educacion = new Educacion();
+  @Output() onDeleteEdu: EventEmitter<Educacion> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onDelete() {
-    console.log("onDelete Edu!");
+  onDelete(edu: Educacion) {
+    console.log("DELETE !");
+    console.log(edu);
+    this.onDeleteEdu.emit(edu);
   }
 
 }

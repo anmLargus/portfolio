@@ -1,19 +1,23 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Job } from '../class/job';
+
+const httpOptions = {
+  headers: new HttpHeaders( { 'Content-Type':'application/json' } )
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class JobServService {
 
-  url:string = 'http://localhost:3001/jobs';
-  httpOptions = {
+  urlJob:string = 'http://localhost:3000/jobs';
+  /* httpOptions = {
     headers: {
       'content-type': 'application-json'
     }
-  };
+  }; */
 
   //jobs: Job[] = [];    
 
@@ -21,14 +25,14 @@ export class JobServService {
 
   getJobs():Observable<Job[]> {
     //return this.jobs ;
-    return this.http.get<Job[]>(this.url);
+    return this.http.get<Job[]>(this.urlJob);
   }
 
-  deleteJob(job: Job): Observable<Job> {
-    return this.http.delete<Job>(this.url + job.id);
+  /* deleteJob(job: Job): Observable<Job> {
+    return this.http.delete<Job>(this.urlJob + job.id);
   }
 
   addJob(job: Job): Observable<Job> {
     return this.http.post<Job>(this.url, job, this.httpOptions);
-  }
+  } */
 }

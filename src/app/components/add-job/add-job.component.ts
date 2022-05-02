@@ -33,7 +33,7 @@ export class AddJobComponent implements OnInit {
     job.descripcion = this.descripcion;
     job.esActual = this.esActual;
 
-    this.jobServService.addJob(job).subscribe();
+    //this.jobServService.addJob(job).subscribe();
   }
 
 }

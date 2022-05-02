@@ -3,23 +3,23 @@
     {
       "id": 1,
       "titulo": "Ingeniero Agrónomo",
-      "anioFin": 2009, 
-      "lugar": "Facultad de Agronomía Universidad de Buenos Aires",  
-      "descripcion": "", 
-      "calificacion": 7.08  
+      "anioFin": 2009,
+      "lugar": "Facultad de Agronomía Universidad de Buenos Aires",
+      "descripcion": "",
+      "calificacion": 7.08
     },
     {
-      "id": 2,  
+      "id": 2,
       "titulo": "Doctor en Ciencias Agropecuarias",
-      "anioFin": 2017, 
+      "anioFin": 2017,
       "lugar": "Facultad de Agronomía Universidad de Buenos Aires",
       "descripcion": "Título de tesis: Persistencia de malezas gramíneas en cultivos de trigo del sudeste bonaerense. Director: Julio Scursoni",
-      "calificacion": 10 
+      "calificacion": 10
     },
     {
-      "id": 3,  
+      "id": 3,
       "titulo": "Programa de Experto en Cerveza",
-      "anioFin": 2017, 
+      "anioFin": 2017,
       "lugar": "Centro de Cata de Cerveza",
       "descripcion": "Directores: Ing.Quím Mag. Martín Boan; Ing. Mag. Diego Collini. Programa de 90 hs que abarcó todos los aspectos en la elaboración de cerveza, desde la materia prima, elaboración, envasado y calidad.",
       "calificacion": 10
@@ -27,7 +27,7 @@
     {
       "id": 4,
       "titulo": "resistencia de malezas a herbicidas",
-      "anioFin": 2011, 
+      "anioFin": 2011,
       "lugar": "CERZOS (Conicet) - Universidad Nacional del Sur",
       "descripcion": "Directores: Dr. Albert Fischer (U.California-Davis) y Bernal Valverde (U.Copenhagen). Duración: 30hs.",
       "calificacion": 8
@@ -35,40 +35,41 @@
   ],
   "jobs": [
     {
-      "id":1,
-      "fechaInicio":"enero de 2016",
-      "fechaFin":"",
-      "empresa":"@YurcaBeer",
-      "posicion":"emprendimiento propio",
-      "descripcion":"Elaboración y venta de cerveza artesanal. Me encargo junto a mi socio de todos los procesos involucrados, desde la compra de insumos, la elaboración y enbarrilado hasta la entrega al cliente. Diseñé junto a mi socio la microfábrica con sus procesos y operaciones.",
-      "esActual":true
+      "id": 1,
+      "fechaInicio": "enero de 2016",
+      "fechaFin": "",
+      "empresa": "@YurcaBeer",
+      "posicion": "emprendimiento propio",
+      "descripcion": "Elaboración y venta de cerveza artesanal. Me encargo junto a mi socio de todos los procesos involucrados, desde la compra de insumos, la elaboración y enbarrilado hasta la entrega al cliente. Diseñé junto a mi socio la microfábrica con sus procesos y operaciones.",
+      "esActual": true
     },
     {
-      "id":2,
-      "fechaInicio":"septiembre de 2013",
-      "fechaFin":"octubre de 2015",
-      "empresa":"facultad de agronomia universidad de buenos aires",
-      "posicion":"ayudante de primera regular",
-      "descripcion":"cátedra de Producción Vegetal, UBA resol C.D.4469. Docente en las materias Producción Vegetal, Malezas, Adversidades Fitosanitarias y Manejo de Adversidades Fitosanitarias (4to. año carrera Agronomía). Conduje experimentos a campo y también coordiné y asistí a los alumnos de grado en sus proyectos de tesina",
-      "esActual":false
+      "id": 2,
+      "fechaInicio": "septiembre de 2013",
+      "fechaFin": "octubre de 2015",
+      "empresa": "facultad de agronomia universidad de buenos aires",
+      "posicion": "ayudante de primera regular",
+      "descripcion": "cátedra de Producción Vegetal, UBA resol C.D.4469. Docente en las materias Producción Vegetal, Malezas, Adversidades Fitosanitarias y Manejo de Adversidades Fitosanitarias (4to. año carrera Agronomía). Conduje experimentos a campo y también coordiné y asistí a los alumnos de grado en sus proyectos de tesina",
+      "esActual": false
     },
     {
-      "id":3,
-      "fechaInicio":"septiembre de 1998",
-      "fechaFin":"agosto de 2007",
-      "empresa":"estudio contable dr. artese"
-      ,"posicion":"administrativo",
-      "descripcion":"administrativo, asistente, atención a clientes, gestiones en organismos públicos, cobranzas.",
-      "esActual":false
+      "id": 3,
+      "fechaInicio": "septiembre de 1998",
+      "fechaFin": "agosto de 2007",
+      "empresa": "estudio contable dr. artese",
+      "posicion": "administrativo",
+      "descripcion": "administrativo, asistente, atención a clientes, gestiones en organismos públicos, cobranzas.",
+      "esActual": false
     },
     {
-      "id":4,
-      "fechaInicio":"abril de 2009",
-      "fechaFin":"marzo de 2014",
-      "empresa":"CONICET",
-      "posicion":"becario de posgrado, becas tipo I y tipo II",
-      "descripcion":"Director: Julio Scursoni, Co-Director: Roberto Benech-Arnold.",
-      "esActual":false}
+      "id": 4,
+      "fechaInicio": "abril de 2009",
+      "fechaFin": "marzo de 2014",
+      "empresa": "CONICET",
+      "posicion": "becario de posgrado, becas tipo I y tipo II",
+      "descripcion": "Director: Julio Scursoni, Co-Director: Roberto Benech-Arnold.",
+      "esActual": false
+    }
   ],
   "projs": [
     {
@@ -104,5 +105,4 @@
       "snapshot": "path al snapshot del proyecto"
     }
   ]
-  
 }

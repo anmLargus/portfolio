@@ -20,7 +20,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { ProyectosComponent } from './pages/proyectos/proyectos.component';
 import { ProjCardComponent } from './components/proj-card/proj-card.component';
 import { EduCardComponent } from './components/edu-card/edu-card.component';
-import { ExpCardComponent } from './components/exp-card/exp-card.component';
+
 
 import { EduFlyerComponent } from './pages/edu-flyer/edu-flyer.component';
 import { JobsFlyerComponent } from './pages/jobs-flyer/jobs-flyer.component';
@@ -29,6 +29,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { AddJobComponent } from './components/add-job/add-job.component';
 import { EditarComponent } from './pages/editar/editar.component';
+import { JobCardComponent } from './components/job-card/job-card.component';
 
 
 @NgModule({
@@ -48,7 +49,7 @@ import { EditarComponent } from './pages/editar/editar.component';
     ProyectosComponent,
     ProjCardComponent,
     EduCardComponent,
-    ExpCardComponent,       
+      
     EduFlyerComponent,
     JobsFlyerComponent,
     ContactoFormComponent,
@@ -56,6 +57,7 @@ import { EditarComponent } from './pages/editar/editar.component';
     LoginFormComponent,
     AddJobComponent,
     EditarComponent,
+    JobCardComponent,
 
   ],
   imports: [
