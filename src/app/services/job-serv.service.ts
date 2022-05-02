@@ -30,9 +30,14 @@ export class JobServService {
 
   /* deleteJob(job: Job): Observable<Job> {
     return this.http.delete<Job>(this.urlJob + job.id);
+  }*/
+  deleteJob(job: Job): Observable<Job> {
+    const url = `${this.urlJob}/${job.id}`;
+    return this.http.delete<Job>(url);
   }
+  
 
-  addJob(job: Job): Observable<Job> {
+  /* addJob(job: Job): Observable<Job> {
     return this.http.post<Job>(this.url, job, this.httpOptions);
-  } */
+  }  */
 }

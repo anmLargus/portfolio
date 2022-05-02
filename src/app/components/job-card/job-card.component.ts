@@ -18,6 +18,12 @@ export class JobCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  }  
+  }
+  
+  onDelete(job: Job) {
+    console.log("DELETE A JOB !!");
+    console.log(job);
+    this.deleteJob.emit(job);
+  }
 
 }

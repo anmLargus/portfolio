@@ -18,7 +18,10 @@ export class JobsFlyerComponent implements OnInit {
     console.log("jobs desde servidor")
   }
 
-  
+  deleteJob(job: Job) {
+    this.jobService.deleteJob(job)
+      .subscribe( ( ) => ( this.jobs = this.jobs.filter( ( j ) => j.id !== job.id ) ) );
+  }
 
   
 
