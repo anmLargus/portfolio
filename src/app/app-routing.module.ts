@@ -8,6 +8,8 @@ import { ProyectosComponent } from './pages/proyectos/proyectos.component';
 import { ContactoFormComponent } from './components/contacto-form/contacto-form.component';
 import { LoginComponent } from './pages/login/login.component';
 import { EditarComponent } from './pages/editar/editar.component';
+import { IsLoggedGuard } from './guards/is-logged.guard';
+import { IsNotLoggedGuard } from './guards/is-not-logged.guard';
 
 
 const routes: Routes = [
@@ -16,8 +18,8 @@ const routes: Routes = [
   {path: "proyectos", component: ProyectosComponent},
   {path: "about", component: AboutComponent},
   {path: "contacto", component: ContactoFormComponent},
-  {path: "login", component: LoginComponent},
-  {path: "editar", component: EditarComponent},
+  {path: "login", component: LoginComponent, canActivate: [IsNotLoggedGuard]},
+  {path: "editar", component: EditarComponent, canActivate: [IsLoggedGuard]},
   {path: "**", component: ErrorComponent},
 ];
 

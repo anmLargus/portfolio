@@ -1,4 +1,21 @@
-<p>login works!</p>
-<div class="container">
-    <app-login-form (enviar)="enviar($event)"></app-login-form>
+<div>
+    <form [formGroup]="form" (ngSubmit)="login()">
+        <div>
+            <label for="email"></label>
+            <br>
+            <input type="email" name="email" id="email" formControlName="email">
+        </div>
+
+        <div>
+            <label for="password"></label>
+            <br>
+            <input type="password" name="password" id="password" formControlName="password">
+        </div>
+        
+        <br>
+        <div>
+            <button [disabled]="form.invalid">Login</button>
+        </div>
+        
+    </form>
 </div>
