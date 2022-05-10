@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Persona } from 'src/app/class/persona';
+import { PersonaService } from 'src/app/services/persona.service';
 
 @Component({
   selector: 'app-inicio',
@@ -7,11 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
-  miFoto = "assets/yoCircle1.jpg"; //
+  persona: Persona = new Persona;
 
-  constructor() { }
+  //miFoto = "assets/yoCircle1.jpg" ; // assets/yoCircle1.jpg
+
+  constructor( private personaService: PersonaService) { }
 
   ngOnInit(): void {
+    this.personaService.getPersona().subscribe(data => (this.persona = data) );
   }
 
 }

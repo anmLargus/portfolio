@@ -8,7 +8,7 @@ import { Skill } from '../class/skill';
 })
 export class SkillService {
 
-  url:string = 'http://localhost:3003/skills';
+  url:string = 'http://localhost:3000/skills';
   httpOptions = {
     headers: {
       'content-type': 'application-json'
