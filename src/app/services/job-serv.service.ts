@@ -12,7 +12,7 @@ const httpOptions = {
 })
 export class JobServService {
 
-  urlJob:string = 'http://localhost:3000/jobs';
+  urlJob:string = 'http://localhost:8081/trabajos';
   /* httpOptions = {
     headers: {
       'content-type': 'application-json'

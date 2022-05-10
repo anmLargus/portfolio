@@ -1,16 +1,8 @@
 <div class="container-fluid row bg-success bg-opacity-50 border border-light">
     <div class="col">
-        <p class="text-left">Andrés N. Martin. Alguna licencia (C)</p>
+        <p class="text-left">Hecho por {{user.nombre | titlecase}} {{user.apellido | titlecase}}.</p>
     </div>
-    <div class="col">
-        <p class="text-center">Esto es el Footer 
-            <span><a routerLink="/login">Login</a></span>            
-        </p>
-        <a (click)="logout()">Logout</a>        
-    </div>
-    <div>
-        <span><a routerLink="/editar">Editar</a></span>
-    </div>
+    
     <div class="col">
         <p class="text-right">Dale un vistazo a <a href="https://www.instagram.com/yurcabeer/?hl=es-la" alt="link a YurcaBeer">@YurcaBeer</a></p>
     </div>

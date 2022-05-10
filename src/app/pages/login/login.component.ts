@@ -24,16 +24,15 @@ export class LoginComponent implements OnInit {
                   Validators.required, 
                   Validators.minLength(6), 
                   Validators.maxLength(12), 
-                  Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=[0-9])[a-zA-Z0-9]+$')
+                  Validators.pattern('^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]+$')    
                 ]
             ],
     })
-
   }
 
   login(){
-    /* console.log(this.form);
-    if(this.form.invalid){
+    console.log(this.form);
+    /*if(this.form.invalid){
       console.log("ES INVÁLIDO !!!!")
     } */
 

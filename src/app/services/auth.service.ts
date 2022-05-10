@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
 
-const LOGIN_ENDPOINT = "http://localhost:3000/api/login";
+const LOGIN_ENDPOINT = "http://localhost:8081/login";
 
 const TOKEN_KEY = 'token';
 

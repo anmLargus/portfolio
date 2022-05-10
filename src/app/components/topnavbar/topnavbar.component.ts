@@ -9,6 +9,8 @@ import { NavLink } from 'src/app/class/nav-link';
 })
 export class TopnavbarComponent implements OnInit {
 
+  public user = {nombre: "andrés", apellido: "martin"};
+
   @Input() links: NavLink[] = []; // Crea un array vacío para llenarlo con los links para el navbar
 
   // constructor( private viewportScroller: ViewportScroller ) { } // x si uso scroller

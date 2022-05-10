@@ -12,7 +12,7 @@ const httpOptions = {
 })
 export class ProjServService {
 
-  urlProj:string = 'http://localhost:3000/projs';
+  urlProj:string = 'http://localhost:8081/proyectos';
  
   proyectos: Project[] = [];    
 

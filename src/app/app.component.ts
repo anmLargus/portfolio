@@ -10,8 +10,8 @@ export class AppComponent {
   title = 'portfolio';
 
   links: NavLink[] = [
-    {label: 'Proyectos', link: 'proyectos'},
     {label: 'Sobre mí', link: 'about'},
-    {label: 'Contacto', link: 'contacto'}
+    {label: 'Contacto', link: 'contacto'},
+    {label: 'Login', link: 'login'}
   ]
 }

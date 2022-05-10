@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { AuthService } from 'src/app/services/auth.service';
+
 
 @Component({
   selector: 'app-footer',
@@ -9,14 +8,13 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class FooterComponent implements OnInit {
 
-  constructor( private auth: AuthService, private router: Router ) { }
+  public user = {nombre: "Andrés", apellido: "Martin"}; //TODO RECIBIR ESTO DESDE LA DB
+
+  constructor( ) { }
 
   ngOnInit(): void {
   }
 
-  logout() {
-    this.auth.logout();
-    this.router.navigate(['/login']);
-  }
+ 
 
 }

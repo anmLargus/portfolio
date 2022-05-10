@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
-  miFoto = "assets/yoCircle1.jpg";
+  miFoto = "assets/yoCircle1.jpg"; //
 
   constructor() { }
 
