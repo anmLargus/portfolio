@@ -1,4 +1,29 @@
 <div class="container">
+    <div class="row">
+        <div class="col border border-primary">
+            <app-about-card></app-about-card>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary" (click)="toggleExp()">Experiencia</button>
+                <button type="button" class="btn btn-primary" (click)="toggleEdu()">Educación</button>
+            </div>
+        </div>
+
+        <div class="col border border-primary">
+            <div class="col" *ngIf="opcion == 'exp'">
+                <app-jobs-flyer></app-jobs-flyer>
+            </div>
+            <div class="col" *ngIf="opcion == 'edu'">
+                <app-edu-flyer></app-edu-flyer>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-- <div class="container">
     <p>Acá va un párrafo sobre mí</p>
     <br>
     <p>Quizás también una foto</p>
@@ -15,6 +40,6 @@
         </div>
     </div>
 </div>
-
+ -->
 
 

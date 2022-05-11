@@ -32,6 +32,7 @@ import { JobsFlyerComponent } from './pages/jobs-flyer/jobs-flyer.component';
 import { LoginComponent } from './pages/login/login.component';
 import { EditarComponent } from './pages/editar/editar.component';
 import { SkillFlyerComponent } from './pages/skill-flyer/skill-flyer.component';
+import { AboutCardComponent } from './components/about-card/about-card.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { SkillFlyerComponent } from './pages/skill-flyer/skill-flyer.component';
     JobCardComponent,
     SkillCloudComponent,
     SkillFlyerComponent,
+    AboutCardComponent,
   ],
   imports: [
     BrowserModule,

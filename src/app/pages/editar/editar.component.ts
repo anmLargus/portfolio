@@ -7,9 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditarComponent implements OnInit {
 
-  public opcion: string = "";
-
-  
+  public opcion: string = "";  
 
   constructor() { }
 

@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+  opcion: string = "exp";
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleExp(){
+    this.opcion = "exp";
+  }
+  toggleEdu(){
+    this.opcion = "edu";
   }
 
 }
