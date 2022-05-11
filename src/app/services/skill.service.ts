@@ -15,10 +15,9 @@ export class SkillService {
     }
   };
 
-  skills: Skill[] = [];
-    
+  skills: Skill[] = [];    
 
-  constructor(private http:HttpClient) { }
+  constructor( private http:HttpClient ) { }
 
   getSkills():Observable<Skill[]> {
     //return this.skills;

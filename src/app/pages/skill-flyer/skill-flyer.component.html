@@ -1,11 +1,23 @@
-<div class="d-flex m-2 p-1 flex-row justify-content-center border border-danger">
-  
-    <div class="m-4 align-self-center border border-danger">
-      <h2 class="">Acá va un texto, puede ser el about me!!</h2>
+<!-- PROGRESS BAR EN FORMATO CÍRUCLO -->
+<!-- <h2 class="text-center">Skills</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3" *ngFor="let skill of skills">
+        <app-skill-circle [value]="skill.progress" [skill]="skill"></app-skill-circle>
     </div>
+  </div>
+</div> -->
 
-    <div class="m-4 align-self-center">
-      <app-skill-cloud></app-skill-cloud>
-    </div>
-  
+
+<!-- PROGRESS BAR EN FORMATO BARRA -->
+      
+<div>
+  <h2 class="text-center">Skills</h2>
+  <div class="w-90 p-3">
+      <div class="row">
+          <div class="row row-cols-2">
+              <app-skill-card *ngFor="let skill of skills" [skill]="skill"></app-skill-card>
+          </div>
+      </div>
+  </div>
 </div>

@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TagCloudModule } from 'angular-tag-cloud-module';
+//import { RoundProgressModule } from 'angular-svg-round-progressbar';
 
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -20,7 +21,6 @@ import { ContactoFormComponent } from './components/contacto-form/contacto-form.
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { AddJobComponent } from './components/add-job/add-job.component';
 import { JobCardComponent } from './components/job-card/job-card.component';
-import { SkillCloudComponent } from './components/skill-cloud/skill-cloud.component';
 
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { ErrorComponent } from './pages/error/error.component';
@@ -33,6 +33,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { EditarComponent } from './pages/editar/editar.component';
 import { SkillFlyerComponent } from './pages/skill-flyer/skill-flyer.component';
 import { AboutCardComponent } from './components/about-card/about-card.component';
+import { SkillCircleComponent } from './components/skill-circle/skill-circle.component';
 
 @NgModule({
   declarations: [
@@ -60,9 +61,9 @@ import { AboutCardComponent } from './components/about-card/about-card.component
     AddJobComponent,
     EditarComponent,
     JobCardComponent,
-    SkillCloudComponent,
     SkillFlyerComponent,
     AboutCardComponent,
+    SkillCircleComponent,
   ],
   imports: [
     BrowserModule,
@@ -73,6 +74,7 @@ import { AboutCardComponent } from './components/about-card/about-card.component
     FontAwesomeModule,
     ReactiveFormsModule,
     TagCloudModule,
+    //RoundProgressModule
   ],
   
   providers: [],

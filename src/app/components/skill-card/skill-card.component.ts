@@ -3,6 +3,7 @@ import { faCircleMinus } from '@fortawesome/free-solid-svg-icons';
 import { Skill } from 'src/app/class/skill';
 
 
+
 @Component({
   selector: 'app-skill-card',
   templateUrl: './skill-card.component.html',

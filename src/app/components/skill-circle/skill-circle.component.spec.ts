@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SkillCloudComponent } from './skill-cloud.component';
+import { SkillCircleComponent } from './skill-circle.component';
 
-describe('SkillCloudComponent', () => {
-  let component: SkillCloudComponent;
-  let fixture: ComponentFixture<SkillCloudComponent>;
+describe('SkillCircleComponent', () => {
+  let component: SkillCircleComponent;
+  let fixture: ComponentFixture<SkillCircleComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SkillCloudComponent ]
+      declarations: [ SkillCircleComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SkillCloudComponent);
+    fixture = TestBed.createComponent(SkillCircleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
