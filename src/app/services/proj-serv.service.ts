@@ -12,7 +12,7 @@ const httpOptions = {
 })
 export class ProjServService {
 
-  urlProj:string = 'http://localhost:3000/proyectos'; //Cambiar al puerto que corresponda al backend
+  urlProj:string = 'http://localhost:3000/projs'; //Cambiar al puerto que corresponda al backend
  
   proyectos: Project[] = [];    
 

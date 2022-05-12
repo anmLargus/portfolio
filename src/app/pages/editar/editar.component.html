@@ -12,16 +12,17 @@
         <button ngbDropdownItem (click)="opcion='b'">Educación</button>
         <button ngbDropdownItem (click)="opcion='c'">Proyectos</button>
         <button ngbDropdownItem (click)="opcion='d'">Skills</button>
+        <button ngbDropdownItem (click)="opcion='e'">Persona</button>
       </div>
     </div>
   </div>
 </div>
 <!--Editar experiencia laboral-->
-<div class="row" *ngIf="opcion == 'a'">
-  <div class="col">
+<div class="" *ngIf="opcion == 'a'">
+  <div class="">
     <app-add-job></app-add-job>
   </div>
-  <div class="col">
+  <div class="">
     <app-jobs-flyer></app-jobs-flyer>
   </div>
 </div>
@@ -62,5 +63,15 @@
 
     <app-skills-list></app-skills-list>
 
+  </div>
+</div>
+
+<div class="row" *ngIf="opcion == 'e'">
+  <div class="col">
+    <h1 class="text-center">HOLA EDIT Persona</h1>
+  </div>
+
+  <div class="col">
+    <h1>Acá va la persona</h1>
   </div>
 </div>

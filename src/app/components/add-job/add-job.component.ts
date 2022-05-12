@@ -1,5 +1,5 @@
 import { isNgTemplate } from '@angular/compiler';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Job } from 'src/app/class/job';
 import { JobServService } from 'src/app/services/job-serv.service';
 
@@ -10,7 +10,9 @@ import { JobServService } from 'src/app/services/job-serv.service';
 })
 export class AddJobComponent implements OnInit {
 
-  id: number = 1;
+  @Output() onAddJob: EventEmitter<Job> = new EventEmitter();
+
+  id: number = 0;
   fechaInicio: string = "1/1/1901";  // Existe tipo Date?
   fechaFin: string = "1/1/1901";  
   empresa: string = "";
@@ -24,6 +26,14 @@ export class AddJobComponent implements OnInit {
   }
 
   onSubmit() {
+    const {id, fechaInicio, fechaFin, empresa, posicion, descripcion, esActual } = this ;
+    const newJob = {id, fechaInicio, fechaFin, empresa, posicion, descripcion, esActual } ;
+
+    this.jobServService.addJob(newJob).subscribe( );
+    //this.onAddJob.emit(newJob);
+  }
+
+  /* onSubmit() {
     const job = new Job();
     job.id = this.id;
     job.fechaInicio = this.fechaInicio;
@@ -33,7 +43,8 @@ export class AddJobComponent implements OnInit {
     job.descripcion = this.descripcion;
     job.esActual = this.esActual;
 
-    //this.jobServService.addJob(job).subscribe();
-  }
+    this.jobServService.addJob(job).subscribe( );
+  } */
 
+  
 }

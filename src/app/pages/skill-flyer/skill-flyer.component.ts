@@ -17,4 +17,8 @@ export class SkillFlyerComponent implements OnInit {
     this.skillService.getSkills().subscribe(data => (this.skills = data))
   }
 
+  deleteSkill(skill: Skill) {
+    this.skillService.deleteSkill(skill).subscribe( ( ) => ( this.skills = this.skills.filter((p) => p.id !== skill.id)));
+  }
+
 }

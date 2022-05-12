@@ -37,7 +37,7 @@ export class JobServService {
   }
   
 
-  /* addJob(job: Job): Observable<Job> {
-    return this.http.post<Job>(this.url, job, this.httpOptions);
-  }  */
+  addJob(job: Job): Observable<Job> {
+    return this.http.post<Job>(this.urlJob, job, httpOptions);
+  }  
 }

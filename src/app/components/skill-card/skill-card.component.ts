@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { faCircleMinus } from '@fortawesome/free-solid-svg-icons';
 import { Skill } from 'src/app/class/skill';
 
@@ -15,6 +15,7 @@ export class SkillCardComponent implements OnInit {
   faCircleMinus = faCircleMinus;
 
   @Input() skill: Skill = new Skill() ;
+  @Output() onDeleteSkill: EventEmitter<Skill> = new EventEmitter();
 
   public progreso = this.skill.progress ; // no se muy bien que función cumple esto
 
@@ -23,8 +24,8 @@ export class SkillCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onDelete() {
-    console.log("onDelete skill!");
+  onDelete(skill: Skill) {
+    this.onDeleteSkill.emit(skill);
   }
 
 }

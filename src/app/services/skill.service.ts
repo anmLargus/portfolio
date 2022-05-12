@@ -8,7 +8,7 @@ import { Skill } from '../class/skill';
 })
 export class SkillService {
 
-  url:string = 'http://localhost:3000/skills';
+  urlSkill: string = 'http://localhost:3000/skills';
   httpOptions = {
     headers: {
       'content-type': 'application-json'
@@ -21,6 +21,11 @@ export class SkillService {
 
   getSkills():Observable<Skill[]> {
     //return this.skills;
-    return this.http.get<Skill[]>(this.url);
+    return this.http.get<Skill[]>(this.urlSkill);
+  }
+
+  deleteSkill(skill: Skill): Observable<Skill> {
+    const url = `${this.urlSkill}/${skill.id}`;
+    return this.http.delete<Skill>(url);
   }
 }

@@ -21,8 +21,6 @@ export class ProjCardComponent implements OnInit {
   }
 
   onDelete(project: Project) {
-    console.log("onDelete proyecto!");
-    console.log(project);
     this.onDeleteProject.emit(project);
   }
 

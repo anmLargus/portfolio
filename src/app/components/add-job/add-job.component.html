@@ -2,27 +2,27 @@
 <form class="row g-3" (ngSubmit)="onSubmit()">
   <div class="col-md-6">
     <label for="empresa" class="form-label">Empresa</label>
-    <input type="text" class="form-control" id="empresa" [(ngModel)]="empresa">
+    <input type="text" class="form-control" id="empresa" name="empresa" [(ngModel)]="empresa">
   </div>
   <div class="col-md-6">
     <label for="posicion" class="form-label">Posición</label>
-    <input type="text" class="form-control" id="posicion" [(ngModel)]="posicion">
+    <input type="text" class="form-control" id="posicion" name="posicion" [(ngModel)]="posicion">
   </div>
   <div class="col-12">
     <label for="descripcion" class="form-label">Tareas realizadas y descripción</label>
-    <input type="text" class="form-control" id="descripcion" placeholder="Planché resortes y etc..." [(ngModel)]="descripcion">
+    <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Planché resortes y etc..." [(ngModel)]="descripcion">
   </div>
   <div class="col-md-6">
     <label for="fechaInicio" class="form-label">Fecha de inicio</label>
-    <input type="text" class="form-control" id="fechaInicio" placeholder="Solo mes y año" [(ngModel)]="fechaInicio">
+    <input type="text" class="form-control" id="fechaInicio" name="fechaInicio" placeholder="Solo mes y año" [(ngModel)]="fechaInicio">
   </div>
   <div class="col-md-6">
     <label for="fechaFin" class="form-label">Fecha de Fin</label>
-    <input type="text" class="form-control" id="fechaFin" placeholder="Solo mes y año" [(ngModel)]="fechaFin">
+    <input type="text" class="form-control" id="fechaFin" name="fechaFin" placeholder="Solo mes y año" [(ngModel)]="fechaFin">
   </div>
   <div class="col-12">
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="esActual" [(ngModel)]="esActual">
+      <input class="form-check-input" type="checkbox" id="esActual" name="esActual" [(ngModel)]="esActual">
       <label class="form-check-label" for="esActual">
         Es trabajo actual?
       </label>
