@@ -1,0 +1,15 @@
+<p>add-skill works!</p>
+
+<form class="row g-3" (ngSubmit)="onSubmit()">
+  <div class="col-md-6">
+    <label for="habilidad" class="form-label">Habilidad</label>
+    <input type="text" class="form-control" id="habilidad" name="habilidad" [(ngModel)]="habilidad">
+  </div>
+  <div class="col-md-6">
+    <label for="progress" class="form-label">Experticia</label>
+    <input type="text" class="form-control" id="progress" name="progress" [(ngModel)]="progress">
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </div>
+</form>

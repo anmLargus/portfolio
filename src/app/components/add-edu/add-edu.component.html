@@ -1,0 +1,26 @@
+<form class="row g-3" (ngSubmit)="onSubmit()">
+  <div class="col-md-6">
+    <label for="titulo" class="form-label">Título</label>
+    <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Puede ser título profesional, nombre del curso y/o capacitación" [(ngModel)]="titulo">
+  </div>
+  <div class="col-md-6">
+    <label for="anioFin" class="form-label">Año de finalización</label>
+    <input type="text" class="form-control" id="anioFin" name="anioFin" [(ngModel)]="anioFin">
+  </div>
+  <div class="col-md-6">
+    <label for="lugar" class="form-label">Institución o Lugar donde se cursó</label>
+    <input type="text" class="form-control" id="lugar" name="lugar" placeholder="" [(ngModel)]="lugar">
+  </div>
+  <div class="col-md-6">
+    <label for="descripcion" class="form-label">Descripción</label>
+    <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Descripción, directores, calificación" [(ngModel)]="descripcion">
+  </div>
+  <div class="col-md-6">
+    <label for="calificacion" class="form-label">Calificación</label>
+    <input type="text" class="form-control" id="calificacion" name="calificacion" placeholder="opcional" [(ngModel)]="calificacion">
+  </div>
+
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </div>
+</form>

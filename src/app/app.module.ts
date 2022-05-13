@@ -34,6 +34,9 @@ import { EditarComponent } from './pages/editar/editar.component';
 import { SkillFlyerComponent } from './pages/skill-flyer/skill-flyer.component';
 import { AboutCardComponent } from './components/about-card/about-card.component';
 import { SkillCircleComponent } from './components/skill-circle/skill-circle.component';
+import { AddSkillComponent } from './components/add-skill/add-skill.component';
+import { AddEduComponent } from './components/add-edu/add-edu.component';
+import { AddProjectComponent } from './components/add-project/add-project.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +67,9 @@ import { SkillCircleComponent } from './components/skill-circle/skill-circle.com
     SkillFlyerComponent,
     AboutCardComponent,
     SkillCircleComponent,
+    AddSkillComponent,
+    AddEduComponent,
+    AddProjectComponent,
   ],
   imports: [
     BrowserModule,

@@ -14,7 +14,7 @@ export class ProjServService {
 
   urlProj:string = 'http://localhost:3000/projs'; //Cambiar al puerto que corresponda al backend
  
-  proyectos: Project[] = [];    
+  //proyectos: Project[] = [];    
 
   constructor(private http:HttpClient) { }
 
@@ -26,5 +26,9 @@ export class ProjServService {
   deleteProject(project: Project): Observable<Project> {
     const url = `${this.urlProj}/${project.id}`;
     return this.http.delete<Project>(url);
+  }
+
+  addProject(proj: Project): Observable<Project> {
+    return this.http.post<Project>(this.urlProj, proj, httpOptions);
   }
 }

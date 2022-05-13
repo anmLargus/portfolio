@@ -14,7 +14,7 @@ export class EducacionService {
 
   private urlEdu:string = 'http://localhost:3000/edus'; 
  
-  educacion: Educacion[] = [];
+  //educacion: Educacion[] = [];
     
   constructor(private http:HttpClient) { }
 
@@ -26,5 +26,9 @@ export class EducacionService {
   deleteEdu(edu: Educacion): Observable<Educacion> {
     const url = `${this.urlEdu}/${edu.id}`;
     return this.http.delete<Educacion>(url);
+  }
+
+  addEdu(edu: Educacion): Observable<Educacion> {
+    return this.http.post<Educacion>(this.urlEdu, edu, httpOptions)
   }
 }

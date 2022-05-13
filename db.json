@@ -31,6 +31,14 @@
       "lugar": "CERZOS (Conicet) - Universidad Nacional del Sur",
       "descripcion": "Directores: Dr. Albert Fischer (U.California-Davis) y Bernal Valverde (U.Copenhagen). Duración: 30hs.",
       "calificacion": 8
+    },
+    {
+      "id": 5,
+      "titulo": "Espectador de teorías de posguerra",
+      "anioFin": 1979,
+      "lugar": "Instituto BORRAME",
+      "descripcion": "Borrame, borrame, borrame, Borrame, borrame, borrame",
+      "calificacion": 10
     }
   ],
   "jobs": [
@@ -78,24 +86,6 @@
       "posicion": "Repartidor",
       "descripcion": "Trabajé repartiendo pizza en una moto cuando tenía solo 16 años.",
       "esActual": false
-    },
-    {
-      "id": 7,
-      "fechaInicio": "1/1/1901",
-      "fechaFin": "1/1/1999",
-      "empresa": "BORRAME",
-      "posicion": "Alguna",
-      "descripcion": "Borrame, borrame, borrame",
-      "esActual": false
-    },
-    {
-      "id": 8,
-      "fechaInicio": "1/1/1901",
-      "fechaFin": "1/1/1901",
-      "empresa": "BORRAME2",
-      "posicion": "Alguna",
-      "descripcion": "Borrame, borrame, borrame, Borrame, borrame, borrame",
-      "esActual": true
     }
   ],
   "projs": [
@@ -161,6 +151,11 @@
       "id": 5,
       "habilidad": "R",
       "progress": 90
+    },
+    {
+      "id": 8,
+      "habilidad": "Planchar resortes",
+      "progress": "99"
     }
   ]
 }
