@@ -37,6 +37,7 @@ import { SkillCircleComponent } from './components/skill-circle/skill-circle.com
 import { AddSkillComponent } from './components/add-skill/add-skill.component';
 import { AddEduComponent } from './components/add-edu/add-edu.component';
 import { AddProjectComponent } from './components/add-project/add-project.component';
+import { AddPersonaComponent } from './components/add-persona/add-persona.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { AddProjectComponent } from './components/add-project/add-project.compon
     AddSkillComponent,
     AddEduComponent,
     AddProjectComponent,
+    AddPersonaComponent,
   ],
   imports: [
     BrowserModule,

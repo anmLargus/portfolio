@@ -19,4 +19,9 @@ export class PersonaService {
   getPersona(): Observable<Persona>{
     return this.http.get<Persona>(this.urlPersona);
   }
+
+  updatePersona(persona: Persona): Observable<Persona> {
+    return this.http.put<Persona>(`${this.urlPersona}`, persona, httpOptions); ///${persona.id}
+    // LOS PARAMETROS DE PUT PUEDEN SER INCORRECTOS. ¿Falta httpOptions?
+  }
 }

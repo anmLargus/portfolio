@@ -1,0 +1,44 @@
+<p>add-persona works!</p>
+<form class="row g-3" (ngSubmit)="updatePersona()">
+  <div class="col-md-6">
+    <label for="nombre" class="form-label">Nombre</label>
+    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre">
+  </div>
+  <div class="col-md-6">
+    <label for="apellido" class="form-label">Apellido</label>
+    <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="apellido">
+  </div>
+  <div class="col-md-6">
+    <label for="parrafoPresentacion" class="form-label">Párrafo de presentación</label>
+    <input type="text" class="form-control" id="parrafoPresentacion" name="parrafoPresentacion" [(ngModel)]="parrafoPresentacion">
+  </div>
+  <div class="col-md-6">
+    <label for="frasePresentacion" class="form-label">Frase de presentación</label>
+    <input type="text" class="form-control" id="frasePresentacion" name="frasePresentacion" [(ngModel)]="frasePresentacion">
+  </div>
+  <div class="col-md-6">
+    <label for="linkFoto" class="form-label">url a la foto del perfil</label>
+    <input type="text" class="form-control" id="linkFoto" name="linkFoto" [(ngModel)]="linkFoto">
+  </div>
+  <div class="col-md-6">
+    <label for="linkedin" class="form-label">Linkedin</label>
+    <input type="text" class="form-control" id="linkedin" name="linkedin" [(ngModel)]="linkedin">
+  </div>
+  <div class="col-md-6">
+    <label for="github" class="form-label">Github</label>
+    <input type="text" class="form-control" id="github" name="github" [(ngModel)]="github">
+  </div>
+  <div class="col-md-6">
+    <label for="redSocial1" class="form-label">Enlace a redSocial 1</label>
+    <input type="text" class="form-control" id="redSocial1" name="redSocial1" [(ngModel)]="redSocial1">
+  </div>
+  <div class="col-md-6">
+    <label for="redSocial2" class="form-label">Enlace a redSocial 2</label>
+    <input type="text" class="form-control" id="redSocial2" name="redSocial2" [(ngModel)]="redSocial2">
+  </div>
+
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </div>
+  
+</form>
