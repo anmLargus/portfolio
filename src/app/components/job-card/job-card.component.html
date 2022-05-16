@@ -5,8 +5,8 @@
       </h5>
       <h6 class="capitalize-first">{{job.posicion}} -
           <span class="text-muted">
-               ({{job.fechaInicio}} - 
-              <span *ngIf="!job.esActual">{{job.fechaFin}}</span>
+               ({{job.fechaInicio | date: "MMMM" : "" : "es"}} de {{job.fechaInicio | date: "yyyy" }} - 
+              <span *ngIf="!job.esActual">{{job.fechaFin | date: "MMMM" : "" : "es"}} de {{job.fechaFin | date: "yyyy" }}</span>
               <span *ngIf="job.esActual">Actual</span>
                )
           </span>

@@ -39,6 +39,12 @@ import { AddEduComponent } from './components/add-edu/add-edu.component';
 import { AddProjectComponent } from './components/add-project/add-project.component';
 import { AddPersonaComponent } from './components/add-persona/add-persona.component';
 
+import { registerLocaleData } from '@angular/common';
+
+import myLocaleEs from '@angular/common/locales/es';
+
+registerLocaleData(myLocaleEs);
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -44,7 +44,7 @@
   "jobs": [
     {
       "id": 1,
-      "fechaInicio": "enero de 2016",
+      "fechaInicio": "2016-01-01",
       "fechaFin": "",
       "empresa": "@YurcaBeer",
       "posicion": "emprendimiento propio",
@@ -53,8 +53,8 @@
     },
     {
       "id": 2,
-      "fechaInicio": "septiembre de 2013",
-      "fechaFin": "octubre de 2015",
+      "fechaInicio": "2013-09-01",
+      "fechaFin": "2015-10-01",
       "empresa": "facultad de agronomia universidad de buenos aires",
       "posicion": "ayudante de primera regular",
       "descripcion": "cátedra de Producción Vegetal, UBA resol C.D.4469. Docente en las materias Producción Vegetal, Malezas, Adversidades Fitosanitarias y Manejo de Adversidades Fitosanitarias (4to. año carrera Agronomía). Conduje experimentos a campo y también coordiné y asistí a los alumnos de grado en sus proyectos de tesina",
@@ -62,8 +62,8 @@
     },
     {
       "id": 3,
-      "fechaInicio": "septiembre de 1998",
-      "fechaFin": "agosto de 2007",
+      "fechaInicio": "1998-09-01",
+      "fechaFin": "2007-08-01",
       "empresa": "estudio contable dr. artese",
       "posicion": "administrativo",
       "descripcion": "administrativo, asistente, atención a clientes, gestiones en organismos públicos, cobranzas.",
@@ -71,8 +71,8 @@
     },
     {
       "id": 4,
-      "fechaInicio": "abril de 2009",
-      "fechaFin": "marzo de 2014",
+      "fechaInicio": "abril de 2009-04-01",
+      "fechaFin": "2014-03-01",
       "empresa": "CONICET",
       "posicion": "becario de posgrado, becas tipo I y tipo II",
       "descripcion": "Director: Julio Scursoni, Co-Director: Roberto Benech-Arnold.",
@@ -80,8 +80,8 @@
     },
     {
       "id": 6,
-      "fechaInicio": "marzo de 1996",
-      "fechaFin": "mayo de 1996",
+      "fechaInicio": "algun mes de 1996",
+      "fechaFin": "otro mes de 1996",
       "empresa": "Pizzería La Barca",
       "posicion": "Repartidor",
       "descripcion": "Trabajé repartiendo pizza en una moto cuando tenía solo 16 años.",
