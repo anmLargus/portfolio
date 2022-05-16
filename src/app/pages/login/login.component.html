@@ -3,7 +3,7 @@
         <div>
             <label for="email"></label>
             <br>
-            <input type="email" name="email" id="email" formControlName="email">
+            <input type="email" name="email" id="email" formControlName="email"><!--name y id no son necesarios acá-->
         </div>
 
         <div>
@@ -12,7 +12,7 @@
             <input type="password" name="password" id="password" formControlName="password">
         </div>
         
-        <br>
+        <hr>
         <div>
             <button [disabled]="form.invalid">Login</button>
         </div>

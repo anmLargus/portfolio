@@ -1,7 +1,9 @@
 import { ViewportScroller } from '@angular/common'; // Esto x si uso el scroller
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { NavLink } from 'src/app/class/nav-link';
 import { Persona } from 'src/app/class/persona';
+import { AuthService } from 'src/app/services/auth.service';
 import { PersonaService } from 'src/app/services/persona.service';
 
 @Component({
@@ -18,7 +20,9 @@ export class TopnavbarComponent implements OnInit {
   // constructor( private viewportScroller: ViewportScroller ) { } // x si uso scroller
   constructor( 
     private viewportScroller: ViewportScroller, 
-    private personaService: PersonaService
+    private personaService: PersonaService,
+    private auth: AuthService,
+    private router: Router
     ) { }
 
   ngOnInit(): void {
@@ -29,5 +33,10 @@ export class TopnavbarComponent implements OnInit {
   /* scrollTo() {
     this.viewportScroller.scrollToAnchor('seccionProyectos');
   } */
+
+  logout() {
+    this.auth.logout();
+    this.router.navigate(['/']); // Cuando se desloguea, va al inicio
+  }
 
 }

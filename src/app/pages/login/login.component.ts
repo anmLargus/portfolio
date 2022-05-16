@@ -11,7 +11,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  form!: FormGroup;
+  form!: FormGroup; // non-null assertion operator ( ! ). FormGroup va a manejar todo el formulario
 
   constructor( private fb: FormBuilder , private authService: AuthService , private router: Router ) { }
 
@@ -45,15 +45,17 @@ export class LoginComponent implements OnInit {
         next: (data:any) => { 
           console.log (data);
           if(data) {
-            this.router.navigate(['/']);
+            this.router.navigate(['/editar']);
           } else {
             //Informar al usuario que no se pudo loguear
+            console.log("No se pudo loguear");
           }        
         },
          error: e => { console.log(e) }  
       });
   }
 
+  
   
 
 }
