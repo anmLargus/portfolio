@@ -11,9 +11,10 @@ import { Skill } from 'src/app/class/skill';
 })
 export class SkillCardComponent implements OnInit {
 
-  esBorrable = true;
+  //esBorrable = false;
   faCircleMinus = faCircleMinus;
 
+  @Input() esBorrable: boolean = false;
   @Input() skill: Skill = new Skill() ;
   @Output() onDeleteSkill: EventEmitter<Skill> = new EventEmitter();
 

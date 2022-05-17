@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
         next: (data:any) => { 
           console.log (data);
           if(data) {
-            this.router.navigate(['/editar']);
+            this.router.navigate(['/editar']);// 
           } else {
             //Informar al usuario que no se pudo loguear
             console.log("No se pudo loguear");

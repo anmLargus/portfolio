@@ -12,16 +12,17 @@ import { AuthService } from 'src/app/services/auth.service';
 export class JobCardComponent implements OnInit {
 
 
-  esBorrable: boolean = false;
+  
   faCircleMinus = faCircleMinus;
 
   @Input() job: Job = new Job();
+  @Input() esBorrable: boolean = false;
   @Output() deleteJob : EventEmitter<Job> = new EventEmitter();
 
   constructor( private router: Router, private auth: AuthService ) { }
 
   ngOnInit(): void {
-    this.esBorrable = this.auth.isLogged();
+    
   }
   
   onDelete(job: Job) {

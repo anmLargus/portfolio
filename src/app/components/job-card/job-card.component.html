@@ -1,7 +1,7 @@
 <div>
   <div>
       <h5>{{job.empresa | titlecase}} 
-          <fa-icon *ngIf="esBorrable" [icon]="faCircleMinus" (click)="onDelete(job)"></fa-icon>
+          <fa-icon [icon]="faCircleMinus" (click)="onDelete(job)" *ngIf="esBorrable"></fa-icon>
       </h5>
       <h6 class="capitalize-first">{{job.posicion}} -
           <span class="text-muted">

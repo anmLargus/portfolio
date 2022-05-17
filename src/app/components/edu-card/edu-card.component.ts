@@ -9,11 +9,12 @@ import { Educacion } from '../../class/educacion';
   styleUrls: ['./edu-card.component.scss']
 })
 export class EduCardComponent implements OnInit {
-
-  esBorrable = true;
+  
   faCircleMinus = faCircleMinus;
 
   @Input() edu: Educacion = new Educacion();
+  @Input() esBorrable: boolean = false;
+
   @Output() onDeleteEdu: EventEmitter<Educacion> = new EventEmitter();
 
   constructor() { }

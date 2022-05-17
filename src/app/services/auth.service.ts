@@ -36,7 +36,7 @@ export class AuthService {
   }
 
   isLogged(): boolean {
-    // Debe chequearse que exista el token y tambien chequear claims
+    // Debe chequearse que exista el token en el localStorage y tambien chequear claims
     return localStorage.getItem(TOKEN_KEY) !== null;
   }
 }

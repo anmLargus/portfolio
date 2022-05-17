@@ -19,7 +19,7 @@ const routes: Routes = [
   {path: "about", component: AboutComponent},
   {path: "contacto", component: ContactoFormComponent},
   {path: "login", component: LoginComponent, /*canActivate: [IsNotLoggedGuard]*/},
-  {path: "editar", component: EditarComponent, canActivate: [IsLoggedGuard]},
+  {path: "editar", component: EditarComponent, /*canActivate: [IsLoggedGuard]*/},//descomentar cuando esté completo editar page
   {path: "**", component: ErrorComponent},
 ];
 

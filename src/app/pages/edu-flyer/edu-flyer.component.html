@@ -3,5 +3,6 @@
     <app-edu-card *ngFor="let edu of edus" 
                     [edu]="edu" 
                     (onDeleteEdu)="deleteEducacion(edu)"
+                    [esBorrable]="isLogged"
     ></app-edu-card>
 </div>

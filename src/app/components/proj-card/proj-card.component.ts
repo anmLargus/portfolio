@@ -8,11 +8,11 @@ import { Project } from 'src/app/class/project';
   styleUrls: ['./proj-card.component.scss']
 })
 export class ProjCardComponent implements OnInit {
-
-  esBorrable = true;
+  
   faCircleMinus = faCircleMinus;
 
   @Input() project: Project = new Project();
+  @Input() esBorrable = false;
   @Output() onDeleteProject: EventEmitter<Project> = new EventEmitter();
 
   constructor() { }
