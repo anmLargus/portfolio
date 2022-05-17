@@ -1,23 +1,22 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { faCircleMinus } from '@fortawesome/free-solid-svg-icons';
 import { Project } from 'src/app/class/project';
+import { BaseCardComponent } from '../base-card/base-card.component';
 
 @Component({
   selector: 'app-proj-card',
   templateUrl: './proj-card.component.html',
   styleUrls: ['./proj-card.component.scss']
 })
-export class ProjCardComponent implements OnInit {
+export class ProjCardComponent extends BaseCardComponent implements OnInit {
   
-  faCircleMinus = faCircleMinus;
-
   @Input() project: Project = new Project();
-  @Input() esBorrable = false;
   @Output() onDeleteProject: EventEmitter<Project> = new EventEmitter();
 
-  constructor() { }
+  constructor() {
+    super();
+  }
 
-  ngOnInit(): void {
+  override ngOnInit(): void {
   }
 
   onDelete(project: Project) {

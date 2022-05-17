@@ -1,30 +1,25 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { faCircleMinus } from '@fortawesome/free-solid-svg-icons';
 import { Educacion } from '../../class/educacion';
-
+import { BaseCardComponent } from '../base-card/base-card.component';
 
 @Component({
   selector: 'app-edu-card',
   templateUrl: './edu-card.component.html',
   styleUrls: ['./edu-card.component.scss']
 })
-export class EduCardComponent implements OnInit {
+export class EduCardComponent extends BaseCardComponent implements OnInit {
   
-  faCircleMinus = faCircleMinus;
-
   @Input() edu: Educacion = new Educacion();
-  @Input() esBorrable: boolean = false;
-
   @Output() onDeleteEdu: EventEmitter<Educacion> = new EventEmitter();
 
-  constructor() { }
+  constructor() {
+    super();
+  }
 
-  ngOnInit(): void {
+  override ngOnInit(): void {
   }
 
   onDelete(edu: Educacion) {
-    console.log("DELETE !");
-    console.log(edu);
     this.onDeleteEdu.emit(edu);
   }
 

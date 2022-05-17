@@ -42,6 +42,7 @@ import { AddPersonaComponent } from './components/add-persona/add-persona.compon
 import { registerLocaleData } from '@angular/common';
 
 import myLocaleEs from '@angular/common/locales/es';
+import { BaseCardComponent } from './components/base-card/base-card.component';
 
 registerLocaleData(myLocaleEs);
 
@@ -78,6 +79,7 @@ registerLocaleData(myLocaleEs);
     AddEduComponent,
     AddProjectComponent,
     AddPersonaComponent,
+    BaseCardComponent,
   ],
   imports: [
     BrowserModule,
