@@ -5,8 +5,9 @@
   </div>
   <div class="col-md-6">
     <label for="anioFin" class="form-label">Año de finalización</label>
-    <input type="text" class="form-control" id="anioFin" name="anioFin" [(ngModel)]="anioFin">
+    <input type="text" class="form-control" id="anioFin" name="anioFin" [(ngModel)]="anioFin" required minlength="4">
   </div>
+  <div>Debe ser un número de año con 4 cifras</div><!--alert para validar-->
   <div class="col-md-6">
     <label for="lugar" class="form-label">Institución o Lugar donde se cursó</label>
     <input type="text" class="form-control" id="lugar" name="lugar" placeholder="" [(ngModel)]="lugar">
@@ -14,10 +15,6 @@
   <div class="col-md-6">
     <label for="descripcion" class="form-label">Descripción</label>
     <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Descripción, directores, calificación" [(ngModel)]="descripcion">
-  </div>
-  <div class="col-md-6">
-    <label for="calificacion" class="form-label">Calificación</label>
-    <input type="text" class="form-control" id="calificacion" name="calificacion" placeholder="opcional" [(ngModel)]="calificacion">
   </div>
 
   <div class="col-12">

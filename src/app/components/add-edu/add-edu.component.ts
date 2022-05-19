@@ -14,7 +14,7 @@ export class AddEduComponent implements OnInit {
   anioFin: number = 1979; 
   lugar: string = "";
   descripcion: string = "" ;
-  calificacion?: number = 10;   
+  
 
   constructor( private educacionService: EducacionService ) { }
 
@@ -28,7 +28,6 @@ export class AddEduComponent implements OnInit {
     edu.anioFin = this.anioFin;
     edu.lugar = this.lugar;
     edu.descripcion = this.descripcion;
-    edu.calificacion = this.calificacion;
 
     this.educacionService.addEdu(edu).subscribe();
 

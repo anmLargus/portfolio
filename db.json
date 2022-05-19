@@ -5,40 +5,47 @@
       "titulo": "Ingeniero Agrónomo",
       "anioFin": 2009,
       "lugar": "Facultad de Agronomía Universidad de Buenos Aires",
-      "descripcion": "",
-      "calificacion": 7.08
+      "descripcion": ""
+  
     },
     {
       "id": 2,
       "titulo": "Doctor en Ciencias Agropecuarias",
       "anioFin": 2017,
       "lugar": "Facultad de Agronomía Universidad de Buenos Aires",
-      "descripcion": "Título de tesis: Persistencia de malezas gramíneas en cultivos de trigo del sudeste bonaerense. Director: Julio Scursoni",
-      "calificacion": 10
+      "descripcion": "Título de tesis: Persistencia de malezas gramíneas en cultivos de trigo del sudeste bonaerense. Director: Julio Scursoni"
+  
     },
     {
       "id": 3,
       "titulo": "Programa de Experto en Cerveza",
       "anioFin": 2017,
       "lugar": "Centro de Cata de Cerveza",
-      "descripcion": "Directores: Ing.Quím Mag. Martín Boan; Ing. Mag. Diego Collini. Programa de 90 hs que abarcó todos los aspectos en la elaboración de cerveza, desde la materia prima, elaboración, envasado y calidad.",
-      "calificacion": 10
+      "descripcion": "Directores: Ing.Quím Mag. Martín Boan; Ing. Mag. Diego Collini. Programa de 90 hs que abarcó todos los aspectos en la elaboración de cerveza, desde la materia prima, elaboración, envasado y calidad."
+    
     },
     {
       "id": 4,
       "titulo": "resistencia de malezas a herbicidas",
       "anioFin": 2011,
       "lugar": "CERZOS (Conicet) - Universidad Nacional del Sur",
-      "descripcion": "Directores: Dr. Albert Fischer (U.California-Davis) y Bernal Valverde (U.Copenhagen). Duración: 30hs.",
-      "calificacion": 8
+      "descripcion": "Directores: Dr. Albert Fischer (U.California-Davis) y Bernal Valverde (U.Copenhagen). Duración: 30hs."
+
     },
     {
       "id": 5,
       "titulo": "Espectador de teorías de posguerra",
       "anioFin": 1979,
       "lugar": "Instituto BORRAME",
-      "descripcion": "Borrame, borrame, borrame, Borrame, borrame, borrame",
-      "calificacion": 10
+      "descripcion": "Borrame, borrame, borrame, Borrame, borrame, borrame"
+    },
+    {
+      "id": 6,
+      "titulo": "Experto en la profilaxis en enemas",
+      "anioFin": "123455",
+      "lugar": "Instituto BORRAME",
+      "descripcion": "Director: El gran jefe"
+     
     }
   ],
   "jobs": [
@@ -86,7 +93,7 @@
       "posicion": "Repartidor",
       "descripcion": "Trabajé repartiendo pizza en una moto cuando tenía solo 16 años.",
       "esActual": false
-}
+    }
   ],
   "projs": [
     {
