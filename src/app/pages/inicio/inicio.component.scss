@@ -1,5 +1,5 @@
 #inicio {
-    height: 80vh;
+    height: 60vh;
     // background-color: blue;
 }
 
@@ -10,7 +10,16 @@
 }
 
 #newLines {
-    white-space: pre;
+    white-space: pre;/*Salta de línea si hay un punto*/
+}
+
+#t64 {
+    height: 64px;
+    width: 64px;
+}
+
+#circle {
+    border-radius: 50%;
 }
 
 

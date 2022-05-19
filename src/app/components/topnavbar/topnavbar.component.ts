@@ -13,6 +13,8 @@ import { PersonaService } from 'src/app/services/persona.service';
 })
 export class TopnavbarComponent implements OnInit {
 
+  public isMenuCollapsed = true;
+
   persona: Persona = new Persona;
   
   @Input() links: NavLink[] = []; // Crea un array vacío para llenarlo con los links para el navbar

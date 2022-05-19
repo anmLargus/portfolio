@@ -11,7 +11,8 @@ export class InicioComponent implements OnInit {
 
   persona: Persona = new Persona;
 
-  //miFoto = "assets/yoCircle1.jpg" ; // assets/yoCircle1.jpg
+  iconoLinkedin = "/assets/linkedin.svg";
+  iconoGithub = "assets/github.svg";
 
   constructor( private personaService: PersonaService) { }
 

@@ -1,34 +1,31 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-success bg-opacity-50">
+<nav class="navbar navbar-expand-sm navbar-light bg-success bg-opacity-50">
     <div class="container-fluid">
       <a class="navbar-brand" aria-current="page" routerLink="/inicio">{{persona.nombre | titlecase }} {{persona.apellido | titlecase}} </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed"><!--data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"-->
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+      <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse justify-content-end"><!-- EL d-flex HACE QUE SIEMPRE ESTE EXPANDIDO -->
         <ul class="navbar-nav">
           <!-- <li class="nav-item">
             <button class="btn" aria-label="proyectos button" (click)="scrollTo()">ProyectosB</button>
           </li> -->
-          
-          <li class="nav-item" *ngFor="let link of links">
-            <a class="nav-link active" aria-current="page" [routerLink]="link.link"> {{link.label}} </a>
+
+          <!-- <li class="nav-item active">
+            <a class="nav-link" aria-current="page" routerLink="/about" (click)="isMenuCollapsed = true">Sobre mí</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" routerLink="/contacto" (click)="isMenuCollapsed = true">Contacto</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" routerLink="/login" (click)="isMenuCollapsed = true">Login</a>
+          </li> -->
+
+          <li class="nav-item active" *ngFor="let link of links">
+            <a class="nav-link active" aria-current="page" [routerLink]="link.link" (click)="isMenuCollapsed = true"> {{link.label}} </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" (click)="logout()">Logout</a>
-          </li>
-
-          <!-- <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="/proyectos">Proyectos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" routerLink="/about">Sobre mí</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" routerLink="/contacto">Contacto</a>
-          </li> -->
-         <!--  <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-          </li> -->
+          </li>         
         </ul>
       </div>
     </div>

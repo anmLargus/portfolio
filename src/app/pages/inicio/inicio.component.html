@@ -1,17 +1,31 @@
-<div class="d-flex flex-row justify-content-center bg-light" id="inicio">
-    <!-- class="presentacion d-flex flex-row" -->
-    <div class="align-self-center">
-        <h2>Hola, soy {{persona.nombre | titlecase}} </h2>
-        <p id="newLines"> {{persona.frasePresentacion}} </p>
+<div class="bg-light container-fluid" >
+   <div class="d-flex d-sm-flex flex-column flex-sm-row justify-content-center align-items-center" id="inicio" >
+        <!-- class="presentacion d-flex flex-row" -->
+        <div class="align-self-center">
+            <h2>Hola, soy {{persona.nombre | titlecase}} </h2>
+            <p id="newLines"> {{persona.frasePresentacion}} </p>            
+        </div>
+        
+        <img [src]="persona.linkFoto" alt="Andres Martin" class="col img-thumbnail align-self-center" id="fotoCarnet">
         
     </div>
-    
-    <img [src]="persona.linkFoto" alt="Andres Martin" class="img-thumbnail align-self-center" id="fotoCarnet">
-    
-</div>
+    <div class="m-2 p-2 d-flex flex-row justify-content-center">
+        <a [href]="persona.linkedin"> <img [src]="iconoLinkedin" alt="iconoLinkedin" id="t64"> </a>
+        <a [href]="persona.github"> <img [src]="iconoGithub" alt="iconoGithub" id="t64"> </a>
+    </div>  
 
-<!-- <app-skills-list></app-skills-list> -->
-<app-skill-flyer></app-skill-flyer>
+<!-- PRESENTACION & SKILLS -->
+    <div class="p-3 container-xl">
+        <div class="row row-cols-1 row-cols-sm-2">
+            <div class="col border border-primary d-flex justify-content-center align-items-center" id="">
+                <div class="w-60 ">
+                    <p>{{persona.parrafoPresentacion}}</p>
+                </div>
+            </div>
+            <app-skill-flyer class="col"></app-skill-flyer><!-- <app-skills-list></app-skills-list> -->
+        </div>
+    </div>
+</div> 
 
 <div id="seccionProyectos">
     <app-proyectos></app-proyectos>
