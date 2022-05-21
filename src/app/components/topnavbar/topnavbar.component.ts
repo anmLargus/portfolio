@@ -15,11 +15,12 @@ export class TopnavbarComponent implements OnInit {
 
   public isMenuCollapsed = true;
 
+  mostrar: boolean = true //this.auth.isLogged();
+
   persona: Persona = new Persona;
   
   @Input() links: NavLink[] = []; // Crea un array vacío para llenarlo con los links para el navbar
 
-  // constructor( private viewportScroller: ViewportScroller ) { } // x si uso scroller
   constructor( 
     private viewportScroller: ViewportScroller, 
     private personaService: PersonaService,
@@ -28,7 +29,8 @@ export class TopnavbarComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    this.personaService.getPersona().subscribe(data => (this.persona = data) );
+    this.personaService.getPersona1(1).subscribe(data => (this.persona = data) );
+    this.mostrar = this.auth.isLogged();
   }
 
   // descomentar si uso el scroller

@@ -12,7 +12,7 @@ const httpOptions = {
 })
 export class EducacionService {
 
-  private urlEdu:string = 'http://localhost:3000/edus'; 
+  private urlEdu:string = /* 'http://localhost:3000/edus'; */  'http://localhost:8081/edus' ;
  
   //educacion: Educacion[] = [];
     

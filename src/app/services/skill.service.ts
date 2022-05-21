@@ -13,7 +13,7 @@ const httpOptions = {
 
 export class SkillService {
 
-  urlSkill: string = 'http://localhost:3000/skills';  
+  urlSkill: string = /*'http://localhost:3000/skills'; */ 'http://localhost:8081/skills';
 
   //skills: Skill[] = [];    
 

@@ -12,12 +12,16 @@ const httpOptions = {
 })
 export class PersonaService {
 
-  urlPersona: string = "http://localhost:3000/persona";
+  urlPersona: string = /* "http://localhost:3000/persona"; */  'http://localhost:8081/personas' ;
 
   constructor( private http: HttpClient) { }
 
-  getPersona(): Observable<Persona>{
-    return this.http.get<Persona>(this.urlPersona);
+  getPersona(): Observable<Persona[]>{
+    return this.http.get<Persona[]>(this.urlPersona);
+  }
+
+  getPersona1(id: number): Observable<Persona> {
+    return this.http.get<Persona>(`${this.urlPersona}/${id}`);
   }
 
   updatePersona(persona: Persona): Observable<Persona> {

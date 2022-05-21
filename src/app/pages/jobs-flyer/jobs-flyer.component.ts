@@ -20,7 +20,7 @@ export class JobsFlyerComponent implements OnInit {
     this.jobService.getJobs().subscribe(data => ( this.jobs = data) );
     console.log("jobs desde servidor");
 
-    this.isLogged = true//this.auth.isLogged();
+    this.isLogged = this.auth.isLogged(); // true
 
   }
 

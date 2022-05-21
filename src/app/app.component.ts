@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavLink } from './class/nav-link';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,8 @@ import { NavLink } from './class/nav-link';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'portfolio';
+  title = 'portfolio';  
+
 
   links: NavLink[] = [
     {label: 'Sobre mí', link: 'about'},

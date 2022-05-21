@@ -12,7 +12,8 @@ const httpOptions = {
 })
 export class JobServService {
 
-  urlJob:string = 'http://localhost:3000/jobs'; //Cambiar al puerto que corresponda al backend
+  //Cambiar al puerto que corresponda al backend
+  urlJob:string = /* 'http://localhost:3000/jobs'; */  'http://localhost:8081/jobs' ;
   /* httpOptions = {
     headers: {
       'content-type': 'application-json'

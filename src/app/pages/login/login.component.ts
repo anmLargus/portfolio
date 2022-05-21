@@ -32,10 +32,7 @@ export class LoginComponent implements OnInit {
 
   login(){
     console.log(this.form);
-    /*if(this.form.invalid){
-      console.log("ES INVÁLIDO !!!!")
-    } */
-
+    
     const { email , password } = this.form.value
 
     console.log(email, password)

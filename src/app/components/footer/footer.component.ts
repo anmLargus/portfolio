@@ -17,7 +17,7 @@ export class FooterComponent implements OnInit {
   constructor( private personaService: PersonaService ) { }
 
   ngOnInit(): void {
-    this.personaService.getPersona().subscribe(data => (this.persona = data) );
+    this.personaService.getPersona1(1).subscribe(data => (this.persona = data) );
   }
   
 
