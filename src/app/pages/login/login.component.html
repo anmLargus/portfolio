@@ -1,21 +1,23 @@
-<div>
-    <form [formGroup]="form" (ngSubmit)="login()">
-        <div>
-            <label for="email"></label>
-            <br>
-            <input type="email" name="email" id="email" formControlName="email"><!--name y id no son necesarios acá-->
-        </div>
+<div class="">
+    <div class="border border-dark w-50 justify-content-center mx-auto">
+        <form class="p-2 m-2" [formGroup]="form" (ngSubmit)="login()">
+            <div class="justify-conten-center">
+                <label for="email"></label>
+                <br>
+                <input type="email" name="email" id="email" formControlName="email"><!--name y id no son necesarios acá-->
+            </div>
 
-        <div>
-            <label for="password"></label>
-            <br>
-            <input type="password" name="password" id="password" formControlName="password">
-        </div>
-        
-        <hr>
-        <div>
-            <button [disabled]="form.invalid">Login</button>
-        </div>
-        
-    </form>
-</div>
+            <div class="justify-conten-center">
+                <label for="password"></label>
+                <br>
+                <input type="password" name="password" id="password" formControlName="password">
+            </div>
+            
+            <hr>
+            <div>
+                <button class="btn btn-primary" [disabled]="form.invalid">Login</button>
+            </div>
+            
+        </form>
+    </div>
+</div>    

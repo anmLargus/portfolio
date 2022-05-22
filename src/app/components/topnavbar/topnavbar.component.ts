@@ -15,6 +15,8 @@ export class TopnavbarComponent implements OnInit {
 
   public isMenuCollapsed = true;
 
+  logo = "/assets/APLogo-20-20.png";
+
   mostrar: boolean = true //this.auth.isLogged();
 
   persona: Persona = new Persona;
@@ -38,9 +40,6 @@ export class TopnavbarComponent implements OnInit {
     this.viewportScroller.scrollToAnchor('seccionProyectos');
   } */
 
-  logout() {
-    this.auth.logout();
-    this.router.navigate(['/']); // Cuando se desloguea, va al inicio
-  }
+ 
 
 }
