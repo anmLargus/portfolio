@@ -1,18 +1,20 @@
 <div class="bg-light container-fluid" >
-   <div class="d-flex d-sm-flex flex-column flex-sm-row justify-content-center align-items-center" id="inicio" >
-        <!-- class="presentacion d-flex flex-row" -->
-        <div class="align-self-center">
-            <h2>Hola, soy {{persona.nombre | titlecase}} </h2>
-            <p id="newLines"> {{persona.frasePresentacion}} </p>            
+    <div  >
+        <div class="d-flex d-sm-flex flex-column flex-sm-row justify-content-center align-items-center" id="inicio" >
+            <!-- class="presentacion d-flex flex-row" -->
+            <div class="align-self-center">
+                <h2>Hola, soy {{persona.nombre | titlecase}} </h2>
+                <p id="newLines"> {{persona.frasePresentacion}} </p>            
+            </div>
+            
+            <img [src]="persona.linkFoto" alt="Andres Martin" class="col img-thumbnail align-self-center" id="fotoCarnet">
+            
         </div>
-        
-        <img [src]="persona.linkFoto" alt="Andres Martin" class="col img-thumbnail align-self-center" id="fotoCarnet">
-        
+        <div class="m-2 p-2 d-flex flex-row justify-content-center">
+            <a [href]="persona.linkedin"> <img [src]="iconoLinkedin" alt="iconoLinkedin" id="t64"> </a>
+            <a [href]="persona.github"> <img [src]="iconoGithub" alt="iconoGithub" id="t64"> </a>
+        </div>  
     </div>
-    <div class="m-2 p-2 d-flex flex-row justify-content-center">
-        <a [href]="persona.linkedin"> <img [src]="iconoLinkedin" alt="iconoLinkedin" id="t64"> </a>
-        <a [href]="persona.github"> <img [src]="iconoGithub" alt="iconoGithub" id="t64"> </a>
-    </div>  
 
 <!-- PRESENTACION & SKILLS -->
     <div class="p-3 container-xl">

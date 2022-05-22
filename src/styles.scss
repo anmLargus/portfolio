@@ -2,6 +2,11 @@
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+body {
+    font-family: 'Montserrat';
+}
 
 /* Para capitalizar solo la primer letra de un título o párrafo */
 .capitalize-first::first-letter {
@@ -9,5 +14,7 @@
 }
 
 div {
-    border-radius: 15px;
+    border-radius: 13px;
 }
+
+
