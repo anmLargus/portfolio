@@ -1,23 +1,36 @@
-<div class="">
-    <div class="border border-dark w-50 justify-content-center mx-auto">
-        <form class="p-2 m-2" [formGroup]="form" (ngSubmit)="login()">
-            <div class="justify-conten-center">
-                <label for="email"></label>
+<div class="full">
+    <div class="container-fluid">
+        <div class="row m-5">
+        <div class="col col-sm-6 col-md-4 rounded border border-dark mx-auto" id="recuadro">
+            <form class="p-2 m-2" [formGroup]="form" (ngSubmit)="login()">
+                <div class="">
+                    <h5>email</h5>
+                    <label for="email"></label>                    
+                    <input type="email" name="email" id="email" formControlName="email" 
+                            ngbPopover="El email debe ser válido" 
+                            triggers="mouseenter:mouseleave" popoverTitle="Login"
+                            > <!--name y id no son necesarios acá-->
+                </div>
                 <br>
-                <input type="email" name="email" id="email" formControlName="email"><!--name y id no son necesarios acá-->
-            </div>
-
-            <div class="justify-conten-center">
-                <label for="password"></label>
-                <br>
-                <input type="password" name="password" id="password" formControlName="password">
-            </div>
-            
-            <hr>
-            <div>
-                <button class="btn btn-primary" [disabled]="form.invalid">Login</button>
-            </div>
-            
-        </form>
-    </div>
-</div>    
+                <div class="">
+                    <h5>password</h5>
+                    <label for="password"></label>
+                    
+                    <input type="password" name="password" id="password" formControlName="password"
+                            ngbPopover="El password debe tener entre 6 y 12 caracteres. Solo letras, mayúsculas y números." 
+                            triggers="mouseenter:mouseleave" popoverTitle="Login" 
+                            placement="end" 
+                            [closeDelay]="5000"
+                    >
+                </div>
+                
+                <hr>
+                <div>
+                    <button class="btn btn-primary" [disabled]="form.invalid">Login</button>
+                </div>
+                
+            </form>
+        </div>
+        </div>
+    </div>    
+</div>

@@ -8,6 +8,6 @@ export class Persona {
   linkFoto: string = "http://facebook.com.....";
   linkedin: string = "http://linkedin.com.....";
   github: string = "http://github.com.....";
-  redSocial1?: string = "Instagram..?"; 
+  redSocial?: string = "Instagram..?"; 
 
 }

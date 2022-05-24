@@ -1,14 +1,33 @@
-<div>
-  <h6> {{persona.parrafoPresentacion}} </h6>
+
+<div class="p-2 ">
+  <div class="">
+
+  <div class="text-wrap">
+    <h4> {{persona.nombre | uppercase}} {{persona.apellido | uppercase}} </h4>
+    <hr>
+    <h6> {{persona.parrafoPresentacion}} </h6>
+    <hr>
+  </div>
+
+  <div>
+    <h6 class="text-center">
+      Estoy acá: 
+      <span>
+        <a [href]="persona.linkedin">
+          <img [src]="iconoLinkedin" alt="IconoLinkedin">
+        </a>
+      </span>
+       , 
+      <span>        
+        <a [href]="persona.github">
+          <img [src]="iconoGithub" alt="IconoGithub">
+        </a>
+      </span>
+       y también 
+      <a [href]="persona.redSocial">acá</a>
+      .
+    </h6>
+    <br>
+  </div>
 </div>
-
-<div>
-  <p> {{persona.frasePresentacion}} </p>
-  <br>
-  <p> {{persona.linkedin}} </p>
-  <br>
-  <p> {{persona.github}} </p>
-  <br>
-  <p> {{persona.redSocial1}} </p>
-
 </div>

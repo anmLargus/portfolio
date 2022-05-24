@@ -2,20 +2,25 @@
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
-/* Fuente Montserrat de Google */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-body {
+
+
+/* body {
     font-family: 'Montserrat';
-}
+} */
 
 /* Para capitalizar solo la primer letra de un título o párrafo */
 .capitalize-first::first-letter {
     text-transform: uppercase;
 }
 
-div {
+/* Para que footer quede siempre abajo*/
+.full {
+    min-height: 80vh;
+  }
+
+/* div {
     border-radius: 13px;
 }
-
+ */
 

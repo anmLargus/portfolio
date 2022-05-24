@@ -15,7 +15,7 @@ export class TopnavbarComponent implements OnInit {
 
   public isMenuCollapsed = true;
 
-  logo = "/assets/APLogo-20-20.png";
+  logo = "/assets/APLogo-v5.png";
 
   mostrar: boolean = true //this.auth.isLogged();
 

@@ -13,6 +13,9 @@ export class AboutCardComponent implements OnInit {
 
   constructor( private personaService: PersonaService) { }
 
+  iconoLinkedin = "/assets/linkedin.svg";
+  iconoGithub = "assets/github.svg";
+
   ngOnInit(): void {
     this.personaService.getPersona1(1).subscribe(data => ( this.persona = data) );
   }

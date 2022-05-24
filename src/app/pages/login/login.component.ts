@@ -30,12 +30,20 @@ export class LoginComponent implements OnInit {
     })
   }
 
+  esValido() {
+    if (!this.form.valid) {
+      console.log("El email debe ser válido");
+    }
+  }
+
   login(){
     console.log(this.form);
     
     const { email , password } = this.form.value
 
     console.log(email, password)
+
+    this.esValido();
 
     this.authService.login(email, password)
       .subscribe({
