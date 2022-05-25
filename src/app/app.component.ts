@@ -13,7 +13,7 @@ export class AppComponent {
 
   links: NavLink[] = [
     {label: 'Sobre mí', link: 'about'},
-    {label: 'Contacto', link: 'contacto'},
-    {label: 'Login', link: 'login'}
+   // {label: 'Contacto', link: 'contacto'},
+    {label: 'Editar', link: 'editar-landing'}
   ]
 }

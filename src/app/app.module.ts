@@ -43,6 +43,7 @@ import { registerLocaleData } from '@angular/common';
 
 import myLocaleEs from '@angular/common/locales/es';
 import { BaseCardComponent } from './components/base-card/base-card.component';
+import { EditarLandingComponent } from './pages/editar-landing/editar-landing.component';
 
 registerLocaleData(myLocaleEs);
 
@@ -80,6 +81,7 @@ registerLocaleData(myLocaleEs);
     AddProjectComponent,
     AddPersonaComponent,
     BaseCardComponent,
+    EditarLandingComponent,
   ],
   imports: [
     BrowserModule,
