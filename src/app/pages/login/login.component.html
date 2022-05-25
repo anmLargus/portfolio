@@ -7,7 +7,7 @@
                     <h5>email</h5>
                     <label for="email"></label>                    
                     <input type="email" name="email" id="email" formControlName="email" 
-                            ngbPopover="El email debe ser válido" 
+                            ngbPopover="Coloque su email" 
                             triggers="mouseenter:mouseleave" popoverTitle="Login"
                             > <!--name y id no son necesarios acá-->
                 </div>
@@ -18,7 +18,7 @@
                     
                     <input type="password" name="password" id="password" formControlName="password"
                             ngbPopover="El password debe tener entre 6 y 12 caracteres. Solo letras, mayúsculas y números." 
-                            triggers="mouseenter:mouseleave" popoverTitle="Login" 
+                            triggers="mouseenter:mouseleave" popoverTitle="Password" 
                             placement="end" 
                             [closeDelay]="5000"
                     >
@@ -33,4 +33,5 @@
         </div>
         </div>
     </div>    
+  
 </div>

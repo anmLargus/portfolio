@@ -11,26 +11,24 @@ import { PersonaService } from 'src/app/services/persona.service';
 export class AddPersonaComponent implements OnInit {
   
   id?: number = 1 ;
-  nombre: string = "john";
-  apellido: string = "doe";
-  email: string = "a@b.com";
-  parrafoPresentacion: string = "up to 200 words";
-  frasePresentacion: string = "up to 280 characters";
-  linkFoto: string = "http://facebook.com.....";
-  linkedin: string = "http://linkedin.com.....";
-  github: string = "http://github.com.....";
-  redSocial1?: string = "Otra red social";
+  nombre: string = "Juan";
+  apellido: string = "Perez";
+  email: string = "juanperez@fake.com";
+  parrafoPresentacion: string = "Aquí un párrafo de hasta 180 palabras";
+  frasePresentacion: string = "Frase de hasta 280 caracteres";
+  linkFoto: string = "url a su Foto";
+  linkedin: string = "linkedin.com...";
+  github: string = "github.com...";
+  redSocial?: string = "Instagram...?"; 
   
 
   constructor( private personaService: PersonaService ) { }
 
-  ngOnInit(): void {
-    //this.personaService.getPersona().subscribe( res => { this.persona = res } );     
-  }
+  ngOnInit(): void {  }
 
   updatePersona() {
-    const {id, nombre, apellido, email, parrafoPresentacion, frasePresentacion, linkFoto, linkedin, github, redSocial1} = this;
-    const persona = {id, nombre, apellido, email, parrafoPresentacion, frasePresentacion, linkFoto, linkedin, github, redSocial1}
+    const {id, nombre, apellido, email, parrafoPresentacion, frasePresentacion, linkFoto, linkedin, github, redSocial} = this;
+    const persona = {id, nombre, apellido, email, parrafoPresentacion, frasePresentacion, linkFoto, linkedin, github, redSocial}
 
     this.personaService.updatePersona(persona).subscribe( response => { console.log(response) } );
   }
