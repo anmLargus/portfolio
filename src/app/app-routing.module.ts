@@ -5,7 +5,7 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ProyectosComponent } from './pages/proyectos/proyectos.component';
-import { ContactoFormComponent } from './components/contacto-form/contacto-form.component';
+//import { ContactoFormComponent } from './components/contacto-form/contacto-form.component';
 import { LoginComponent } from './pages/login/login.component';
 import { EditarComponent } from './pages/editar/editar.component';
 import { IsLoggedGuard } from './guards/is-logged.guard';
@@ -18,9 +18,9 @@ const routes: Routes = [
   {path: "inicio", component: InicioComponent},
   {path: "proyectos", component: ProyectosComponent},
   {path: "about", component: AboutComponent},
-  {path: "contacto", component: ContactoFormComponent},
+  //{path: "contacto", component: ContactoFormComponent},
   {path: "login", component: LoginComponent, canActivate: [IsNotLoggedGuard]},
-  {path: "editar-landing", component: EditarLandingComponent, canActivate: [IsNotLoggedGuard]},
+  {path: "editar-landing", component: EditarLandingComponent, canActivate: [IsNotLoggedGuard]  },
   {path: "editar", component: EditarComponent, canActivate: [IsLoggedGuard]},//
   {path: "**", component: ErrorComponent},
 ];

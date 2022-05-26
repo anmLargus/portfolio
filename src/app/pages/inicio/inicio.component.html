@@ -2,7 +2,7 @@
     <div class="text-white" >
         <div class="d-flex d-sm-flex flex-column flex-sm-row justify-content-center align-items-center" id="inicio" >
             <!-- class="presentacion d-flex flex-row" -->
-            <div class="align-self-center">
+            <div class="align-self-center text-wrap">
                 <h2>Hola, soy {{persona.nombre | titlecase}} </h2>
                 <p id="newLines"> {{persona.frasePresentacion}} </p>            
             </div>
@@ -29,6 +29,11 @@
     </div>
 </div> 
 
+<!-- SECCIÓN PROYECTOS -->
+
 <div id="seccionProyectos">
+    <div class="mt-4">
+        <h3 class="text-center">Proyectos</h3>
+    </div>
     <app-proyectos></app-proyectos>
 </div>

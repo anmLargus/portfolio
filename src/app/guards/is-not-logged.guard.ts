@@ -16,7 +16,7 @@ export class IsNotLoggedGuard implements CanActivate {
       if(!this.auth.isLogged()){
         return true
       }
-      this.router.navigate(['/']);
+      this.router.navigate(['/editar']); // '/'
       return false
   }
   

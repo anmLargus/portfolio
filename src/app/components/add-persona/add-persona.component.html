@@ -1,20 +1,29 @@
-<p>add-persona works!</p>
+
 <form class="row g-3" (ngSubmit)="updatePersona()">
   <div class="col-md-6">
     <label for="nombre" class="form-label">Nombre</label>
-    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre">
+    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre"
+            required minlength="2" maxlength="30" 
+    >
   </div>
   <div class="col-md-6">
     <label for="apellido" class="form-label">Apellido</label>
-    <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="apellido">
+    <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="apellido"
+            required minlength="2" maxlength="30"
+    >
   </div>
   <div class="col-md-6">
-    <label for="email" class="form-label">Apellido</label>
-    <input type="text" class="form-control" id="email" name="email" [(ngModel)]="email">
+    <label for="email" class="form-label">Email</label>
+    <input type="text" class="form-control" id="email" name="email" [(ngModel)]="email"
+           required minlength="2" maxlength="30"    
+    >
   </div>
   <div class="col-md-6">
     <label for="parrafoPresentacion" class="form-label">Párrafo de presentación</label>
-    <input type="text" class="form-control" id="parrafoPresentacion" name="parrafoPresentacion" [(ngModel)]="parrafoPresentacion">
+    <input type="text" class="form-control" id="parrafoPresentacion" name="parrafoPresentacion" 
+          [(ngModel)]="parrafoPresentacion"
+                    
+          >
   </div>
   <div class="col-md-6">
     <label for="frasePresentacion" class="form-label">Frase de presentación</label>

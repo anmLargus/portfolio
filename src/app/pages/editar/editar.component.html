@@ -1,52 +1,71 @@
-<div>
-  <div class="container p-1 border border-danger">
-    <div class="mx-auto d-flex justify-content-center border border-success">
-      <app-boton clase="btn btn-danger" label="Logout" (clickear)="logout()"></app-boton>
-    </div>
+<div class="container p-1">
+
+  <div class="p-3 m-1">
+    <h3 class="text-center">Área de Edición</h3>
+    <br>
+    <p>Desde aquí puede editar sus datos.</p>
+    <p>Cuando termine, presione "Finalizar Edición</p>
   </div>
+  
 
-  <div class="row m-3">
-    <div class="col">
-      <p class="text-center">Seleccione el área que desea editar:</p>
+  <div class="row m-3 p-1 justify-content-center">
+    <div class="col d-flex align-items-center justify-content-end">
+      <h6 class="text-end">Seleccione el área que desea editar:</h6>
     </div>
 
     <div class="col">
-      <div ngbDropdown class="d-inline-block">
+      <div ngbDropdown class="ps-3 d-inline-block">
         <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Editar</button>
         <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
           <button ngbDropdownItem (click)="opcion='a'">Experiencia Laboral</button>
           <button ngbDropdownItem (click)="opcion='b'">Educación</button>
           <button ngbDropdownItem (click)="opcion='c'">Proyectos</button>
           <button ngbDropdownItem (click)="opcion='d'">Skills</button>
-          <button ngbDropdownItem (click)="opcion='e'">Persona</button>
+          <button ngbDropdownItem (click)="opcion='e'">Usuario</button>
         </div>
       </div>
+    </div>    
+  </div>
+
+  <div class="container p-1 mb-4">
+    <div class="mx-auto d-flex justify-content-center">
+      <app-boton clase="btn btn-danger" label="Finalizar Edición" (clickear)="logout()"></app-boton>
     </div>
   </div>
+
   <!--Editar experiencia laboral-->
-  <div class="" *ngIf="opcion == 'a'">
-    <div class="">
+  <div class="row row-cols-1 p-2" *ngIf="opcion == 'a'">
+    <h3 class="text-center">Experiencia Laboral</h3>
+    <div class="col col-md-6">
+
       <app-add-job></app-add-job>
+
     </div>
-    <div class="">
+    <div class="col col-md-6 ">  <!-- d-flex justify-content-center -->
+
       <app-jobs-flyer></app-jobs-flyer>
+
     </div>
   </div>
+
   <!--Editar educación -->
-  <div class="" *ngIf="opcion == 'b'">
-    <div class="">
+  <div class="row row-cols-1 p-2" *ngIf="opcion == 'b'">
+    <h3 class="text-center">Educación</h3>
+    <div class="col col-md-6">
 
       <app-add-edu></app-add-edu>
 
     </div>
-    <div class="">
+    <div class="col col-md-6">
 
       <app-edu-flyer></app-edu-flyer>
 
     </div>
   </div>
+
   <!-- Editar proyectos -->
-  <div class="" *ngIf="opcion == 'c'">
+  <div class="p-2" *ngIf="opcion == 'c'">
+    <h3 class="text-center">Proyectos</h3>
     <div class="">
 
       <app-add-project></app-add-project>
@@ -57,27 +76,32 @@
       <app-proyectos></app-proyectos>
 
     </div>
+    <br>
   </div>
+
   <!-- Editar habilidades -->
-  <div class="" *ngIf="opcion == 'd'">
+  <div class="p-2" *ngIf="opcion == 'd'">
+    <h3 class="text-center">Skills</h3>
     <div class="">
 
       <app-add-skill></app-add-skill>
 
     </div>
-    <div class="">
-
-      <app-skills-list></app-skills-list>
+    <div class="mt-3">
+      
+      <app-skill-flyer></app-skill-flyer>
 
     </div>
   </div>
+
   <!-- Editar persona usuario -->
-  <div class="" *ngIf="opcion == 'e'">
+  <div class="p-2" *ngIf="opcion == 'e'">
+    <h3 class="text-center">Usuario</h3>
     <div class="">
       <app-add-persona></app-add-persona>
     </div>
 
-    <div class="">
+    <div class="mt-3">
       <app-about-card></app-about-card>
     </div>
   </div>

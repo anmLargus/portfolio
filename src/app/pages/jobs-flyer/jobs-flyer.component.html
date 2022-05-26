@@ -1,4 +1,12 @@
-<p class="text-center">Acá va el jobs-flyer, conectá el servidor!</p>
-<div>
-    <app-job-card *ngFor="let job of jobs" [job]="job" (deleteJob)="deleteJob(job)" [esBorrable]="isLogged"></app-job-card>
+
+<div class="pt-3">
+    <app-job-card 
+        *ngFor="let job of jobs" 
+        [job]="job" 
+        (deleteJob)="deleteJob(job)" 
+        [esBorrable]="isLogged"
+        >
+    </app-job-card>
+    
 </div>
+

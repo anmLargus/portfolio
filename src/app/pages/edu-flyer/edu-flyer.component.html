@@ -1,8 +1,10 @@
-<p class="text-center">Acá va el edu-flyer, conectá el servidor!</p>
-<div>
-    <app-edu-card *ngFor="let edu of edus" 
-                    [edu]="edu" 
-                    (onDeleteEdu)="deleteEducacion(edu)"
-                    [esBorrable]="isLogged"
-    ></app-edu-card>
+
+<div class="pt-3">
+    <app-edu-card 
+        *ngFor="let edu of edus" 
+        [edu]="edu" 
+        (onDeleteEdu)="deleteEducacion(edu)"
+        [esBorrable]="isLogged"
+        >
+    </app-edu-card>
 </div>

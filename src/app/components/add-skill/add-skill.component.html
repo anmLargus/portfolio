@@ -1,4 +1,4 @@
-<p>add-skill works!</p>
+
 
 <form class="row g-3" (ngSubmit)="onSubmit()">
   <div class="col-md-6">
@@ -6,8 +6,10 @@
     <input type="text" class="form-control" id="habilidad" name="habilidad" [(ngModel)]="habilidad">
   </div>
   <div class="col-md-6">
-    <label for="progress" class="form-label">Experticia</label>
-    <input type="text" class="form-control" id="progress" name="progress" [(ngModel)]="progress">
+    <label for="progress" class="form-label">Experticia <span class="text-muted">( {{progress}} )</span></label>
+    <input type="range" class="form-range" id="progress" name="progress" [(ngModel)]="progress">
+    <!-- min es 0 y max es 100 por default -->
+    <p></p>
   </div>
   <div class="col-12">
     <button type="submit" class="btn btn-primary">Enviar</button>

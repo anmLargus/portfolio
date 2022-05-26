@@ -1,11 +1,61 @@
-<div class="card p-3"> <!--style="width: 18rem;"-->
+<!--PROGRESS BAR TIPO CARD-->
+
+ <!--<div class="card p-3 style="width: 18rem;"-->
+ <!-- style="width: 5%;" aria-valuenow="75" [style.width.%]="progreso"   -->   
+
+<!-- <div class="card p-3">
     <h5 class="card-title">{{skill.habilidad | titlecase}}
         <fa-icon *ngIf="esBorrable" [icon]="faCircleMinus" (click)="onDelete(skill)"></fa-icon>
     </h5>
-    <div class="progress" style="height: 10px;">
-        <div class="progress-bar" role="progressbar" [ngStyle]="{width: skill.progress + '%'}" [attr.aria-valuenow]="progreso" aria-valuemin="0" aria-valuemax="100"></div>
-    <!-- style="width: 5%;" aria-valuenow="75" [style.width.%]="progreso"   -->
+    <div class="progress" style="height: 15px;">
+        <div 
+            class="progress-bar" 
+            role="progressbar" 
+            [ngStyle]="{width: skill.progress + '%'}" 
+            [attr.aria-valuenow]="progreso" 
+            aria-valuemin="0" 
+            aria-valuemax="100"
+            >
+        </div>
+    
     </div>
-    <p>{{skill.progress}}</p>
+   
+</div> -->
+
+<!--PROGRESS BAR SIN TIPO-->
+
+<div class="p-3">
+    <h5 class="card-title">{{skill.habilidad | titlecase}}
+        <fa-icon *ngIf="esBorrable" [icon]="faCircleMinus" (click)="onDelete(skill)"></fa-icon>
+    </h5>
+    <div class="progress" style="height: 15px;">
+        <div 
+            class="progress-bar progress-bar-striped" 
+            role="progressbar" 
+            [ngStyle]="{width: skill.progress + '%'}" 
+            [attr.aria-valuenow]="progreso" 
+            aria-valuemin="0" 
+            aria-valuemax="100"
+            >
+        </div>
+    
+    </div>
+
 </div>
 
+<!--PROGRESS BAR TIPO BARRA CON ETIQUETA DENTRO si la palabra es larga y el progress peq se corta la palabra-->
+
+<!-- <div class="">
+    <fa-icon *ngIf="esBorrable" [icon]="faCircleMinus" (click)="onDelete(skill)"></fa-icon>
+</div>
+<div class="progress text-nowrap" style="height: 40px">
+    <div 
+        class="progress-bar fs-5" 
+        role="progressbar" 
+        [ngStyle]="{width: skill.progress + '%'}" 
+        [attr.aria-valuenow]="skill.progress" 
+        aria-valuemin="0" 
+        aria-valuemax="100"
+        ><span>{{skill.habilidad}}</span>
+    </div>
+</div> -->
