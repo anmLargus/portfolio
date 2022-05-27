@@ -28,9 +28,9 @@
     <h5 class="card-title">{{skill.habilidad | titlecase}}
         <fa-icon *ngIf="esBorrable" [icon]="faCircleMinus" (click)="onDelete(skill)"></fa-icon>
     </h5>
-    <div class="progress" style="height: 15px;">
+    <div class="progress bg-gris" style="height: 7px;">
         <div 
-            class="progress-bar progress-bar-striped" 
+            class="progress-bar progress-bar-striped bg-primary"
             role="progressbar" 
             [ngStyle]="{width: skill.progress + '%'}" 
             [attr.aria-valuenow]="progreso" 

@@ -11,6 +11,12 @@ export class InicioComponent implements OnInit {
 
   persona: Persona = new Persona;
 
+  images = [
+    "assets/escritorio3.png",
+    "assets/RStudio.png",
+    "assets/pantallaVisualStudio.png"
+  ]
+
   iconoLinkedin = "/assets/linkedin.svg";
   iconoGithub = "assets/github.svg";
 

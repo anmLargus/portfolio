@@ -2,12 +2,16 @@
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+/* Montserrat m500 sb600 - Poppins sb600 sb600i */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Poppins:ital,wght@0,600;1,600&display=swap');
 
 
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
 
-/* body {
-    font-family: 'Montserrat';
-} */
+
 
 /* Para capitalizar solo la primer letra de un título o párrafo */
 .capitalize-first::first-letter {
@@ -19,7 +23,7 @@
     min-height: 80vh;
   }
 
-/* div {
+/* radius {
     border-radius: 13px;
 }
  */

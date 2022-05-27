@@ -1,39 +1,54 @@
-<div class="bg-light container-fluid" >
-    <div class="text-white" >
-        <div class="d-flex d-sm-flex flex-column flex-sm-row justify-content-center align-items-center" id="inicio" >
-            <!-- class="presentacion d-flex flex-row" -->
-            <div class="align-self-center text-wrap">
+<div class="bg-light container-fluid mb-4" >
+
+    <!-- PORTADA -->
+    <div class="container-fluid d-flex align-items-end justify-content-center shadow-lg" id="inicio">
+
+        <div class="border border-success">
+
+            <img [src]="persona.linkFoto" alt="Andres Martin" class="img-thumbnail img-fluid d-block mx-auto" id="fotoCarnet">
+            
+            <div class="text-center border border-primary lh-1">
                 <h2>Hola, soy {{persona.nombre | titlecase}} </h2>
-                <p id="newLines"> {{persona.frasePresentacion}} </p>            
+                <p id="preline" >{{persona.frasePresentacion}}</p> 
             </div>
             
-            <img [src]="persona.linkFoto" alt="Andres Martin" class="col img-thumbnail align-self-center" id="fotoCarnet">
-            
+            <div class="d-flex justify-content-center border border-danger">
+                <ul class="list-inline h3 align-self-end ">
+                    <li class="list-inline-item"><a [href]="persona.linkedin"> <img [src]="iconoLinkedin" alt="iconoLinkedin" id="em"> </a></li>                   
+                    <li class="list-inline-item"><a [href]="persona.github"> <img [src]="iconoGithub" alt="iconoGithub" id="em"> </a></li>
+                </ul>
+            </div>
+
         </div>
-        <div class="m-2 p-2 d-flex flex-row justify-content-center">
-            <a [href]="persona.linkedin"> <img [src]="iconoLinkedin" alt="iconoLinkedin" id="t64"> </a>
-            <a [href]="persona.github"> <img [src]="iconoGithub" alt="iconoGithub" id="t64"> </a>
-        </div>  
+
     </div>
+    
 
 <!-- PRESENTACION & SKILLS -->
-    <div class="p-3 container-xl">
-        <div class="row row-cols-1 row-cols-sm-2">
-            <div class="col border border-primary d-flex justify-content-center align-items-center" id="">
-                <div class="w-60 ">
-                    <p>{{persona.parrafoPresentacion}}</p>
+
+    <div class="p-3 mt-4 container ">
+        <h3 class="text-center">Sobre mí</h3>
+        <div class="row row-cols-1 row-cols-md-2">
+            <div class="col  d-flex  align-items-center" id="">
+                <div class="col-12 col-lg-9 shadow-lg p-3 mb-4 bg-light rounded ">
+                    
+                    <p>Mi nombre es {{persona.nombre | titlecase}} {{persona.apellido | titlecase}}.</p>
+                    <p class="capitalize-first">{{persona.parrafoPresentacion}}</p>
                 </div>
             </div>
-            <app-skill-flyer class="col"></app-skill-flyer><!-- <app-skills-list></app-skills-list> -->
+            <div class="col d-flex align-items-center ">
+                <app-skill-flyer class="col shadow-lg mb-4 bg-light rounded"></app-skill-flyer><!-- <app-skills-list></app-skills-list> -->
+            </div>
         </div>
     </div>
-</div> 
+ 
 
-<!-- SECCIÓN PROYECTOS -->
+    <!-- SECCIÓN PROYECTOS -->
 
-<div id="seccionProyectos">
-    <div class="mt-4">
-        <h3 class="text-center">Proyectos</h3>
+    <div class="" id="seccionProyectos">
+        <div class="mt-4">
+            <h3 class="text-center">Proyectos</h3>
+        </div>
+        <app-proyectos></app-proyectos>
     </div>
-    <app-proyectos></app-proyectos>
 </div>
