@@ -1,18 +1,18 @@
-<div class="bg-light container-fluid mb-4" >
+<div class="container-fluid mb-4" >
 
     <!-- PORTADA -->
     <div class="container-fluid d-flex align-items-end justify-content-center shadow-lg" id="inicio">
 
-        <div class="border border-success">
+        <div class="">
 
             <img [src]="persona.linkFoto" alt="Andres Martin" class="img-thumbnail img-fluid d-block mx-auto" id="fotoCarnet">
             
-            <div class="text-center border border-primary lh-1">
+            <div class="text-center lh-1">
                 <h2>Hola, soy {{persona.nombre | titlecase}} </h2>
                 <p id="preline" >{{persona.frasePresentacion}}</p> 
             </div>
             
-            <div class="d-flex justify-content-center border border-danger">
+            <div class="d-flex justify-content-center ">
                 <ul class="list-inline h3 align-self-end ">
                     <li class="list-inline-item"><a [href]="persona.linkedin"> <img [src]="iconoLinkedin" alt="iconoLinkedin" id="em"> </a></li>                   
                     <li class="list-inline-item"><a [href]="persona.github"> <img [src]="iconoGithub" alt="iconoGithub" id="em"> </a></li>
