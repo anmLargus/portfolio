@@ -1,13 +1,13 @@
-<div class="container-fluid mb-4" >
+<div class="container-fluid mb-10" >
 
     <!-- PORTADA -->
-    <div class="container-fluid d-flex align-items-end justify-content-center shadow-lg" id="inicio">
+    <div class="container-fluid d-flex align-items-center justify-content-center shadow-lg rounded-pill" id="inicio">
 
         <div class="">
 
             <img [src]="persona.linkFoto" alt="Andres Martin" class="img-thumbnail img-fluid d-block mx-auto" id="fotoCarnet">
             
-            <div class="text-center lh-1">
+            <div class="text-center text-white lh-1">
                 <h2>Hola, soy {{persona.nombre | titlecase}} </h2>
                 <p id="preline" >{{persona.frasePresentacion}}</p> 
             </div>
@@ -26,18 +26,18 @@
 
 <!-- PRESENTACION & SKILLS -->
 
-    <div class="p-3 mt-4 container ">
+    <div class="p-1 mt-4 container ">
         <h3 class="text-center">Sobre mí</h3>
         <div class="row row-cols-1 row-cols-md-2">
             <div class="col  d-flex  align-items-center" id="">
-                <div class="col-12 col-lg-9 shadow-lg p-3 mb-4 bg-light rounded ">
+                <div class="col-12 col-lg-9 shadow-lg p-3 mb-4 bg-light rounded-custom ">
                     
                     <p>Mi nombre es {{persona.nombre | titlecase}} {{persona.apellido | titlecase}}.</p>
                     <p class="capitalize-first">{{persona.parrafoPresentacion}}</p>
                 </div>
             </div>
-            <div class="col d-flex align-items-center ">
-                <app-skill-flyer class="col shadow-lg mb-4 bg-light rounded"></app-skill-flyer><!-- <app-skills-list></app-skills-list> -->
+            <div class="col d-flex align-items-center">
+                <app-skill-flyer class="col shadow-lg mb-4 bg-light rounded-custom"></app-skill-flyer><!-- <app-skills-list></app-skills-list> -->
             </div>
         </div>
     </div>
@@ -45,7 +45,7 @@
 
     <!-- SECCIÓN PROYECTOS -->
 
-    <div class="" id="seccionProyectos">
+    <div class="mb-5" id="seccionProyectos">
         <div class="mt-4">
             <h3 class="text-center">Proyectos</h3>
         </div>

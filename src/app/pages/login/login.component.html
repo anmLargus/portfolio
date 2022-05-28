@@ -4,7 +4,7 @@
         <div class="col col-sm-6 col-md-4 rounded border border-dark mx-auto" id="recuadro">
             <form class="p-2 m-2" [formGroup]="form" (ngSubmit)="login()">
                 <div class="">
-                    <h5>email</h5>
+                    <h5><fa-icon [icon]="faCircleUser"></fa-icon> Email</h5>
                     <label for="email"></label>                    
                     <input type="email" name="email" id="email" formControlName="email" 
                             ngbPopover="Coloque su email" 
@@ -13,7 +13,7 @@
                 </div>
                 <br>
                 <div class="">
-                    <h5>password</h5>
+                    <h5><fa-icon [icon]="faKey"></fa-icon> Password</h5>
                     <label for="password"></label>
                     
                     <input type="password" name="password" id="password" formControlName="password"

@@ -13,11 +13,11 @@ body {
 }
 
 .fondo {
-    background-image: url("/assets/overlayInkscape5.svg#svgView(preserveAspectRatio(none))");
+    background-image: url("/assets/overlayInkscape6.svg#svgView(preserveAspectRatio(none))");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center ;
-    
+     
 }
 
 
@@ -29,11 +29,15 @@ body {
 
 /* Para que footer quede siempre abajo*/
 .full {
-    min-height: 80vh;
+    min-height: 75vh;
   }
 
-/* radius {
-    border-radius: 13px;
+.rounded-custom {
+    border-radius: 50px;
 }
- */
+
+.mb-10 {
+    margin-bottom: 10rem;
+  }
+
 

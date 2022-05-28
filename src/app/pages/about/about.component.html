@@ -2,20 +2,19 @@
     <div class="row row-cols-1 row-cols-md-2">
         <div class="col d-flex align-items-center justify-content-center flex-column full" id="mancha">
             
-            <div class="w-75">
+            <div class="w-75 ">
                 <app-about-card></app-about-card>
             </div>
-            <div class="btn-group">
+            <div class="btn-group ">
                 <app-boton clase="btn btn-primary" label="Experiencia" (clickear)="toggleExp()"></app-boton>
                 <app-boton clase="btn btn-success" label="Educación" (clickear)="toggleEdu()"></app-boton>
             </div>
              
         </div>
 
-        <div class="col p-5" id="overlay">
+        <div class="col p-5 rounded" id="overlay">
             <div class="row">
-                <div class="col-2">
-                </div>
+                
                 <div class="col-10" *ngIf="opcion == 'exp'">
                     <app-jobs-flyer></app-jobs-flyer>
                 </div>

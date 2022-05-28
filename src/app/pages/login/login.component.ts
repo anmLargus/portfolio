@@ -5,6 +5,9 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { User } from 'src/app/class/user';
 import { AuthService } from 'src/app/services/auth.service';
 
+import { faCircleUser } from '@fortawesome/free-solid-svg-icons';
+import { faKey } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,6 +16,9 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LoginComponent implements OnInit {
 
   form!: FormGroup; // non-null assertion operator ( ! ). FormGroup va a manejar todo el formulario
+
+  faCircleUser = faCircleUser;
+  faKey = faKey;
 
   constructor( 
     private fb: FormBuilder ,
