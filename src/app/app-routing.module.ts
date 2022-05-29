@@ -13,6 +13,7 @@ import { IsNotLoggedGuard } from './guards/is-not-logged.guard';
 import { EditarLandingComponent } from './pages/editar-landing/editar-landing.component';
 
 
+
 const routes: Routes = [
   {path: "", redirectTo: "inicio", pathMatch: "full"},
   {path: "inicio", component: InicioComponent},

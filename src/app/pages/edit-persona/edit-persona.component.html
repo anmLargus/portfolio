@@ -1,0 +1,45 @@
+<form [formGroup]="userForm" (ngSubmit)="enviar()" >
+  <p>
+    <label>Nombre:</label>
+    <input type="text" formControlName="nombre">
+  </p>
+  <p>
+    <label>Apellido:</label>
+    <input type="text" formControlName="apellido">
+  </p>
+  <p>
+    <label>Email:</label>
+    <input type="email" formControlName="email">
+  </p>
+  <p>
+    <label>Párafo de presentación:</label>
+    <input type="text" formControlName="parrafoPresentacion">
+  </p>
+  <p>
+    <label>Frase de presentación:</label>
+    <input type="text" formControlName="frasePresentacion">
+  </p>
+  <p>
+    <label>Url a una imagen:</label>
+    <input type="text" formControlName="linkFoto">
+  </p>
+  <p>
+    <label>Linkedin:</label>
+    <input type="text" formControlName="linkedin">
+  </p>
+  <p>
+    <label>Github:</label>
+    <input type="email" formControlName="github">
+  </p>
+  <p>
+    <label>Otra Red Social:</label>
+    <input type="email" formControlName="redSocial">
+  </p>
+
+  <p>
+    <button type="submit" >Enviar</button>
+  </p>
+
+</form>
+
+<!-- [disabled]="!userForm.valid -->

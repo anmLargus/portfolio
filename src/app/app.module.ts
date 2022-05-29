@@ -44,6 +44,7 @@ import { registerLocaleData } from '@angular/common';
 import myLocaleEs from '@angular/common/locales/es';
 import { BaseCardComponent } from './components/base-card/base-card.component';
 import { EditarLandingComponent } from './pages/editar-landing/editar-landing.component';
+import { EditPersonaComponent } from './pages/edit-persona/edit-persona.component';
 
 registerLocaleData(myLocaleEs);
 
@@ -82,6 +83,7 @@ registerLocaleData(myLocaleEs);
     AddPersonaComponent,
     BaseCardComponent,
     EditarLandingComponent,
+    EditPersonaComponent,
   ],
   imports: [
     BrowserModule,
@@ -92,7 +94,7 @@ registerLocaleData(myLocaleEs);
     FontAwesomeModule,
     ReactiveFormsModule,
     TagCloudModule,
-    //RoundProgressModule
+    
   ],
   
   providers: [],

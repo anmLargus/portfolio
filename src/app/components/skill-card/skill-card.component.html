@@ -1,32 +1,14 @@
-<!--PROGRESS BAR TIPO CARD-->
-
- <!--<div class="card p-3 style="width: 18rem;"-->
- <!-- style="width: 5%;" aria-valuenow="75" [style.width.%]="progreso"   -->   
-
-<!-- <div class="card p-3">
-    <h5 class="card-title">{{skill.habilidad | titlecase}}
-        <fa-icon *ngIf="esBorrable" [icon]="faCircleMinus" (click)="onDelete(skill)"></fa-icon>
-    </h5>
-    <div class="progress" style="height: 15px;">
-        <div 
-            class="progress-bar" 
-            role="progressbar" 
-            [ngStyle]="{width: skill.progress + '%'}" 
-            [attr.aria-valuenow]="progreso" 
-            aria-valuemin="0" 
-            aria-valuemax="100"
-            >
-        </div>
-    
-    </div>
-   
-</div> -->
-
 <!--PROGRESS BAR SIN TIPO-->
 
 <div class="p-3">
     <h5 class="card-title">{{skill.habilidad | titlecase}}
-        <fa-icon *ngIf="esBorrable" [icon]="faCircleMinus" (click)="onDelete(skill)"></fa-icon>
+        <fa-icon 
+            *ngIf="esBorrable" 
+            [icon]="faCircleMinus" 
+            (click)="onDelete(skill)" 
+            [ngStyle]="{'color':'red'}"
+            >
+        </fa-icon>
     </h5>
     <div class="progress bg-gris" style="height: 7px;">
         <div 
