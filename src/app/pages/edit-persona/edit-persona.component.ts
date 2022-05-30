@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
-import { JobServService } from 'src/app/services/job-serv.service';
+import { Persona } from 'src/app/class/persona';
+import { PersonaService } from 'src/app/services/persona.service';
 
 
 @Component({
@@ -9,15 +10,22 @@ import { JobServService } from 'src/app/services/job-serv.service';
   styleUrls: ['./edit-persona.component.scss']
 })
 export class EditPersonaComponent implements OnInit {
-
+  //FORMULARIO REACTIVO
   userForm!: FormGroup;
 
-  constructor( private fb: FormBuilder, private jobService: JobServService ) {   }
+  persona: Persona = new Persona();
+
+  constructor( private fb: FormBuilder, private personaService: PersonaService ) {   }
 
   ngOnInit(): void { 
     this.userForm = this.fb.group({
-      "nombre": [ "", Validators.required ],
-      "apellido": [ "" , Validators.required ],
+      "nombre": [ "", 
+                  [
+                    Validators.required,
+                    Validators.maxLength(50)
+                  ] 
+                ],
+      "apellido": [ "" , Validators.required, Validators.maxLength(50) ],
       "email": [ "",
                 [ 
                   Validators.required,
@@ -41,13 +49,31 @@ export class EditPersonaComponent implements OnInit {
       "linkFoto": [ "" , Validators.required ],
       "linkedin": [ "" , Validators.required ],
       "github": [ "" , Validators.required ],
-      "redSocial": [ "" , Validators.required ],
+      "redSocial": [ ""  ],
     });
+
    }
   
   enviar(){
     console.log(this.userForm);
 
+    const { 
+      nombre, apellido, email, parrafoPresentacion, 
+      frasePresentacion, linkFoto, linkedin, github, redSocial 
+    } = this.userForm.value ;
+
+    this.personaService.updatePersona({
+      nombre, apellido, email, parrafoPresentacion, 
+      frasePresentacion, linkFoto, linkedin, github, redSocial}).subscribe(
+         response => { console.log(response) } 
+         );
   }
+
+  
+
+  
+
+
+
 
 }

@@ -23,7 +23,7 @@ export class InicioComponent implements OnInit {
   constructor( private personaService: PersonaService) { }
 
   ngOnInit(): void {
-    this.personaService.getPersona1(1).subscribe(data => (this.persona = data) );
+    this.personaService.getPersona1(27).subscribe(data => (this.persona = data) );
   }
 
 }

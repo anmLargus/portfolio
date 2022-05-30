@@ -25,7 +25,12 @@ export class PersonaService {
   }
 
   updatePersona(persona: Persona): Observable<Persona> {
-    return this.http.put<Persona>(`${this.urlPersona}`, persona, httpOptions); //
-    
+   
+    return this.http.put<Persona>(`${this.urlPersona}`, persona, httpOptions); 
+        
+  }
+
+  addPersona(persona: Persona): Observable<Persona> {
+    return this.http.post<Persona>(this.urlPersona, persona , httpOptions);
   }
 }
