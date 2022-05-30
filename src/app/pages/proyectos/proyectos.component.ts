@@ -12,13 +12,14 @@ export class ProyectosComponent implements OnInit {
 
   projects: Project[] = [];
   isLogged = false;
+  loading = true;
 
   constructor( private projServService: ProjServService , private auth: AuthService ) { }
 
   ngOnInit(): void {
     this.projServService.getProjects().subscribe(data => {
-      this.projects = data;
-      console.log("proyectos desde el servidor")    
+      this.loading = false;
+      this.projects = data;          
     }) ;
 
     this.isLogged = this.auth.isLogged();

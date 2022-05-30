@@ -1,4 +1,7 @@
 <div class="container-fluid mb-10" >
+    <div *ngIf="loading" class="d-flex justify-content-center">
+        <app-spinner></app-spinner>
+    </div>
 
     <!-- PORTADA -->
     <div class="container-fluid d-flex align-items-center justify-content-center shadow-lg rounded-pill" id="inicio">

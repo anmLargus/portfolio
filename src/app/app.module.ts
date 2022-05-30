@@ -45,6 +45,7 @@ import myLocaleEs from '@angular/common/locales/es';
 import { BaseCardComponent } from './components/base-card/base-card.component';
 import { EditarLandingComponent } from './pages/editar-landing/editar-landing.component';
 import { EditPersonaComponent } from './pages/edit-persona/edit-persona.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 registerLocaleData(myLocaleEs);
 
@@ -84,6 +85,7 @@ registerLocaleData(myLocaleEs);
     BaseCardComponent,
     EditarLandingComponent,
     EditPersonaComponent,
+    SpinnerComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,6 @@
-
+<div *ngIf="loading" class="d-flex justify-content-center">
+    <app-spinner></app-spinner>
+</div>
 <div class="pt-3">
     <app-edu-card 
         *ngFor="let edu of edus" 

@@ -12,13 +12,15 @@ import { EducacionService } from 'src/app/services/educacion.service';
 export class EduFlyerComponent implements OnInit {
 
   edus: Educacion[] = [];
-  isLogged = false
+  isLogged = false;
+  loading = true;
 
   constructor( private educacionService: EducacionService , private auth: AuthService) { }
 
   ngOnInit(): void {
     //this.educaciones = this.educacionService.getEducacion();
     this.educacionService.getEducacion().subscribe(edus => {
+      this.loading = false;
       this.edus = edus.sort( (a , b) => b.anioFin - a.anioFin );      
     });  
 

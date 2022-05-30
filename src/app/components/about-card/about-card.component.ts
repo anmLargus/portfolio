@@ -10,6 +10,7 @@ import { PersonaService } from 'src/app/services/persona.service';
 export class AboutCardComponent implements OnInit {
 
   persona: Persona = new Persona() ;
+  loading = true;
 
   constructor( private personaService: PersonaService) { }
 
@@ -17,7 +18,10 @@ export class AboutCardComponent implements OnInit {
   iconoGithub = "assets/github.svg";
 
   ngOnInit(): void {
-    this.personaService.getPersona1(1).subscribe(data => ( this.persona = data) );
+    this.personaService.getPersona1(1).subscribe(data => {
+      this.loading = false;
+      this.persona = data
+    } );
   }
 
 }

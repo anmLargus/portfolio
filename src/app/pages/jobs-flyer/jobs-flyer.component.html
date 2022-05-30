@@ -1,4 +1,6 @@
-
+<div *ngIf="loading" class="d-flex justify-content-center">
+    <app-spinner></app-spinner>
+</div>
 <div class="pt-3">
     <app-job-card 
         *ngFor="let job of jobs" 

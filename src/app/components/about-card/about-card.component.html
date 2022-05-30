@@ -1,33 +1,35 @@
-
+<div *ngIf="loading" class="d-flex justify-content-center">
+  <app-spinner></app-spinner>
+</div>
 <div class="p-2 ">
   <div class="">
 
-  <div class="text-wrap">
-    <h4> {{persona.nombre | uppercase}} {{persona.apellido | uppercase}} </h4>
-    <hr>
-    <h6> {{persona.parrafoPresentacion}} </h6>
-    <hr>
-  </div>
+    <div class="text-wrap">
+      <h4> {{persona.nombre | uppercase}} {{persona.apellido | uppercase}} </h4>
+      <hr>
+      <h6> {{persona.parrafoPresentacion}} </h6>
+      <hr>
+    </div>
 
-  <div>
-    <h6 class="text-center">
-      Estoy acá: 
-      <span>
-        <a [href]="persona.linkedin">
-          <img [src]="iconoLinkedin" alt="IconoLinkedin">
-        </a>
-      </span>
-       , 
-      <span>        
-        <a [href]="persona.github">
-          <img [src]="iconoGithub" alt="IconoGithub">
-        </a>
-      </span>
-       y también 
-      <a [href]="persona.redSocial">acá</a>
-      .
-    </h6>
-    <br>
+    <div>
+      <h6 class="text-center">
+        Estoy acá: 
+        <span>
+          <a [href]="persona.linkedin">
+            <img [src]="iconoLinkedin" alt="IconoLinkedin">
+          </a>
+        </span>
+        , 
+        <span>        
+          <a [href]="persona.github">
+            <img [src]="iconoGithub" alt="IconoGithub">
+          </a>
+        </span>
+        y también 
+        <a [href]="persona.redSocial">acá</a>
+        .
+      </h6>
+      <br>
+    </div>
   </div>
-</div>
 </div>

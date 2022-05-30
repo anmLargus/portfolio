@@ -11,13 +11,16 @@ import { SkillService } from 'src/app/services/skill.service';
 export class SkillFlyerComponent implements OnInit {
 
   skills: Skill[] = [];
-
+  loading = true
   isLogged = false; // isLogged le pasa la variable al atributo esBorrable del componente skillCard. Si está aparecerá el botón de borrar
 
   constructor( private skillService: SkillService , private auth: AuthService ) { }
 
   ngOnInit(): void {
-    this.skillService.getSkills().subscribe(data => (this.skills = data));
+    this.skillService.getSkills().subscribe(data => { 
+      this.loading = false; 
+      this.skills = data
+    });
 
     this.isLogged = this.auth.isLogged();
   }

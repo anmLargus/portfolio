@@ -10,6 +10,7 @@ import { PersonaService } from 'src/app/services/persona.service';
 export class InicioComponent implements OnInit {
 
   persona: Persona = new Persona;
+  loading = true;
 
   images = [
     "assets/escritorio3.png",
@@ -23,7 +24,11 @@ export class InicioComponent implements OnInit {
   constructor( private personaService: PersonaService) { }
 
   ngOnInit(): void {
-    this.personaService.getPersona1(27).subscribe(data => (this.persona = data) );
+    this.personaService.getPersona1(27)
+      .subscribe(data => { 
+        this.loading = false ; 
+        (this.persona = data) 
+      } );
   }
 
 }

@@ -11,14 +11,16 @@ import { JobServService } from 'src/app/services/job-serv.service';
 export class JobsFlyerComponent implements OnInit {
 
   jobs: Job[] = [];
-
+  loading = true;
   isLogged: boolean = false;
 
   constructor( private jobService: JobServService , private auth: AuthService ) { }
 
   ngOnInit(): void {
-    this.jobService.getJobs().subscribe(data => ( this.jobs = data) );
-    console.log("jobs desde servidor");
+    this.jobService.getJobs().subscribe(data => {
+      this.loading = false;
+      this.jobs = data;
+     } );    
 
     this.isLogged = this.auth.isLogged(); // true
 
