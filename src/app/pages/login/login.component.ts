@@ -58,6 +58,7 @@ export class LoginComponent implements OnInit {
           } else {
             //Informar al usuario que no se pudo loguear
             console.log("No se pudo loguear");
+            alert("No se pudo loguear");
           }        
         },
          error: e => { console.log(e) }  

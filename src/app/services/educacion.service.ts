@@ -14,12 +14,10 @@ export class EducacionService {
 
   private urlEdu:string = /* 'http://localhost:3000/edus'; */  'http://localhost:8081/edus' ;
  
-  //educacion: Educacion[] = [];
-    
-  constructor(private http:HttpClient) { }
+    constructor(private http:HttpClient) { }
 
   getEducacion():Observable<Educacion[]> {
-    //return this.educacion;
+    
     return this.http.get<Educacion[]>(this.urlEdu);
   }
 

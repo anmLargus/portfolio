@@ -18,7 +18,7 @@ export class EduFlyerComponent implements OnInit {
   constructor( private educacionService: EducacionService , private auth: AuthService) { }
 
   ngOnInit(): void {
-    //this.educaciones = this.educacionService.getEducacion();
+    
     this.educacionService.getEducacion().subscribe(edus => {
       this.loading = false;
       this.edus = edus.sort( (a , b) => b.anioFin - a.anioFin );      

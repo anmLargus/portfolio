@@ -1,6 +1,6 @@
 // ESTE COMPONENTE CONTIENE PARTES COMUNES A OTRAS CARD.COMPONENT
-
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+// No pude hacer funcionar output con eventemitter
+import { Component, Input, OnInit } from '@angular/core';
 import { faCircleMinus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({

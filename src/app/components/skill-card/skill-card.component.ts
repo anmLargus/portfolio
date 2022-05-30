@@ -15,12 +15,10 @@ export class SkillCardComponent extends BaseCardComponent implements OnInit {
   @Input() skill: Skill = new Skill() ;
   @Output() onDeleteSkill: EventEmitter<Skill> = new EventEmitter();
 
-  public progreso = this.skill.progress ; // no se muy bien que función cumple esto
-  
+  public progreso = this.skill.progress ;   
 
   constructor() {
-    super();
-    
+    super();    
   }
 
   override ngOnInit(): void {

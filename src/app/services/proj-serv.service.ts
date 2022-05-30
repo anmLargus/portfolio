@@ -15,12 +15,10 @@ export class ProjServService {
   //Cambiar al puerto que corresponda al backend
   urlProj:string = /* 'http://localhost:3000/projs'; */  'http://localhost:8081/proyectos' ;
  
-  //proyectos: Project[] = [];    
-
   constructor(private http:HttpClient) { }
 
   getProjects():Observable<Project[]> {
-    //return this.proyectos ;
+
     return this.http.get<Project[]>(this.urlProj);
   }
 

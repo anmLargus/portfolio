@@ -25,8 +25,7 @@ export class AddSkillComponent implements OnInit {
     skill.progress = this.progress;
 
     this.skillService.addSkill(skill).subscribe();
-    console.log("desde add skill")
-    console.log(skill)
+    
   }
 
 }

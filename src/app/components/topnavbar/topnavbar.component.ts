@@ -1,4 +1,4 @@
-import { ViewportScroller } from '@angular/common'; // Esto x si uso el scroller
+//import { ViewportScroller } from '@angular/common'; // Esto x si uso el scroller
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NavLink } from 'src/app/class/nav-link';
@@ -24,7 +24,7 @@ export class TopnavbarComponent implements OnInit {
   @Input() links: NavLink[] = []; // Crea un array vacío para llenarlo con los links para el navbar
 
   constructor( 
-    private viewportScroller: ViewportScroller, 
+   // private viewportScroller: ViewportScroller, 
     private personaService: PersonaService,
     private auth: AuthService,
     private router: Router
@@ -35,7 +35,7 @@ export class TopnavbarComponent implements OnInit {
     this.mostrar = this.auth.isLogged();
   }
 
-  // descomentar si uso el scroller
+  // descomentar si uso el scroller. tiene algunos problemas
   /* scrollTo() {
     this.viewportScroller.scrollToAnchor('seccionProyectos');
   } */

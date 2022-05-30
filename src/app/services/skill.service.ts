@@ -15,12 +15,10 @@ export class SkillService {
 
   urlSkill: string = /*'http://localhost:3000/skills'; */ 'http://localhost:8081/skills';
 
-  //skills: Skill[] = [];    
-
   constructor( private http:HttpClient ) { }
 
   getSkills():Observable<Skill[]> {
-    //return this.skills;
+
     return this.http.get<Skill[]>(this.urlSkill);
   }
 

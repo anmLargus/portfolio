@@ -11,16 +11,12 @@ import { PersonaService } from 'src/app/services/persona.service';
 
 export class FooterComponent implements OnInit {
 
-  //public persona = {nombre: "Andrés", apellido: "Martin"}; //TODO RECIBIR ESTO DESDE LA DB
-  persona: Persona = new Persona() ;
+    persona: Persona = new Persona() ;
   
   constructor( private personaService: PersonaService ) { }
 
   ngOnInit(): void {
     this.personaService.getPersona1(1).subscribe(data => (this.persona = data) );
-  }
-  
-
- 
+  } 
 
 }
