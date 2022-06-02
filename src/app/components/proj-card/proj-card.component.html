@@ -3,10 +3,18 @@
     <div class="card-body">
       <h5 class="card-title">{{project.tituloProyecto}}
         <fa-icon 
-          *ngIf="esBorrable" 
+          *ngIf="esEditable" 
           [icon]="faCircleMinus" 
           (click)="onDelete(project)" 
           [ngStyle]="{'color':'red'}"
+          >
+        </fa-icon>
+        &nbsp;&nbsp;
+        <fa-icon
+          [icon]="faPen"
+          [ngStyle]="{'color':'#e96700'}"
+          *ngIf="esEditable"
+          (click)="onEdit()"
           >
         </fa-icon>
       </h5>

@@ -2,11 +2,19 @@
 <div>
     <h5><strong>{{edu.titulo | titlecase }} </strong>
         <fa-icon 
-            *ngIf="esBorrable" 
+            *ngIf="esEditable" 
             [icon]="faCircleMinus" 
             (click)="onDelete(edu)"
             [ngStyle]="{'color':'red'}"
             >
+        </fa-icon>
+        &nbsp;&nbsp;
+        <fa-icon
+          [icon]="faPen"
+          [ngStyle]="{'color':'#e96700'}"
+          *ngIf="esEditable"
+          (click)="onEdit()"
+          >
         </fa-icon>
     </h5>
     <p class="ls-sm">

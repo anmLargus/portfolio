@@ -1,14 +1,24 @@
 <div>
   <hr>
   <div>
-      <h5>{{job.empresa | titlecase}} 
+      <h5>
+        {{job.empresa | titlecase}} 
+        &nbsp;&nbsp;
         <fa-icon 
           [icon]="faCircleMinus" 
           (click)="onDelete(job)" 
-          *ngIf="esBorrable" 
+          *ngIf="esEditable" 
           [ngStyle]="{'color':'red'}"
           >
         </fa-icon> 
+        &nbsp;&nbsp;
+        <fa-icon
+          [icon]="faPen"
+          [ngStyle]="{'color':'#e96700'}"
+          *ngIf="esEditable"
+          (click)="onEdit()"
+          >
+        </fa-icon>
       </h5>
       <h6 class="capitalize-first">{{job.posicion}} -
           <span class="text-muted">

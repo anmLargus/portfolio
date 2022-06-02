@@ -2,6 +2,7 @@
 // No pude hacer funcionar output con eventemitter
 import { Component, Input, OnInit } from '@angular/core';
 import { faCircleMinus } from '@fortawesome/free-solid-svg-icons';
+import { faPen } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-base-card',
@@ -11,8 +12,9 @@ import { faCircleMinus } from '@fortawesome/free-solid-svg-icons';
 export class BaseCardComponent implements OnInit {
 
   faCircleMinus = faCircleMinus;
+  faPen = faPen;
 
-  @Input() esBorrable: boolean = false;
+  @Input() esEditable: boolean = false;
 
   //@Output() onDelete: EventEmitter<any> = new EventEmitter();
 

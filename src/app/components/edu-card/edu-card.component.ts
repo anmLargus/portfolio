@@ -23,4 +23,9 @@ export class EduCardComponent extends BaseCardComponent implements OnInit {
     this.onDeleteEdu.emit(edu);
   }
 
+  onEdit() {
+    console.log("Presionó Editar!!")
+    alert("PRESIONÓ EDITAR")
+  }
+
 }

@@ -28,4 +28,9 @@ export class SkillCardComponent extends BaseCardComponent implements OnInit {
     this.onDeleteSkill.emit(skill);
   }
 
+  onEdit() {
+    console.log("Presionó Editar!!")
+    alert("PRESIONÓ EDITAR")
+  }
+
 }

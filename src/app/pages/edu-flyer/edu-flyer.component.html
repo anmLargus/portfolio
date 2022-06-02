@@ -6,7 +6,7 @@
         *ngFor="let edu of edus" 
         [edu]="edu" 
         (onDeleteEdu)="deleteEducacion(edu)"
-        [esBorrable]="isLogged"
+        [esEditable]="isLogged"
         >
     </app-edu-card>
 </div>
