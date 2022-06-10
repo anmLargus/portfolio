@@ -31,6 +31,10 @@ export class JobsFlyerComponent implements OnInit {
       .subscribe( ( ) => ( this.jobs = this.jobs.filter( ( j ) => j.id !== job.id ) ) );
   }
 
+  editJob(job: Job) {
+    alert("VAS A EDITAR JOB!")
+  }
+
   
 
 }

@@ -31,4 +31,9 @@ export class JobServService {
   addJob(job: Job): Observable<Job> {
     return this.http.post<Job>(this.urlJob, job, httpOptions);
   }  
+
+  editAJob(job: Job): Observable<Job> {
+    const url = `${this.urlJob}/${job.id}`;
+    return this.http.put<Job>(url, job, httpOptions);
+  }
 }

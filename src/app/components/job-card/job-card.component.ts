@@ -12,6 +12,7 @@ export class JobCardComponent extends BaseCardComponent implements OnInit {
 
   @Input() job: Job = new Job();
   @Output() deleteJob : EventEmitter<Job> = new EventEmitter();
+  @Output() editJob : EventEmitter<Job> = new EventEmitter();
 
   constructor() {
     super();
@@ -23,9 +24,10 @@ export class JobCardComponent extends BaseCardComponent implements OnInit {
     this.deleteJob.emit(job);
   }
 
-  onEdit() {
+  onEdit(job: Job) {
     console.log("Presionó Editar!!")
     alert("PRESIONÓ EDITAR")
+    this.editJob.emit(job);
   }
 
 }
