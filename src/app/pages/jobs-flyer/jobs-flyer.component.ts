@@ -19,7 +19,7 @@ export class JobsFlyerComponent implements OnInit {
   ngOnInit(): void {
     this.jobService.getJobs().subscribe(data => {
       this.loading = false;
-      this.jobs = data;
+      this.jobs = data.sort( (a , b) => 0 - (a.fechaFin > b.fechaFin ? 1 : -1 )); // TODO: resolver como ordenar el trabajo actual
      } );    
 
     this.isLogged = this.auth.isLogged(); // true
