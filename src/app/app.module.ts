@@ -46,6 +46,10 @@ import { BaseCardComponent } from './components/base-card/base-card.component';
 import { EditarLandingComponent } from './pages/editar-landing/editar-landing.component';
 import { EditPersonaComponent } from './pages/edit-persona/edit-persona.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { ConfirmDirective } from './directives/confirm.directive';
+import { ModalConfirmDialogComponent } from './components/modal-confirm-dialog/modal-confirm-dialog.component';
+import { ConfirmService } from './services/confirm.service';
+import { ConfirmState } from './class/confirm-state';
 
 registerLocaleData(myLocaleEs);
 
@@ -86,6 +90,8 @@ registerLocaleData(myLocaleEs);
     EditarLandingComponent,
     EditPersonaComponent,
     SpinnerComponent,
+    ConfirmDirective,
+    ModalConfirmDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -98,8 +104,13 @@ registerLocaleData(myLocaleEs);
     TagCloudModule,
     
   ],
-  
-  providers: [],
+  entryComponents: [
+    ModalConfirmDialogComponent
+  ],
+  providers: [
+    ConfirmService, 
+    ConfirmState    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

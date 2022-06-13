@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Job } from 'src/app/class/job';
 import { AuthService } from 'src/app/services/auth.service';
+import { ConfirmService } from 'src/app/services/confirm.service';
 import { JobServService } from 'src/app/services/job-serv.service';
 
 @Component({
@@ -14,7 +15,11 @@ export class JobsFlyerComponent implements OnInit {
   loading = true;
   isLogged: boolean = false;
 
-  constructor( private jobService: JobServService , private auth: AuthService ) { }
+  constructor(
+    private jobService: JobServService ,
+    private auth: AuthService,
+    private confirmService: ConfirmService,
+  ) { }
 
   ngOnInit(): void {
     this.jobService.getJobs().subscribe(data => {
@@ -24,6 +29,18 @@ export class JobsFlyerComponent implements OnInit {
 
     this.isLogged = this.auth.isLogged(); // true
 
+  }
+
+  confirmarDeleteJob(job: Job) {
+    this.confirmService.confirm({
+      title: 'Confirme eliminar ítem de Experiencia Laboral', 
+      message: '¿Está seguro de querer eliminarlo? Esta acción no puede volver atrás',
+      estilo: 'danger'
+    }).then((confirm) => {
+        this.deleteJob(job);
+    }, (cancel) => {
+        console.log("Cancelado borrar ítem");
+    });
   }
 
   deleteJob(job: Job) {

@@ -5,7 +5,7 @@
     <app-job-card 
         *ngFor="let job of jobs" 
         [job]="job" 
-        (deleteJob)="deleteJob(job)" 
+        (deleteJob)="confirmarDeleteJob(job)" 
         (editJob)="editJob(job)"
         [esEditable]="isLogged"
         >

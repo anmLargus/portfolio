@@ -1,11 +1,14 @@
-<!-- <app-header></app-header> -->
+
 <div class="fondo ">
 
   <app-topnavbar [links]="links" ></app-topnavbar>
 
   <router-outlet></router-outlet>
 
-  <!--  -->
+  <!-- MODAL DE CONFIRMACIÓN DE BORRADO -->
+  <ng-template appConfirm>
+    <app-modal-confirm-dialog></app-modal-confirm-dialog>
+  </ng-template>
 
   <app-footer></app-footer>
 
