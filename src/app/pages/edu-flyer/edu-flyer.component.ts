@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Educacion } from 'src/app/class/educacion';
 import { AuthService } from 'src/app/services/auth.service';
+import { ConfirmService } from 'src/app/services/confirm.service';
 import { EducacionService } from 'src/app/services/educacion.service';
 
 
@@ -15,7 +16,11 @@ export class EduFlyerComponent implements OnInit {
   isLogged = false;
   loading = true;
 
-  constructor( private educacionService: EducacionService , private auth: AuthService) { }
+  constructor( 
+    private educacionService: EducacionService , 
+    private auth: AuthService,
+    private confirmService: ConfirmService
+  ) { }
 
   ngOnInit(): void {
     
@@ -25,6 +30,18 @@ export class EduFlyerComponent implements OnInit {
     });  
 
     this.isLogged = this.auth.isLogged();
+  }
+
+  confirmDeleteEducacion(edu: Educacion) {
+    this.confirmService.confirm({
+      title: 'Confirme eliminar ítem de su Educación', 
+      message: '¿Está seguro de querer eliminarlo? Esta acción no puede volver atrás',
+      estilo: 'danger' //alguno de los colores de bootstrap (primary, info, danger, etc)
+    }).then((confirm) => {
+        this.deleteEducacion(edu);
+    }, (cancel) => {
+        console.log("Cancelado borrar ítem");
+    });
   }
 
   deleteEducacion(edu: Educacion) {
