@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Job } from 'src/app/class/job';
 import { AuthService } from 'src/app/services/auth.service';
 import { ConfirmService } from 'src/app/services/confirm.service';
@@ -19,6 +20,7 @@ export class JobsFlyerComponent implements OnInit {
     private jobService: JobServService ,
     private auth: AuthService,
     private confirmService: ConfirmService,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -49,7 +51,9 @@ export class JobsFlyerComponent implements OnInit {
   }
 
   editJob(job: Job) {
-    alert("VAS A EDITAR JOB!")
+    console.log("editar Job")
+    console.log(job);
+    this.router.navigateByUrl(`/editar/${job.id}/editJob`);
   }
 
   

@@ -50,6 +50,8 @@ import { ConfirmDirective } from './directives/confirm.directive';
 import { ModalConfirmDialogComponent } from './components/modal-confirm-dialog/modal-confirm-dialog.component';
 import { ConfirmService } from './services/confirm.service';
 import { ConfirmState } from './class/confirm-state';
+import { FormJobComponent } from './components/form-job/form-job.component';
+import { EditJobComponent } from './pages/edit-job/edit-job.component';
 
 registerLocaleData(myLocaleEs);
 
@@ -92,6 +94,8 @@ registerLocaleData(myLocaleEs);
     SpinnerComponent,
     ConfirmDirective,
     ModalConfirmDialogComponent,
+    FormJobComponent,
+    EditJobComponent,
   ],
   imports: [
     BrowserModule,

@@ -11,6 +11,7 @@ import { EditarComponent } from './pages/editar/editar.component';
 import { IsLoggedGuard } from './guards/is-logged.guard';
 import { IsNotLoggedGuard } from './guards/is-not-logged.guard';
 import { EditarLandingComponent } from './pages/editar-landing/editar-landing.component';
+import { EditJobComponent } from './pages/edit-job/edit-job.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: "login", component: LoginComponent, canActivate: [IsNotLoggedGuard]},
   {path: "editar-landing", component: EditarLandingComponent, canActivate: [IsNotLoggedGuard]  },
   {path: "editar", component: EditarComponent, canActivate: [IsLoggedGuard]},//
+  {path: "editar/:id/editJob", component: EditJobComponent, canActivate: [IsLoggedGuard] },
   {path: "**", component: ErrorComponent},
 ];
 

@@ -23,6 +23,10 @@ export class JobServService {
     return this.http.get<Job[]>(this.urlJob);
   }
 
+  getOneJob(id: number): Observable<Job> {
+    return this.http.get<Job>(`${this.urlJob}/${id}`); // block de notas es distinto
+  }
+
   deleteJob(job: Job): Observable<Job> {
     const url = `${this.urlJob}/${job.id}`;
     return this.http.delete<Job>(url);
@@ -32,7 +36,7 @@ export class JobServService {
     return this.http.post<Job>(this.urlJob, job, httpOptions);
   }  
 
-  editAJob(job: Job): Observable<Job> {
+  update(job: Job): Observable<Job> {
     const url = `${this.urlJob}/${job.id}`;
     return this.http.put<Job>(url, job, httpOptions);
   }
