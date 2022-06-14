@@ -18,7 +18,7 @@ export class AboutCardComponent implements OnInit {
   iconoGithub = "assets/github.svg";
 
   ngOnInit(): void {
-    this.personaService.getPersona1(1).subscribe(data => {
+    this.personaService.getPersona1(27).subscribe(data => {
       this.loading = false;
       this.persona = data
     } );
