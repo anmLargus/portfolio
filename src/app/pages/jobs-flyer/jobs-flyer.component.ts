@@ -51,9 +51,7 @@ export class JobsFlyerComponent implements OnInit {
   }
 
   editJob(job: Job) {
-    console.log("editar Job")
-    console.log(job);
-    this.router.navigateByUrl(`/editar/${job.id}/editJob`);
+    this.router.navigateByUrl(`/${job.id}/editJob`);
   }
 
   

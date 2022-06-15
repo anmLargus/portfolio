@@ -1,5 +1,17 @@
-<div class="">
-  <br>
-  <h4 class="text-center"> Id: {{job.id}} </h4>
-  <app-form-job (enviarJob)="edit($event)" [receivedJob]="this.job" ></app-form-job>
+<div class="container-fluid p-1 mb-10 d-flex row justify-content-center border border-danger">
+  
+  <div class="col-9 p-3 m-1 border border-success">
+    <h3 class="text-center">Área de Edición</h3>
+    <br>
+    <h6>Editar ítem de experiencia laboral.</h6>
+    
+  </div>
+  <div class="p-4 m-2 col-9 shadow-lg rounded-custom">
+    <br>
+    <p class=""> Id: {{job.id}} </p>
+    <app-form-job (enviarJob)="edit($event)" [receivedJob]="this.job" ></app-form-job>
+  </div>
+  <div class="m-4 p-4 d-flex justify-content-center">
+    <app-boton (clickear)="volverAtras()" clase="btn btn-primary" label="Volver"></app-boton> 
+  </div>
 </div>

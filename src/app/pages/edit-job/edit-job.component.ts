@@ -26,7 +26,11 @@ export class EditJobComponent implements OnInit {
 
   edit(jobEditado: Job) {
     this.jobService.update(jobEditado).subscribe();
-    this.router.navigate( [ '/edit'])
+    this.volverAtras();
+  }
+
+  volverAtras() {
+    this.router.navigate( ['/editar'] )
   }
 
 }

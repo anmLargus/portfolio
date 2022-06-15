@@ -25,8 +25,6 @@ export class JobCardComponent extends BaseCardComponent implements OnInit {
   }
 
   onEdit(job: Job) {
-    console.log("Presionó Editar!!")
-    alert("PRESIONÓ EDITAR")
     this.editJob.emit(job);
   }
 

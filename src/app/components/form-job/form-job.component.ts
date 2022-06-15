@@ -17,7 +17,7 @@ export class FormJobComponent implements OnInit {
   esActual: boolean = false;
 
   @Input() job: Job = new Job();
-  @Input() receivedJob!: Job ; // ver si está bien así o hay que inicializar
+  @Input() receivedJob: Job = new Job(); // 
   @Output() enviarJob = new EventEmitter<Job>();
 
   constructor() { }

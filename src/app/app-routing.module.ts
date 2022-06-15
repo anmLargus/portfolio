@@ -23,7 +23,7 @@ const routes: Routes = [
   {path: "login", component: LoginComponent, canActivate: [IsNotLoggedGuard]},
   {path: "editar-landing", component: EditarLandingComponent, canActivate: [IsNotLoggedGuard]  },
   {path: "editar", component: EditarComponent, canActivate: [IsLoggedGuard]},//
-  {path: "editar/:id/editJob", component: EditJobComponent, canActivate: [IsLoggedGuard] },
+  {path: ":id/editJob", component: EditJobComponent, canActivate: [IsLoggedGuard] },
   {path: "**", component: ErrorComponent},
 ];
 

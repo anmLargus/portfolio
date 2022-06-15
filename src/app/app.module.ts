@@ -19,7 +19,7 @@ import { ProjCardComponent } from './components/proj-card/proj-card.component';
 import { EduCardComponent } from './components/edu-card/edu-card.component';
 import { ContactoFormComponent } from './components/contacto-form/contacto-form.component';
 
-import { AddJobComponent } from './components/add-job/add-job.component';
+
 import { JobCardComponent } from './components/job-card/job-card.component';
 
 import { InicioComponent } from './pages/inicio/inicio.component';
@@ -52,6 +52,7 @@ import { ConfirmService } from './services/confirm.service';
 import { ConfirmState } from './class/confirm-state';
 import { FormJobComponent } from './components/form-job/form-job.component';
 import { EditJobComponent } from './pages/edit-job/edit-job.component';
+import { AddJobComponent } from './pages/add-job/add-job.component';
 
 registerLocaleData(myLocaleEs);
 
@@ -78,7 +79,7 @@ registerLocaleData(myLocaleEs);
     ContactoFormComponent,
     LoginComponent,
 
-    AddJobComponent,
+
     EditarComponent,
     JobCardComponent,
     SkillFlyerComponent,
@@ -96,6 +97,7 @@ registerLocaleData(myLocaleEs);
     ModalConfirmDialogComponent,
     FormJobComponent,
     EditJobComponent,
+    AddJobComponent,
   ],
   imports: [
     BrowserModule,

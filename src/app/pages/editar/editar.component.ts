@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Job } from 'src/app/class/job';
 import { AuthService } from 'src/app/services/auth.service';
 import { ConfirmService } from 'src/app/services/confirm.service';
 
@@ -38,5 +39,7 @@ export class EditarComponent implements OnInit {
     this.auth.logout();
     this.router.navigate(['/']); // Cuando se desloguea, va al inicio
   }
+
+ 
 
 }
