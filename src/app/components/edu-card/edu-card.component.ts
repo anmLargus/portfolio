@@ -11,6 +11,7 @@ export class EduCardComponent extends BaseCardComponent implements OnInit {
   
   @Input() edu: Educacion = new Educacion();
   @Output() onDeleteEdu: EventEmitter<Educacion> = new EventEmitter();
+  @Output() onEditEdu: EventEmitter<Educacion> = new EventEmitter();
 
   constructor() {
     super();
@@ -23,9 +24,9 @@ export class EduCardComponent extends BaseCardComponent implements OnInit {
     this.onDeleteEdu.emit(edu);
   }
 
-  onEdit() {
+  onEdit(edu: Educacion) {
     console.log("Presionó Editar!!")
-    alert("PRESIONÓ EDITAR")
+    this.onEditEdu.emit(edu)
   }
 
 }

@@ -22,6 +22,10 @@ export class ProjServService {
     return this.http.get<Project[]>(this.urlProj);
   }
 
+  getOneProject(id: number): Observable<Project> {
+    return this.http.get<Project>(`${this.urlProj}/${id}`);
+  }
+
   deleteProject(project: Project): Observable<Project> {
     const url = `${this.urlProj}/${project.id}`;
     return this.http.delete<Project>(url);
@@ -30,4 +34,10 @@ export class ProjServService {
   addProject(proj: Project): Observable<Project> {
     return this.http.post<Project>(this.urlProj, proj, httpOptions);
   }
+
+  updateProject(proj: Project): Observable<Project> {
+    const url = `${this.urlProj}/${proj.id}`;
+    return this.http.put<Project>(url, proj, httpOptions);
+  }
+
 }

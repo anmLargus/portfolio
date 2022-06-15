@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Educacion } from 'src/app/class/educacion';
 import { AuthService } from 'src/app/services/auth.service';
 import { ConfirmService } from 'src/app/services/confirm.service';
@@ -19,7 +20,8 @@ export class EduFlyerComponent implements OnInit {
   constructor( 
     private educacionService: EducacionService , 
     private auth: AuthService,
-    private confirmService: ConfirmService
+    private confirmService: ConfirmService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -47,6 +49,10 @@ export class EduFlyerComponent implements OnInit {
   deleteEducacion(edu: Educacion) {
     this.educacionService.deleteEdu(edu)
     .subscribe( ( ) => ( this.edus = this.edus.filter( (t) => t.id !== edu.id) ) );
+  }
+
+  editEducacion(edu: Educacion) {
+    this.router.navigateByUrl(`/${edu.id}/editEdu`);
   }
 
 }

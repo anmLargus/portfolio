@@ -1,0 +1,19 @@
+<div class="container-fluid p-1 mb-10 d-flex row justify-content-center">
+
+  <div class="col-9 p-3 m-1 ">
+    <h3 class="text-center">Área de Edición</h3>
+    <br>
+    <h6>Editar ítem de Educación</h6>
+    
+  </div>
+
+  <div class="p-4 m-2 col-9 shadow-lg rounded-custom">
+    <br>
+    <p class=""> Id: {{edu.id}} </p>
+    <app-form-edu (enviarEdu)="edit($event)" [receivedEdu]="this.edu" ></app-form-edu>
+  </div>
+
+
+
+
+</div>

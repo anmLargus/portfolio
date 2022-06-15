@@ -35,7 +35,7 @@ import { SkillFlyerComponent } from './pages/skill-flyer/skill-flyer.component';
 import { AboutCardComponent } from './components/about-card/about-card.component';
 
 import { AddSkillComponent } from './components/add-skill/add-skill.component';
-import { AddEduComponent } from './components/add-edu/add-edu.component';
+
 import { AddProjectComponent } from './components/add-project/add-project.component';
 
 
@@ -53,6 +53,10 @@ import { ConfirmState } from './class/confirm-state';
 import { FormJobComponent } from './components/form-job/form-job.component';
 import { EditJobComponent } from './pages/edit-job/edit-job.component';
 import { AddJobComponent } from './pages/add-job/add-job.component';
+import { FormEduComponent } from './components/form-edu/form-edu.component';
+import { EditEduComponent } from './pages/edit-edu/edit-edu.component';
+import { AddEduComponent } from './pages/add-edu/add-edu.component';
+import { FormProjectComponent } from './components/form-project/form-project.component';
 
 registerLocaleData(myLocaleEs);
 
@@ -86,7 +90,7 @@ registerLocaleData(myLocaleEs);
     AboutCardComponent,
 
     AddSkillComponent,
-    AddEduComponent,
+
     AddProjectComponent,
 
     BaseCardComponent,
@@ -98,6 +102,10 @@ registerLocaleData(myLocaleEs);
     FormJobComponent,
     EditJobComponent,
     AddJobComponent,
+    FormEduComponent,
+    EditEduComponent,
+    AddEduComponent,
+    FormProjectComponent,
   ],
   imports: [
     BrowserModule,

@@ -22,6 +22,10 @@ export class SkillService {
     return this.http.get<Skill[]>(this.urlSkill);
   }
 
+  getOneSkill(id: number): Observable<Skill> {
+    return this.http.get<Skill>(`${this.urlSkill}/${id}`);
+  }
+
   deleteSkill(skill: Skill): Observable<Skill> {
     const url = `${this.urlSkill}/${skill.id}`;
     return this.http.delete<Skill>(url);
@@ -29,5 +33,10 @@ export class SkillService {
 
   addSkill(skill: Skill): Observable<Skill>  {
     return this.http.post<Skill>(this.urlSkill, skill, httpOptions);    
+  }
+
+  update(skill: Skill): Observable<Skill> {
+    const url = `${this.urlSkill}/${skill.id}`;
+    return this.http.put<Skill>(url, skill, httpOptions);
   }
 }
