@@ -1,0 +1,17 @@
+<div class="container-fluid p-1 mb-10 d-flex row justify-content-center">
+  
+  <div class="col-9 p-3 m-1">
+    <h3 class="text-center">Área de Edición</h3>
+    <br>
+    <h6>Editar ítem de Proyectos.</h6>
+    
+  </div>
+  <div class="p-4 m-2 col-9 shadow-lg rounded-custom">
+    <br>
+    <p class=""> Id: {{proj.id}} </p>
+    <app-form-project (enviarProj)="editProject($event)" [receivedProj]="this.proj" ></app-form-project>
+  </div>
+  <div class="m-4 p-4 d-flex justify-content-center">
+    <app-boton (clickear)="volverAtras()" clase="btn btn-primary" label="Volver"></app-boton> 
+  </div>
+</div>

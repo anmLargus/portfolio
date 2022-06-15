@@ -36,7 +36,7 @@ import { AboutCardComponent } from './components/about-card/about-card.component
 
 import { AddSkillComponent } from './components/add-skill/add-skill.component';
 
-import { AddProjectComponent } from './components/add-project/add-project.component';
+
 
 
 import { registerLocaleData } from '@angular/common';
@@ -57,6 +57,8 @@ import { FormEduComponent } from './components/form-edu/form-edu.component';
 import { EditEduComponent } from './pages/edit-edu/edit-edu.component';
 import { AddEduComponent } from './pages/add-edu/add-edu.component';
 import { FormProjectComponent } from './components/form-project/form-project.component';
+import { EditProjectComponent } from './pages/edit-project/edit-project.component';
+import { AddProjectComponent } from './pages/add-project/add-project.component';
 
 registerLocaleData(myLocaleEs);
 
@@ -91,7 +93,7 @@ registerLocaleData(myLocaleEs);
 
     AddSkillComponent,
 
-    AddProjectComponent,
+  
 
     BaseCardComponent,
     EditarLandingComponent,
@@ -106,6 +108,8 @@ registerLocaleData(myLocaleEs);
     EditEduComponent,
     AddEduComponent,
     FormProjectComponent,
+    EditProjectComponent,
+    AddProjectComponent,
   ],
   imports: [
     BrowserModule,

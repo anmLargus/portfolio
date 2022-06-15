@@ -11,6 +11,7 @@ export class ProjCardComponent extends BaseCardComponent implements OnInit {
   
   @Input() project: Project = new Project();
   @Output() onDeleteProject: EventEmitter<Project> = new EventEmitter();
+  @Output() onEditarProyecto: EventEmitter<Project> = new EventEmitter();
 
   constructor() {
     super();
@@ -23,9 +24,9 @@ export class ProjCardComponent extends BaseCardComponent implements OnInit {
     this.onDeleteProject.emit(project);
   }
 
-  onEdit() {
+  onEdit(project: Project) {
     console.log("Presionó Editar!!")
-    alert("PRESIONÓ EDITAR")
+    this.onEditarProyecto.emit(project)
   }
 
 }

@@ -10,7 +10,6 @@ import { JobServService } from 'src/app/services/job-serv.service';
 export class AddJobComponent implements OnInit {
 
 
-
   constructor( private jobService: JobServService ) { }
 
   ngOnInit(): void {

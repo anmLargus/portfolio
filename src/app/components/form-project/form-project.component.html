@@ -1,1 +1,28 @@
-<p>form-project works!</p>
+<form class="row g-3" (ngSubmit)="onSubmit()">
+  <div class="col-12 col-md-6">
+    <label for="tituloProyecto" class="form-label">Título del proyecto</label>
+    <input type="text" class="form-control" id="tituloProyecto" name="tituloProyecto" [(ngModel)]="receivedProj.tituloProyecto">
+  </div>
+  <div class="col-12 col-md-6">
+    <label for="descripcionProyecto" class="form-label">Descripción del proyecto</label>
+    <input type="text" class="form-control" id="descripcionProyecto" name="descripcionProyecto" [(ngModel)]="receivedProj.descripcionProyecto">
+  </div>
+  <div class="col-12 col-md-6">
+    <label for="tecnologias" class="form-label">Tecnologías empleadas</label>
+    <input type="text" class="form-control" id="tecnologias" name="tecnologias" placeholder="Angular, Java, etc." [(ngModel)]="receivedProj.tecnologias">
+  </div>
+  <div class="col-12 col-md-6">
+    <label for="linkProyecto" class="form-label">Link al Proyecto</label>
+    <input type="text" class="form-control" id="linkProyecto" name="linkProyecto" placeholder="url" [(ngModel)]="receivedProj.linkProyecto">
+  </div>
+  <div class="col-12 col-md-6">
+    <label for="snapshot" class="form-label">Snapshot</label>
+    <input type="text" class="form-control" id="snapshot" name="snapshot" placeholder="url de la foto del proyecto" [(ngModel)]="receivedProj.snapshot">
+  </div>
+
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </div>
+
+
+</form>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Project } from 'src/app/class/project';
 import { AuthService } from 'src/app/services/auth.service';
 import { ConfirmService } from 'src/app/services/confirm.service';
@@ -18,7 +19,8 @@ export class ProyectosComponent implements OnInit {
   constructor(
     private projServService: ProjServService , 
     private auth: AuthService,
-    private confirmService: ConfirmService
+    private confirmService: ConfirmService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -45,6 +47,10 @@ export class ProyectosComponent implements OnInit {
   deleteProject(project: Project) {
     this.projServService.deleteProject(project)
       .subscribe( ( ) => ( this.projects = this.projects.filter( (p) => p.id !== project.id ) ) );
+  }
+
+  edit(project: Project) {
+    this.router.navigateByUrl(`/${project.id}/editProject`);
   }
 
 }
