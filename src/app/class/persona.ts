@@ -1,5 +1,5 @@
 export class Persona {
-  id?: number = 0 ;
+  id: number = 0 ;
   nombre: string = "";
   apellido: string = "";
   email: string = "";
@@ -8,6 +8,6 @@ export class Persona {
   linkFoto: string = "";
   linkedin: string = "";
   github: string = "";
-  redSocial?: string = ""; 
+  redSocial: string = ""; 
 
 }

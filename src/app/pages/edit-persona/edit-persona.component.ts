@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Persona } from 'src/app/class/persona';
 import { PersonaService } from 'src/app/services/persona.service';
 
@@ -12,12 +13,33 @@ import { PersonaService } from 'src/app/services/persona.service';
 export class EditPersonaComponent implements OnInit {
   //FORMULARIO REACTIVO
   userForm!: FormGroup;
-
+  id: number = 27; // Es el número que está levantando ahora. Ver x mejor código
   persona: Persona = new Persona();
 
-  constructor( private fb: FormBuilder, private personaService: PersonaService ) {   }
+  constructor(
+    private fb: FormBuilder, 
+    private personaService: PersonaService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void { 
+
+    this.personaService.getPersona1(this.id).subscribe( ( res: Persona ) => {
+      this.persona = res;
+      this.userForm.patchValue({
+        id: this.persona.id,
+        nombre: this.persona.nombre,
+        apellido: this.persona.apellido,
+        email: this.persona.email,
+        parrafoPresentacion: this.persona.parrafoPresentacion,
+        frasePresentacion: this.persona.frasePresentacion,
+        linkFoto: this.persona.linkFoto,
+        linkedin: this.persona.linkedin,
+        github: this.persona.github,
+        redSocial: this.persona.redSocial
+      })
+    })
+
     this.userForm = this.fb.group({
       "nombre": [ "", 
                   [
@@ -25,7 +47,7 @@ export class EditPersonaComponent implements OnInit {
                     Validators.maxLength(50)
                   ] 
                 ],
-      "apellido": [ "" , Validators.required, Validators.maxLength(50) ],
+      "apellido": [ "" , [Validators.required, Validators.maxLength(50)] ],
       "email": [ "",
                 [ 
                   Validators.required,
@@ -54,19 +76,25 @@ export class EditPersonaComponent implements OnInit {
 
    }
   
-  enviar(){
+  enviar() {
     console.log(this.userForm);
 
     const { 
-      nombre, apellido, email, parrafoPresentacion, 
+      id, nombre, apellido, email, parrafoPresentacion, 
       frasePresentacion, linkFoto, linkedin, github, redSocial 
     } = this.userForm.value ;
 
     this.personaService.updatePersona({
-      nombre, apellido, email, parrafoPresentacion, 
+      id, nombre, apellido, email, parrafoPresentacion, 
       frasePresentacion, linkFoto, linkedin, github, redSocial}).subscribe(
          response => { console.log(response) } 
          );
+
+    this.gotoEditar()
+  }
+
+  gotoEditar() {
+    this.router.navigate(['/editar'])
   }
 
   
