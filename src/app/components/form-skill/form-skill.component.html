@@ -1,0 +1,29 @@
+
+
+
+<form class="row g-3" (ngSubmit)="onSubmit()">
+  <div class="col-md-6">
+    <label for="habilidad" class="form-label">Habilidad</label>
+    <input type="text"
+           class="form-control" 
+           id="habilidad" 
+           name="habilidad" 
+           [(ngModel)]="receivedSkill.habilidad"
+    />
+  </div>
+  <div class="col-md-6">
+    <label for="progress" class="form-label">Experticia <span class="text-muted">( {{receivedSkill.progress}} )</span></label>
+    <input type="range"
+           class="form-range" 
+           id="progress" 
+           name="progress" 
+           [(ngModel)]="receivedSkill.progress"
+    />
+    <!-- min es 0 y max es 100 por default -->
+    <p></p>
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </div>
+</form>
+

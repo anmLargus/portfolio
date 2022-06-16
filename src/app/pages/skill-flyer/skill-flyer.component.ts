@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Skill } from 'src/app/class/skill';
 import { AuthService } from 'src/app/services/auth.service';
 import { ConfirmService } from 'src/app/services/confirm.service';
@@ -18,7 +19,8 @@ export class SkillFlyerComponent implements OnInit {
   constructor( 
     private skillService: SkillService,
     private auth: AuthService, 
-    private confirmService: ConfirmService  
+    private confirmService: ConfirmService,
+    private router: Router  
   ) { }
 
   ngOnInit(): void {
@@ -44,6 +46,10 @@ export class SkillFlyerComponent implements OnInit {
 
   deleteSkill(skill: Skill) {
     this.skillService.deleteSkill(skill).subscribe( ( ) => ( this.skills = this.skills.filter((p) => p.id !== skill.id)));
+  }
+
+  editSkill(skill: Skill) {
+    this.router.navigateByUrl(`/${skill.id}/editSkill`);
   }
 
 }

@@ -14,6 +14,7 @@ import { EditarLandingComponent } from './pages/editar-landing/editar-landing.co
 import { EditJobComponent } from './pages/edit-job/edit-job.component';
 import { EditEduComponent } from './pages/edit-edu/edit-edu.component';
 import { EditProjectComponent } from './pages/edit-project/edit-project.component';
+import { EditSkillComponent } from './pages/edit-skill/edit-skill.component';
 
 
 const routes: Routes = [
@@ -28,6 +29,7 @@ const routes: Routes = [
   {path: ":id/editJob", component: EditJobComponent, canActivate: [IsLoggedGuard] },
   {path: ":id/editEdu", component: EditEduComponent, canActivate: [IsLoggedGuard] },
   {path: ":id/editProject", component: EditProjectComponent, canActivate: [IsLoggedGuard] },
+  {path: ":id/editSkill", component: EditSkillComponent, canActivate: [IsLoggedGuard] },
   {path: "**", component: ErrorComponent},
 ];
 

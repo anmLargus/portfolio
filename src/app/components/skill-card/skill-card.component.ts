@@ -14,6 +14,7 @@ export class SkillCardComponent extends BaseCardComponent implements OnInit {
 
   @Input() skill: Skill = new Skill() ;
   @Output() onDeleteSkill: EventEmitter<Skill> = new EventEmitter();
+  @Output() onEditSkill: EventEmitter<Skill> = new EventEmitter();
 
   public progreso = this.skill.progress ;   
 
@@ -28,9 +29,9 @@ export class SkillCardComponent extends BaseCardComponent implements OnInit {
     this.onDeleteSkill.emit(skill);
   }
 
-  onEdit() {
+  onEdit(skill: Skill) {
     console.log("Presionó Editar!!")
-    alert("PRESIONÓ EDITAR")
+    this.onEditSkill.emit(skill);
   }
 
 }

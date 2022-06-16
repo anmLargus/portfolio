@@ -34,7 +34,7 @@ import { EditarComponent } from './pages/editar/editar.component';
 import { SkillFlyerComponent } from './pages/skill-flyer/skill-flyer.component';
 import { AboutCardComponent } from './components/about-card/about-card.component';
 
-import { AddSkillComponent } from './components/add-skill/add-skill.component';
+
 
 
 
@@ -59,6 +59,9 @@ import { AddEduComponent } from './pages/add-edu/add-edu.component';
 import { FormProjectComponent } from './components/form-project/form-project.component';
 import { EditProjectComponent } from './pages/edit-project/edit-project.component';
 import { AddProjectComponent } from './pages/add-project/add-project.component';
+import { FormSkillComponent } from './components/form-skill/form-skill.component';
+import { EditSkillComponent } from './pages/edit-skill/edit-skill.component';
+import { AddSkillComponent } from './pages/add-skill/add-skill.component';
 
 registerLocaleData(myLocaleEs);
 
@@ -91,7 +94,6 @@ registerLocaleData(myLocaleEs);
     SkillFlyerComponent,
     AboutCardComponent,
 
-    AddSkillComponent,
 
   
 
@@ -110,6 +112,9 @@ registerLocaleData(myLocaleEs);
     FormProjectComponent,
     EditProjectComponent,
     AddProjectComponent,
+    FormSkillComponent,
+    EditSkillComponent,
+    AddSkillComponent,
   ],
   imports: [
     BrowserModule,

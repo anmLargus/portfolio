@@ -8,14 +8,6 @@ import { Job } from 'src/app/class/job';
 })
 export class FormJobComponent implements OnInit {
 
-  id: number = 0;
-  fechaInicio: string = "1/1/1901";  
-  fechaFin: string = "1/1/1901";  
-  empresa: string = "";
-  posicion: string = "";
-  descripcion: string = "";
-  esActual: boolean = false;
-
   @Input() job: Job = new Job();
   @Input() receivedJob: Job = new Job(); // 
   @Output() enviarJob = new EventEmitter<Job>();

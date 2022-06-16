@@ -11,6 +11,7 @@
               <app-skill-card *ngFor="let skill of skills" 
                               [skill]="skill" 
                               (onDeleteSkill)="confirmDeleteSkill(skill)" 
+                              (onEditSkill)="editSkill(skill)"
                               [esEditable]="isLogged"
                               >              
               </app-skill-card>

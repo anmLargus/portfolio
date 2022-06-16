@@ -7,36 +7,36 @@ const httpOptions = {
   headers: new HttpHeaders( { 'Content-Type':'application/json' } )
 }
 
+const urlSkill = /*'http://localhost:3000/skills'; */ 'http://localhost:8081/skills';
+
 @Injectable({
   providedIn: 'root'
 })
 
-export class SkillService {
-
-  urlSkill: string = /*'http://localhost:3000/skills'; */ 'http://localhost:8081/skills';
+export class SkillService {  
 
   constructor( private http:HttpClient ) { }
 
   getSkills():Observable<Skill[]> {
 
-    return this.http.get<Skill[]>(this.urlSkill);
+    return this.http.get<Skill[]>(urlSkill);
   }
 
   getOneSkill(id: number): Observable<Skill> {
-    return this.http.get<Skill>(`${this.urlSkill}/${id}`);
+    return this.http.get<Skill>(`${urlSkill}/${id}`);
   }
 
   deleteSkill(skill: Skill): Observable<Skill> {
-    const url = `${this.urlSkill}/${skill.id}`;
+    const url = `${urlSkill}/${skill.id}`;
     return this.http.delete<Skill>(url);
   }
 
   addSkill(skill: Skill): Observable<Skill>  {
-    return this.http.post<Skill>(this.urlSkill, skill, httpOptions);    
+    return this.http.post<Skill>(urlSkill, skill, httpOptions);    
   }
 
   update(skill: Skill): Observable<Skill> {
-    const url = `${this.urlSkill}/${skill.id}`;
+    const url = `${urlSkill}/${skill.id}`;
     return this.http.put<Skill>(url, skill, httpOptions);
   }
 }

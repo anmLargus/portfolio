@@ -9,23 +9,23 @@ import { SkillService } from 'src/app/services/skill.service';
 })
 export class AddSkillComponent implements OnInit {
 
-  id: number = 0;
-  habilidad: string = "";
-  progress: number = 50;
+  skill: Skill = new Skill();
 
   constructor( private skillService: SkillService ) { }
 
   ngOnInit(): void {
   }
 
-  onSubmit() {
-    const skill = new Skill();
-    skill.id = this.id;
-    skill.habilidad = this.habilidad;
-    skill.progress = this.progress;
-
-    this.skillService.addSkill(skill).subscribe();
-    
+  agregar(skill: Skill) {
+    this.skillService.addSkill(skill).subscribe(
+      {
+        next: (data: any) => {},
+        error: (response : any) => {
+          alert("Hubo un error")
+         console.log(response.error);
+        }
+      }
+    );
   }
 
 }

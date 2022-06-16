@@ -1,5 +1,5 @@
 export class Skill {
-    id?:  number = 1;
+    id: number = 1;
     habilidad: string = "";
-    progress?: number = 25;
+    progress: number = 25;
 }
