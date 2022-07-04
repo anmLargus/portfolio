@@ -27,7 +27,7 @@ export class InicioComponent implements OnInit {
   constructor( private personaService: PersonaService , private confirmService: ConfirmService , private modal: NgbModal) { }
 
   ngOnInit(): void {
-    this.personaService.getPersona1(27)
+    this.personaService.getPersona1(1)
       .subscribe(data => { 
         this.loading = false ; 
         (this.persona = data) 
