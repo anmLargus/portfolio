@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Persona } from 'src/app/class/persona';
+import { ConfirmService } from 'src/app/services/confirm.service';
 import { PersonaService } from 'src/app/services/persona.service';
 
 
@@ -19,7 +20,8 @@ export class EditPersonaComponent implements OnInit {
   constructor(
     private fb: FormBuilder, 
     private personaService: PersonaService,
-    private router: Router
+    private router: Router,
+    private confirmService: ConfirmService
   ) { }
 
   ngOnInit(): void { 
@@ -88,13 +90,23 @@ export class EditPersonaComponent implements OnInit {
       id, nombre, apellido, email, parrafoPresentacion, 
       frasePresentacion, linkFoto, linkedin, github, redSocial}).subscribe(
          response => { console.log(response) } 
-         );
-
-    this.gotoEditar()
+    );
   }
 
-  gotoEditar() {
-    this.router.navigate(['/editar'])
+  
+  confirmarEditar() {
+    this.confirmService.confirm({
+      title: 'Confirmación', 
+      message: '¿Confirma los cambios realizados?',
+      estilo: 'success' //alguno de los colores de bootstrap (primary, info, danger, etc)
+    }).then((confirm) => {
+        this.enviar();
+        this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+          this.router.navigate(['/editar'])
+        });
+    }, (cancel) => {
+        console.log("Cancelados los cambios en la edición del usuario");
+    });
   }
 
   

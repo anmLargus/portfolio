@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject, tap } from 'rxjs';
 import { Skill } from '../class/skill';
 
 const httpOptions = {
@@ -32,6 +32,7 @@ export class SkillService {
   }
 
   addSkill(skill: Skill): Observable<Skill>  {
+    
     return this.http.post<Skill>(urlSkill, skill, httpOptions);    
   }
 
