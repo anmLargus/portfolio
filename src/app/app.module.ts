@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -9,7 +9,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TagCloudModule } from 'angular-tag-cloud-module';
 //import { RoundProgressModule } from 'angular-svg-round-progressbar';
-
 
 import { FooterComponent } from './components/footer/footer.component';
 import { TopnavbarComponent } from './components/topnavbar/topnavbar.component';
@@ -34,11 +33,6 @@ import { EditarComponent } from './pages/editar/editar.component';
 import { SkillFlyerComponent } from './pages/skill-flyer/skill-flyer.component';
 import { AboutCardComponent } from './components/about-card/about-card.component';
 
-
-
-
-
-
 import { registerLocaleData } from '@angular/common';
 
 import myLocaleEs from '@angular/common/locales/es';
@@ -62,6 +56,7 @@ import { AddProjectComponent } from './pages/add-project/add-project.component';
 import { FormSkillComponent } from './components/form-skill/form-skill.component';
 import { EditSkillComponent } from './pages/edit-skill/edit-skill.component';
 import { AddSkillComponent } from './pages/add-skill/add-skill.component';
+import { AuthInterceptor } from './services/auth.interceptor';
 
 registerLocaleData(myLocaleEs);
 
@@ -132,7 +127,12 @@ registerLocaleData(myLocaleEs);
   ],
   providers: [
     ConfirmService, 
-    ConfirmState    
+    ConfirmState,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }    
   ],
   bootstrap: [AppComponent]
 })
