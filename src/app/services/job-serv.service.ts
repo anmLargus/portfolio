@@ -13,7 +13,7 @@ const httpOptions = {
 export class JobServService {
 
   //Cambiar al puerto que corresponda al backend
-  urlJob:string = /* 'http://localhost:3000/jobs'; */  'http://localhost:8081/jobs' ;
+  urlJob:string = /* 'http://localhost:3000/jobs'; */  'http://localhost:8081/api/jobs' ;
   
 
   constructor(private http:HttpClient) { }

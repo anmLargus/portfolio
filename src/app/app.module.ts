@@ -57,6 +57,7 @@ import { FormSkillComponent } from './components/form-skill/form-skill.component
 import { EditSkillComponent } from './pages/edit-skill/edit-skill.component';
 import { AddSkillComponent } from './pages/add-skill/add-skill.component';
 import { AuthInterceptor } from './services/auth.interceptor';
+import { HttpErrorInterceptor } from './services/http-error.interceptor';
 
 registerLocaleData(myLocaleEs);
 
@@ -128,11 +129,8 @@ registerLocaleData(myLocaleEs);
   providers: [
     ConfirmService, 
     ConfirmState,
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: AuthInterceptor,
-      multi: true
-    }    
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true}    
   ],
   bootstrap: [AppComponent]
 })
