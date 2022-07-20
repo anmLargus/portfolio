@@ -13,7 +13,7 @@ const httpOptions = {
 export class ProjServService {
 
   //Cambiar al puerto que corresponda al backend
-  urlProj:string = /* 'http://localhost:3000/projs'; */  'http://localhost:8081/api/proyectos' ;
+  urlProj:string = "https://morning-spire-26047.herokuapp.com/api/proyectos" /* 'http://localhost:3000/projs';  'http://localhost:8081/api/proyectos' */ ;
  
   constructor(private http:HttpClient) { }
 

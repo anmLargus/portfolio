@@ -13,7 +13,7 @@ const httpOptions = {
 export class JobServService {
 
   //Cambiar al puerto que corresponda al backend
-  urlJob:string = /* 'http://localhost:3000/jobs'; */  'http://localhost:8081/api/jobs' ;
+  urlJob:string = "https://morning-spire-26047.herokuapp.com/api/jobs" /* 'http://localhost:3000/jobs';   'http://localhost:8081/api/jobs' */ ;
   
 
   constructor(private http:HttpClient) { }
@@ -24,7 +24,7 @@ export class JobServService {
   }
 
   getOneJob(id: number): Observable<Job> {
-    return this.http.get<Job>(`${this.urlJob}/${id}`); // block de notas es distinto
+    return this.http.get<Job>(`${this.urlJob}/${id}`); // 
   }
 
   deleteJob(job: Job): Observable<Job> {

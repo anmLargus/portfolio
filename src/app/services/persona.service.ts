@@ -12,7 +12,7 @@ const httpOptions = {
 })
 export class PersonaService {
 
-  urlPersona: string = /* "http://localhost:3000/persona"; */  'http://localhost:8081/personas' ;
+  urlPersona: string = "https://morning-spire-26047.herokuapp.com/personas" /* "http://localhost:3000/persona";   'http://localhost:8081/personas' */ ;
 
   constructor( private http: HttpClient) { }
 
@@ -30,6 +30,7 @@ export class PersonaService {
         
   }
   /*
+  * No está previsto que se puedan agregar más personas ni borrar, solo editar una única
   addPersona(persona: Persona): Observable<Persona> {
     return this.http.post<Persona>(this.urlPersona, persona , httpOptions);
   }

@@ -9,6 +9,8 @@ import {
 import { catchError, Observable, throwError } from 'rxjs';
 import { ErrorService } from './error.service';
 
+// clase para manejar los mensajes de error
+
 @Injectable()
 export class HttpErrorInterceptor implements HttpInterceptor {
 

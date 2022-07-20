@@ -7,7 +7,7 @@ const httpOptions = {
   headers: new HttpHeaders( { 'Content-Type':'application/json' } )
 }
 
-const urlSkill = /*'http://localhost:3000/skills'; */ 'http://localhost:8081/api/skills';
+const urlSkill = "https://morning-spire-26047.herokuapp.com/skills" /*'http://localhost:3000/skills';  'http://localhost:8081/api/skills' */;
 
 @Injectable({
   providedIn: 'root'

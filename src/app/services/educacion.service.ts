@@ -12,7 +12,7 @@ const httpOptions = {
 })
 export class EducacionService {
 
-  private urlEdu:string = /* 'http://localhost:3000/edus'; */  'http://localhost:8081/api/edus' ;
+  private urlEdu:string = "https://morning-spire-26047.herokuapp.com/api/edus" /* 'http://localhost:3000/edus';  'http://localhost:8081/api/edus' */ ;
  
   constructor(private http:HttpClient) { }
 
