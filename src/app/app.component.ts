@@ -10,7 +10,7 @@ import { AuthService } from './services/auth.service';
 export class AppComponent {
   title = 'portfolio';  
 
-
+  //menú del navbar
   links: NavLink[] = [
     {label: 'Sobre mí', link: 'about'},
    // {label: 'Contacto', link: 'contacto'},

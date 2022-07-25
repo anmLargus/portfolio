@@ -17,7 +17,7 @@ export class ErrorComponent implements OnInit {
   }
 
   onClick(event: any) {
-    console.log("onClick en error");
+    
     this.router.navigateByUrl('/inicio'); 
   }
 

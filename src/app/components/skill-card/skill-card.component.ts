@@ -30,7 +30,7 @@ export class SkillCardComponent extends BaseCardComponent implements OnInit {
   }
 
   onEdit(skill: Skill) {
-    console.log("Presionó Editar!!")
+    
     this.onEditSkill.emit(skill);
   }
 

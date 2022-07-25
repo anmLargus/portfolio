@@ -5,6 +5,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   templateUrl: './boton.component.html',
   styleUrls: ['./boton.component.scss']
 })
+
+// Boton reutilizable
 export class BotonComponent implements OnInit {
 
   @Input() clase = "success"; // Inicializa con una clase de bootstrap
@@ -17,7 +19,7 @@ export class BotonComponent implements OnInit {
   }
 
   onClick() {
-    console.log("app boton");
+    
     this.clickear.emit();
   }
 

@@ -24,7 +24,7 @@
           <span class="text-muted">
                ({{job.fechaInicio | date: "MMMM" : "" : "es"}} de {{job.fechaInicio | date: "yyyy" }} - 
               <span *ngIf="!job.esActual">{{job.fechaFin | date: "MMMM" : "" : "es"}} de {{job.fechaFin | date: "yyyy" }}</span>
-              <span *ngIf="job.esActual">Actual</span>
+              <span *ngIf="job.esActual">Actual</span><!-- Si trabajo es actual, no se muestra fecha fin-->
                )
           </span>
       </h6>

@@ -14,7 +14,7 @@ import { PersonaService } from 'src/app/services/persona.service';
 export class EditPersonaComponent implements OnInit {
   //FORMULARIO REACTIVO
   userForm!: FormGroup;
-  id: number = 1; // Ver numero. Ver x mejor código
+  id: number = 1; // El usuario activo es el id 1
   persona: Persona = new Persona();
 
   constructor(

@@ -7,6 +7,8 @@ import { ConfirmState } from 'src/app/class/confirm-state';
   templateUrl: './modal-confirm-dialog.component.html',
   styleUrls: ['./modal-confirm-dialog.component.scss']
 })
+
+//Modal para confirmación
 export class ModalConfirmDialogComponent implements OnInit {
 
   options!: ConfirmOptions;

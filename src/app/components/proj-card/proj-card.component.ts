@@ -25,7 +25,7 @@ export class ProjCardComponent extends BaseCardComponent implements OnInit {
   }
 
   onEdit(project: Project) {
-    console.log("Presionó Editar!!")
+    
     this.onEditarProyecto.emit(project)
   }
 

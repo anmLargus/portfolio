@@ -22,7 +22,7 @@ const routes: Routes = [
   {path: "inicio", component: InicioComponent},
   {path: "proyectos", component: ProyectosComponent},
   {path: "about", component: AboutComponent},
-  //{path: "contacto", component: ContactoFormComponent}, //To Do más adelante
+  //{path: "contacto", component: ContactoFormComponent}, //To Do next coming
   {path: "login", component: LoginComponent, canActivate: [IsNotLoggedGuard]},
   {path: "editar-landing", component: EditarLandingComponent, canActivate: [IsNotLoggedGuard]  },
   {path: "editar", component: EditarComponent, canActivate: [IsLoggedGuard]},//

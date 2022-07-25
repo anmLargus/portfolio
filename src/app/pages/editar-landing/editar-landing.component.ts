@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './editar-landing.component.html',
   styleUrls: ['./editar-landing.component.scss']
 })
+//
 export class EditarLandingComponent implements OnInit {
 
   constructor() { }

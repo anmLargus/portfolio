@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+//import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { User } from 'src/app/class/user';
 import { AuthService } from 'src/app/services/auth.service';
 
@@ -63,9 +63,6 @@ export class LoginComponent implements OnInit {
         },
          error: e => { console.log(e) }  
       });
-  }
-
-  
-  
+  } 
 
 }

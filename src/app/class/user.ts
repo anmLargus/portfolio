@@ -1,3 +1,5 @@
+// modelo para el usuario administrador
+
 export class User {
     
     email: string;

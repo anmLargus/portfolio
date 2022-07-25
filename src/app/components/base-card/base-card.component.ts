@@ -1,5 +1,3 @@
-// ESTE COMPONENTE CONTIENE PARTES COMUNES A OTRAS CARD.COMPONENT
-// No pude hacer funcionar output con eventemitter
 import { Component, Input, OnInit } from '@angular/core';
 import { faCircleMinus } from '@fortawesome/free-solid-svg-icons';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
@@ -9,6 +7,8 @@ import { faPen } from '@fortawesome/free-solid-svg-icons';
   template: '',
   styles: []
 })
+
+// ESTE CLASE CONTIENE PARTES COMUNES A OTRAS CARD.COMPONENT
 export class BaseCardComponent implements OnInit {
 
   faCircleMinus = faCircleMinus;
