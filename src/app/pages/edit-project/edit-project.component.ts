@@ -26,6 +26,7 @@ export class EditProjectComponent implements OnInit {
 
   editProject(proyectoEditado: Project) {
     this.projService.updateProject(proyectoEditado).subscribe();
+    this.volverAtras();
   }
 
   volverAtras() {
