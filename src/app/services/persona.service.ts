@@ -12,7 +12,7 @@ const httpOptions = {
 })
 export class PersonaService {
 
-  urlPersona: string = "https://morning-spire-26047.herokuapp.com/personas" ;/* "http://localhost:3000/persona"   'http://localhost:8081/personas' */ 
+  urlPersona: string = "https://anm-backend-repo-anmlargus.koyeb.app/personas"; //"https://morning-spire-26047.herokuapp.com/personas" ;/* "http://localhost:3000/persona"   'http://localhost:8081/personas' */ 
 
   constructor( private http: HttpClient) { }
 
