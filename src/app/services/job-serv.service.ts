@@ -13,7 +13,7 @@ const httpOptions = {
 export class JobServService {
 
   //Cambiar al puerto que corresponda al backend
-  urlJob:string = "https://morning-spire-26047.herokuapp.com/api/jobs" /* 'http://localhost:3000/jobs';   'http://localhost:8081/api/jobs' */ ;
+  urlJob:string ="https://anm-backend-repo-anmlargus.koyeb.app/api/jobs"; // "https://morning-spire-26047.herokuapp.com/api/jobs" /* 'http://localhost:3000/jobs';   'http://localhost:8081/api/jobs' */ ;
   
 
   constructor(private http:HttpClient) { }
